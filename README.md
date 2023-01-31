@@ -1,2 +1,2 @@
 # Jan-Dhillon
- My personal portfolio
+ My personal portfolio. I will be designing this website using React.js
