@@ -12,12 +12,12 @@ function App() {
     <div className="App">
       <h1 className="title">Jan-Yaeger Dhillon</h1>
       <div>
-        <a href="https://github.com/jansdhillon" className="link">GitHub</a>
-        <a href="https://www.linkedin.com/in/jan-yaeger-dhillon-572674239/" className="link">LinkedIn</a>
+        <a href="https://github.com/jansdhillon" className="github">GitHub</a>
+        <a href="https://www.linkedin.com/in/jan-yaeger-dhillon-572674239/" className="linkedin">LinkedIn</a>
       </div>
       <div className="card">
         <h2>About Me</h2>
-        <p>My name is Jan.</p>
+        <p className="center">Hey, I'm Jan. Welcome to my personal page! I'll be updating this regularily as my web develoopment skills advance.</p>
       </div>
       {/* <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>

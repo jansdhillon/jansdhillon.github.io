@@ -41,7 +41,7 @@
   color: #888;
 }
 
-.link {
+.center {
   margin: 2em;
   display: inline-block;
   justify-content: center;
@@ -49,11 +49,11 @@
   flex-wrap: wrap;
 }
 
-.about-me {
-  margin: 2em;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+.github {
+  margin-right: auto;
 }
+
+.linkedin {
+  margin-left: auto;
+}
+
