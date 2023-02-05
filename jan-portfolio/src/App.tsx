@@ -1,14 +1,13 @@
 import { useState } from 'react'
-import { useEffect } from 'react'
 import reactLogo from './assets/react.svg'
+
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-  useEffect(() => {
-    document.title = 'Jan-Yaeger Dhillon';
-  }, []);
+  const [count, setCount] = useState(0);
+  
   return (
+    
     <div className="App">
       <h1 className="title">Jan-Yaeger Dhillon</h1>
       <div>
