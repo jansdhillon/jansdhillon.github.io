@@ -1,0 +1,90 @@
+
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url('vaporwave.png');
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+
+.center {
+  margin: 2em;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#github {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px;
+  padding: 10px;
+}
+
+#linkedin {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px;
+  padding: 10px;
+}
+
+.section {
+  padding-top: 400px;
+  padding-bottom: max(400px, 10%);
+  background-repeat: repeat;
+  background-position: center;
+  color: white;
+}
+
+
+Navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url('vaporwave.png');
+}
+
+#intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: white;
+}
+
+#intro h1 {
+  font-size: 3em;
+  font-weight: 700;
+  margin: 0;
+  padding: 100px;
+}
+
+.tab {
+  color: white;
+}
+
+/*set clicked links to the color of the background*/
+a:current {
+  color: purple;
+}
+
+
