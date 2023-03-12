@@ -57,13 +57,13 @@ function App() {
         </Container>
       </Navbar>
       <div id="intro" className="section">
-          <h1 data-aos="fade-down" data-aos-duration="500" id="intro" data-aos-anchor-placement="center-bottom">
+          <h1 data-aos="fade-down" data-aos-duration="1500" id="intro" data-aos-anchor-placement="center-bottom">
             Hey, I'm Jan!
           </h1>
       </div>
       <div id="about-me" className="section">
-        <h2 data-aos="fade-down" data-aos-duartion="500" data-aos-anchor-placement="center-bottom">About Me</h2>
-        <p className="center" data-aos="fade-down">
+        <h2 data-aos="fade-down" data-aos-duration="700" data-aos-anchor-placement="center-bottom">About Me</h2>
+        <p className="center" data-aos="fade-down" data-aos-duration="2000">
           Welcome to my personal page! I'll be updating this regularily as my
           web development skills advance. I'm a fourth year at UBC Okanagan
           pursuing a degree in computer science. I like to learn new things and
@@ -73,15 +73,15 @@ function App() {
         </p>
       </div>
       <Container id="projects" className="section">
-        <h2 data-aos="fade-down" data-aos-duartion="500" data-aos-anchor-placement="center-bottom">Projects</h2>
-        <p className="center" data-aos="fade-down">
+        <h2 data-aos="fade-down" data-aos-duration="700" data-aos-anchor-placement="center-bottom">Projects</h2>
+        <p className="center" data-aos="fade-down" data-aos-duration="2000">
           This portfolio is the main project I'm working on right now, but you
           can find more things I've done over at my GitHub!
         </p>
       </Container>
       <Container id="interests" className="section">
-        <h2 data-aos="fade-down" data-aos-duartion="500" data-aos-anchor-placement="center-bottom">Interests</h2>
-        <p className="center" data-aos="fade-down">
+        <h2 data-aos="fade-down" data-aos-duration="700" data-aos-anchor-placement="center-bottom">Interests</h2>
+        <p className="center" data-aos="fade-down" data-aos-duration="2000">
           I love learning new things and finding ways to be creative. I love
           music, video games and anime.
         </p>
