@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://jansdhillon.github.io/jan-portfolio/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -13,6 +14,7 @@
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
     "bootstrap": "^5.2.3",
+    "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-animate-on-scroll": "^2.1.5",
     "react-animation-on-scroll": "^5.1.0",
