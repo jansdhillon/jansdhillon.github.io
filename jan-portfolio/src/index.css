@@ -3,9 +3,8 @@
     color: #fff;
 }
 
-/*set clicked links to the color of the background*/
-a:current {
-    color: purple;
+a:visited, a:current {
+    color: #fff;
 }
 
 
