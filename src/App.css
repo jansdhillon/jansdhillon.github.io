@@ -8,13 +8,14 @@
   background-repeat: repeat;
   background-position: center;
   background-size: cover;
-  background-image: url('./assets/vaporwave.png');
+  background-color: peachpuff;
 }
 
 .App {
-  font-family: sans-serif;
   text-align: center;
 }
+
+.section
 
 
 .center {
@@ -23,6 +24,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  font-size: 1.5em;
 }
 
 #github {
@@ -60,7 +62,6 @@ Navbar {
   background-repeat: repeat;
   background-position: center;
   background-size: cover;
-  background-image: url('vaporwave.png');
 }
 
 #intro {
@@ -72,8 +73,8 @@ Navbar {
 }
 
 #intro h1 {
-  font-size: 3em;
-  font-weight: 700;
+  font-size: 5em;
+  font-weight: 1000;
   margin: 0;
   padding: 100px;
 }
