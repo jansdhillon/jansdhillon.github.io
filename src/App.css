@@ -8,7 +8,7 @@
   background-repeat: repeat;
   background-position: center;
   background-size: cover;
-  background-image: url('vaporwave.png');
+  background-image: url('./assets/vaporwave.png');
 }
 
 .App {
