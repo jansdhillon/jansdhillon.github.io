@@ -23,8 +23,9 @@ function App() {
 
   return (
     <div className="App">
+      {/*Find a way to make the Navbar solid*/}
       <Navbar expand="lg" fixed="top">
-        <Container fluid="md">
+        <Container>
           <Navbar.Brand className="tab" href="#intro">
             Jan-Yaeger Dhillon
           </Navbar.Brand>
@@ -45,6 +46,7 @@ function App() {
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
+          {/*TODO: Change buttons to logo icons*/}
           <span>
             <Button
               as="a"
@@ -56,8 +58,6 @@ function App() {
               GitHub
             </Button>
             <Button
-              as="a"
-              variant="primary"
               href="https://www.linkedin.com/in/jan-yaeger-dhillon-572674239/"
               target="_blank"
               id="linkedin"
