@@ -48,22 +48,13 @@ function App() {
           </Navbar.Collapse>
           {/*TODO: Change buttons to logo icons*/}
           <span>
-            <Button
-              as="a"
-              variant="success"
-              href="https://github.com/jansdhillon"
-              target="_blank"
-              id="github"
-            >
-              GitHub
-            </Button>
-            <Button
-              href="https://www.linkedin.com/in/jan-yaeger-dhillon-572674239/"
-              target="_blank"
-              id="linkedin"
-            >
-              LinkedIn
-            </Button>
+            <a href="https://www.github.com/jansdhillon">
+            <img
+              src="src/assets/github.png" className="icon" alt="GitHub" width="50" height="50"/>
+            </a>
+            <a href="https://www.linkedin.com/in/jan-yaeger-dhillon-572674239/">
+            <img src="src/assets/linkedin.png" className="icon" alt="LinkedIn" width="50" height="50"/>
+            </a>
           </span>
         </Container>
       </Navbar>
@@ -78,7 +69,7 @@ function App() {
         >
           About Me
         </h2>
-        <p className="center" data-aos="fade-down" data-aos-duration="2000">
+        <p className="center" data-aos="fade-right" data-aos-duration="1000">
           Welcome to my personal page! I'll be updating this regularily as my
           web development skills advance.
         </p>
@@ -91,7 +82,7 @@ function App() {
         >
           Skills
         </h2>
-        <p className="center" data-aos="fade-down" data-aos-duration="2000">
+        <p className="center" data-aos="fade-right" data-aos-duration="1000">
           I have experience programming with Python, JAVA, and JavaScript, and I'm currently learning more about web development technologies like React.
         </p>
       </Container>
@@ -103,7 +94,7 @@ function App() {
         >
           Projects
         </h2>
-        <p className="center" data-aos="fade-down" data-aos-duration="2000">
+        <p className="center" data-aos="fade-right" data-aos-duration="1000">
           This portfolio is the main project I'm working on right now, but you
           can find more things I've done over at my GitHub!
         </p>
@@ -112,7 +103,7 @@ function App() {
         <h2 data-aos="fade-down" data-aos-duration="700" data-aos-anchor="#ee">
           Education and Experience
         </h2>
-        <p className="center" data-aos="fade-down" data-aos-duration="2000">
+        <p className="center" data-aos="fade-right" data-aos-duration="1000">
           I'm currently in my fourth-year of my computer science degree at UBC
           Okanagan. I also work as the Student Support Analyst for UBCIT.
         </p>
