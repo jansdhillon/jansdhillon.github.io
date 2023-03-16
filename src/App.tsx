@@ -50,10 +50,10 @@ function App() {
           <span>
             <a href="https://www.github.com/jansdhillon">
             <img
-              src="src/assets/github.png" className="icon" alt="GitHub" width="50" height="50"/>
+              src="/src/assets/github.png" className="icon" alt="GitHub" width="50" height="50"/>
             </a>
             <a href="https://www.linkedin.com/in/jan-yaeger-dhillon-572674239/">
-            <img src="src/assets/linkedin.png" className="icon" alt="LinkedIn" width="50" height="50"/>
+            <img src="/src/assets/linkedin.png" className="icon" alt="LinkedIn" width="50" height="50"/>
             </a>
           </span>
         </Container>
