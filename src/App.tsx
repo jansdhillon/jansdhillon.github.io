@@ -12,8 +12,8 @@ import "animate.css/animate.min.css";
 import AOS from "aos";
 import React from "react";
 import Writer from "./Writer";
-import "./assets/github.png";
-import "./assets/linkedin.png";
+import github from "./assets/github.png";
+import linkedin from "./assets/linkedin.png";
 
 
 function App() {
@@ -52,10 +52,10 @@ function App() {
           <span>
             <a href="https://www.github.com/jansdhillon">
             <img
-              src="src/assets/github.png" className="icon" alt="GitHub" width="50" height="50"/>
+              src={github} className="icon" alt="GitHub" width="50" height="50"/>
             </a>
             <a href="https://www.linkedin.com/in/jan-yaeger-dhillon-572674239/">
-            <img src="src/assets/linkedin.png" className="icon" alt="LinkedIn" width="50" height="50"/>
+            <img src={linkedin} className="icon" alt="LinkedIn" width="50" height="50"/>
             </a>
           </span>
         </Container>
