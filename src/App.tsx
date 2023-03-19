@@ -35,15 +35,23 @@ function App() {
     });
   }, []);
 
+  // const [angle, setAngle] = useState(0);
+  
+
+
+  // useEffect(() => {
+  //   const animationFrame = requestAnimationFrame(() => {
+  //     setAngle((prevAngle) => (prevAngle + 0.01) % (2 * Math.PI));
+  //   });
+
+  //   return () => cancelAnimationFrame(animationFrame);
+  // }, [angle]);
+
 
   const skills = [
     {
       name: "Python",
       icon: python,
-    },
-    {
-      name: "Java",
-      icon: java,
     },
     {
       name: "JavaScript",
@@ -58,18 +66,31 @@ function App() {
       icon: css,
     },
     {
-      name: "React",
-      icon: react,
+      name: "SQL",
+      icon: sql,
+    },
+    {
+      name: "Java",
+      icon: java,
     },
     {
       name: "TypeScript",
       icon: ts,
     },
     {
-      name: "SQL",
-      icon: sql,
+      name: "React",
+      icon: react,
     }
+    
   ];
+
+  const getPositionOnCircle = (index, total, radius) => {
+    const angle = (2 * Math.PI * index) / total;
+    return {
+      x: radius * Math.cos(angle),
+      y: radius * Math.sin(angle),
+    };
+  };
 
   return (
     <div className="App">
@@ -81,9 +102,9 @@ function App() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link className="tab" href="#about-me">
+              {/* <Nav.Link className="tab" href="#about-me">
                 About Me
-              </Nav.Link>
+              </Nav.Link> */}
               <Nav.Link className="tab" href="#skills">
                 Skills
               </Nav.Link>
@@ -120,7 +141,7 @@ function App() {
       <div id="intro" className="section">
         <Writer />
       </div>
-      <div id="about-me" className="section">
+      {/* <div id="about-me" className="section">
         <h2
           data-aos="fade-down"
           data-aos-duration="700"
@@ -129,35 +150,34 @@ function App() {
           About Me
         </h2>
         <p className="center" data-aos="fade-right" data-aos-duration="1000">
-          Welcome to my personal page! I'll be updating this regularily as my
-          web development skills advance.
+          Welcome to my personal page! I love being creative and a great way to do that is through programming! I'll be updating this frequently as my web development skills improve.
         </p>
-      </div>
+      </div> */}
       <Container id="skills" className="section">
-          <h2
-            data-aos="fade-down"
-            data-aos-duration="700"
-            data-aos-anchor="#skills"
-          >
-            Skills
-          </h2>
-          <div className="d-flex flex-wrap justify-content-center">
-            {skills.map((skill) => (
-              <div
-                className="skill-card"
-                data-aos="zoom-in"
-                data-aos-duration="1000"
-              >
-                <img
-                  src={skill.icon}
-                  alt={skill.name}
-                  style={{ width: "50%", paddingBottom: "10px" }}
-                />
-                <h5>{skill.name}</h5>
-              </div>
-            ))}
-          </div>
-      </Container>
+  <h2
+    data-aos="zoom-in"
+    data-aos-duration="1000"
+    data-aos-anchor="#skills"
+  >
+    Skills
+  </h2>
+  <div className="skills-container">
+    {skills.map((skill) => (
+      <div
+        className="skill-card"
+      >
+        <img
+          src={skill.icon}
+          alt={skill.name}
+          style={{ width: "50px", paddingBottom: "10px" }}
+          data-aos="flip-up"
+          data-aos-duration="1500"
+        />
+        <h5 data-aos="zoom-in" data-aos-duration="1500">{skill.name}</h5>
+      </div>
+    ))}
+  </div>
+</Container>
       <Container id="projects" className="section">
         <h2
           data-aos="fade-down"
