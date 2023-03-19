@@ -28,7 +28,6 @@ a {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  font-size: 1.5em;
 }
 
 .section {
@@ -37,6 +36,14 @@ a {
   background-repeat: repeat;
   background-position: center;
   color: white;
+
+}
+
+.section h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  justify-content: center;
 }
 
 hr {
@@ -152,7 +159,36 @@ nav {
 .skills-container .skill-card:nth-child(8) {
   transform: rotate(315deg) translateY(-250px) rotate(-315deg);
 }
+/* .skills-container .skill-card:nth-child(9) {
+  transform: rotate(360deg) translateY(-250px) rotate(-360deg);
+} */
 
 
+.section {
+  margin-bottom: 50px;
+}
 
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
+.see-more-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff0f;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.see-more-button:hover {
+  background-color: #0056b3;
+}
+
+.see-more-button:active {
+  background-color: #003c7e;
+}

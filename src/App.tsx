@@ -26,7 +26,8 @@ import html from "./assets/html.png";
 import css from "./assets/css.png";
 import ts from "./assets/ts.png";
 import sql from "./assets/sql.png";
-
+import ProjectCard from "./ProjectCard";
+// import bash from "./assets/bash.png";
 
 function App() {
   useLayoutEffect(() => {
@@ -36,8 +37,6 @@ function App() {
   }, []);
 
   // const [angle, setAngle] = useState(0);
-  
-
 
   // useEffect(() => {
   //   const animationFrame = requestAnimationFrame(() => {
@@ -46,7 +45,7 @@ function App() {
 
   //   return () => cancelAnimationFrame(animationFrame);
   // }, [angle]);
-
+  
 
   const skills = [
     {
@@ -73,6 +72,10 @@ function App() {
       name: "Java",
       icon: java,
     },
+    // {
+    //   name: "Bash",
+    //   icon: bash,
+    // },
     {
       name: "TypeScript",
       icon: ts,
@@ -80,16 +83,47 @@ function App() {
     {
       name: "React",
       icon: react,
-    }
+    },
     
   ];
 
-  const getPositionOnCircle = (index, total, radius) => {
-    const angle = (2 * Math.PI * index) / total;
-    return {
-      x: radius * Math.cos(angle),
-      y: radius * Math.sin(angle),
-    };
+  const projects = [
+    {
+      title: "COSC310 NOVA Bot",
+      description: "A chatbot designed in a group software engineering project.",
+      details: "More details about project 1.",
+    },
+    {
+      title: "Dreamer",
+      description: "A Python program to create any Python program.",
+      details: "More details about project 2.",
+    },
+    {
+      title: "Faster Google Search",
+      description: "A Chrome extension to speed up Google searches.",
+      details: "More details about project 3.",
+    },
+    {
+      title: "Quick Export",
+      description: "Automatically export files to OneDrive after being used",
+      details: "This is a Python script I wrote because I was getting annoyed with the way OneDrive uploads were working. Sometimes I am creating a lot of documents and want to use them instantly but they get stuck in the OneDrive upload queue. Currently it's an app that I activate in my Quick Export folder but I have plans to make it watch the file and do it automatically.",
+    },
+    
+    
+  ];
+
+  // const getPositionOnCircle = (index, total, radius) => {
+  //   const angle = (2 * Math.PI * index) / total;
+  //   return {
+  //     x: radius * Math.cos(angle),
+  //     y: radius * Math.sin(angle),
+  //   };
+  // };
+
+  const [showMore, setShowMore] = useState(false);
+
+  const handleShowMore = () => {
+    setShowMore(!showMore);
   };
 
   return (
@@ -154,44 +188,47 @@ function App() {
         </p>
       </div> */}
       <Container id="skills" className="section">
-  <h2
-    data-aos="zoom-in"
-    data-aos-duration="1000"
-    data-aos-anchor="#skills"
-  >
-    Skills
-  </h2>
-  <div className="skills-container">
-    {skills.map((skill) => (
-      <div
-        className="skill-card"
-      >
-        <img
-          src={skill.icon}
-          alt={skill.name}
-          style={{ width: "50px", paddingBottom: "10px" }}
-          data-aos="flip-up"
-          data-aos-duration="1500"
-        />
-        <h5 data-aos="zoom-in" data-aos-duration="1500">{skill.name}</h5>
-      </div>
-    ))}
-  </div>
-</Container>
-      <Container id="projects" className="section">
         <h2
-          data-aos="fade-down"
-          data-aos-duration="700"
-          data-aos-anchor="#projects"
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          data-aos-anchor="#skills"
         >
-          Projects
+          Skills
         </h2>
-        <Card className="center" data-aos="fade-right" data-aos-duration="1000">
-          <Card.Body>
-            This portfolio is the main project I'm working on right now, but you
-            can find more things I've done over at my GitHub!
-          </Card.Body>
-        </Card>
+        <div className="skills-container">
+          {skills.map((skill) => (
+            <div className="skill-card">
+              <img
+                src={skill.icon}
+                alt={skill.name}
+                style={{ width: "50px", paddingBottom: "10px" }}
+                data-aos="zoom-in"
+                data-aos-duration="1500"
+              />
+              <h5 data-aos="zoom-in" data-aos-duration="1500">
+                {skill.name}
+              </h5>
+            </div>
+          ))}
+        </div>
+      </Container>
+      <Container id="projects" className="section" data-aos="fade-down">
+        <h2>Projects</h2>
+        <div className="projects-container">
+          {projects
+            .slice(0, showMore ? projects.length : 3)
+            .map((project, index) => (
+              <ProjectCard
+                key={index}
+                title={project.title}
+                description={project.description}
+                details={project.details}
+              />
+            ))}
+        </div>
+        <button className="see-more-button" onClick={handleShowMore}>
+          {showMore ? "See Less" : "See More"}
+        </button>
       </Container>
       <Container id="ee" className="section">
         <h2 data-aos="fade-down" data-aos-duration="700" data-aos-anchor="#ee">
@@ -199,9 +236,8 @@ function App() {
         </h2>
         <Card className="center" data-aos="fade-right" data-aos-duration="1000">
           <Card.Body>
-            I'm currently in my fourth-year of my computer science degree at
-            UBC Okanagan. I also work as the Student Support Analyst for
-            UBCIT.
+            I'm currently in my fourth-year of my computer science degree at UBC
+            Okanagan. I also work as the Student Support Analyst for UBCIT.
           </Card.Body>
         </Card>
       </Container>
