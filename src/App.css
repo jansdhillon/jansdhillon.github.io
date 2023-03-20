@@ -41,9 +41,14 @@ a {
 
 .section h2 {
   font-size: 3rem;
-  font-weight: 700;
   margin-bottom: 1rem;
   justify-content: center;
+}
+
+.section p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
 }
 
 hr {
@@ -58,19 +63,34 @@ nav {
   background-image: linear-gradient(0deg, #2c92fe 0%, #66a2fc 50%);
 }
 
-.navbar-nav .nav-link,
+.navbar-nav .nav-link.active {
+  color: white;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #b1d8fe 
+}
+
+.navbar-nav .nav-link:focus {
+  color: #b1d8fe 
+}
+
+.navbar-nav .nav-link:active {
+  color: #2c92fe;
+}
+
 .navbar-brand {
   color: white;
 }
 
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link:focus,
-.navbar-brand:hover,
-.navbar-brand:focus {
-  color: #b1d8fe;
+.navbar-brand:focus, .navbar-brand:hover {
+  color: #b1d8fe 
 }
 
-.navbar-nav .nav-link:active,
 .navbar-brand:active {
   color: #2c92fe;
 }
@@ -116,6 +136,11 @@ nav {
   height: 100%;
   width: 100%;
   position: relative;
+}
+  
+.section h5 {
+  font-size: 15px;
+  font-weight: 400;
 }
 
 .skill-card {
