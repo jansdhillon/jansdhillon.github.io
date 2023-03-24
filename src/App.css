@@ -15,6 +15,8 @@ body,
   text-align: center;
 }
 
+
+
 .icon {
   padding: 10px;
 }
@@ -139,7 +141,7 @@ nav {
 }
   
 .section h5 {
-  font-size: 15px;
+  font-size: 1.1rem;
   font-weight: 400;
 }
 
@@ -150,7 +152,7 @@ nav {
   align-items: center;
   text-align: center;
   position: absolute;
-  transition: all 0.5s;
+  transition: all 3s;
 }
 
 .skills-container .skill-card:nth-child(1) {
@@ -184,9 +186,6 @@ nav {
 .skills-container .skill-card:nth-child(8) {
   transform: rotate(315deg) translateY(-250px) rotate(-315deg);
 }
-/* .skills-container .skill-card:nth-child(9) {
-  transform: rotate(360deg) translateY(-250px) rotate(-360deg);
-} */
 
 
 .section {

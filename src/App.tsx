@@ -27,7 +27,7 @@ import css from "./assets/css.png";
 import ts from "./assets/ts.png";
 import sql from "./assets/sql.png";
 import ProjectCard from "./ProjectCard";
-// import bash from "./assets/bash.png";
+import StackX from "./StackX";
 
 function App() {
   useLayoutEffect(() => {
@@ -35,18 +35,6 @@ function App() {
       duration: 200,
     });
   }, []);
-
-  // const [angle, setAngle] = useState(0);
-
-  // useEffect(() => {
-  //   const animationFrame = requestAnimationFrame(() => {
-  //     setAngle((prevAngle) => (prevAngle + 0.01) % (2 * Math.PI));
-  //   });
-
-  //   return () => cancelAnimationFrame(animationFrame);
-  // }, [angle]);
-
-
 
   const skills = [
     {
@@ -67,9 +55,6 @@ function App() {
     {
       icon: java,
     },
-    // {
-    //   icon: bash,
-    // },
     {
       icon: ts,
     },
@@ -109,13 +94,20 @@ function App() {
     
   ];
 
-  // const getPositionOnCircle = (index, total, radius) => {
-  //   const angle = (2 * Math.PI * index) / total;
-  //   return {
-  //     x: radius * Math.cos(angle),
-  //     y: radius * Math.sin(angle),
-  //   };
-  // };
+  const ee = [
+    {
+      title: "UBC Bachelor of Science",
+      subtitle: "Major: Computer Science",
+      period: "2018 - Present",
+      description: "I'm currently in my 4th year of my Computer Science degree at UBC Okanagan."
+    },
+    {
+      title: "Student Support Analyst I",
+      subtitle: "UBC IT",
+      period: "2022 - Present",
+      description: "I'm currently working as a Student Support Analyst I at UBC IT. I'm responsible for providing technical support to students on the UBC Okanagan campus."
+    },
+  ];
 
   const [showMore, setShowMore] = useState(false);
 
@@ -133,9 +125,6 @@ function App() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              {/* <Nav.Link className="tab" href="#about-me">
-                About Me
-              </Nav.Link> */}
               <Nav.Link className="tab" href="#skills">
                 Skills
               </Nav.Link>
@@ -170,20 +159,8 @@ function App() {
         </Container>
       </Navbar>
       <div id="intro" className="section">
-        <Writer />
+        <Writer text="Hey, I'm Jan :)" />
       </div>
-      {/* <div id="about-me" className="section">
-        <h2
-          data-aos="fade-down"
-          data-aos-duration="700"
-          data-aos-anchor="#about-me"
-        >
-          About Me
-        </h2>
-        <p className="center" data-aos="fade-right" data-aos-duration="1000">
-          Welcome to my personal page! I love being creative and a great way to do that is through programming! I'll be updating this frequently as my web development skills improve.
-        </p>
-      </div> */}
       <Container id="skills" className="section">
         <h2
           data-aos="zoom-in"
@@ -194,9 +171,10 @@ function App() {
         </h2>
         <h5 data-aos="zoom-in" data-aos-duration="1000">What I use. I'm constantly learning more too!</h5>
         <div className="skills-container">
-          {skills.map((skill) => (
+          {skills.map((skill, index) => (
             <div className="skill-card">
               <img
+                key={index}
                 src={skill.icon}
                 style={{ width: "50px", paddingBottom: "10px" }}
                 data-aos="zoom-in"
@@ -230,12 +208,12 @@ function App() {
         <h2 data-aos="fade-down" data-aos-duration="700" data-aos-anchor="#ee">
           Education and Experience
         </h2>
-        {/*TODO: Add more about education and experience*/}
-        <p className="center" data-aos="fade-right" data-aos-duration="1000">
-            I'm currently in my fourth-year of my Computer Science degree at UBC
-            Okanagan. I also work as the Student Support Analyst for UBC IT. I'm actively looking for an internship in a software development role for the summer!
-
-        </p>
+        {ee.slice().map((eeItem, index) => (
+          <StackX key={index} title={eeItem.title} subtitle={eeItem.subtitle} description={eeItem.description} period={eeItem.period}/>
+        ))}
+        {/* <button className="see-more-button" onClick={handleShowMore}>
+          {showMore ? "See Less" : "See More"}
+        </button> */}
       </Container>
     </div>
   );
