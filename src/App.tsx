@@ -128,10 +128,10 @@ function App() {
               <Nav.Link className="tab" href="#skills">
                 Skills
               </Nav.Link>
-              <Nav.Link className="tab" href="#projects">
+              <Nav.Link className="tab" href="#projects-anchor">
                 Projects
               </Nav.Link>
-              <Nav.Link className="tab" href="#ee">
+              <Nav.Link className="tab" href="#eeContainer">
                 Education and Experience
               </Nav.Link>
             </Nav>
@@ -184,8 +184,8 @@ function App() {
           ))}
         </div>
       </Container>
-      <Container id="projects" className="section" data-aos="fade-down">
-        <h2>Projects</h2>
+      <Container id="projects" className="section" data-aos="fade-down" style={{paddingTop: "500px"}}>
+        <h2 id="projects-anchor">Projects</h2>
         <h5 className="center" data-aos="fade-right" data-aos-duration="1000">Find even more things I've done on my GitHub!</h5>
         <div className="projects-container" data-aos="flip-up">
           {projects
@@ -205,7 +205,7 @@ function App() {
         </button>
       </Container>
       <Container id="ee" className="section">
-        <h2 data-aos="fade-down" data-aos-duration="700" data-aos-anchor="#ee">
+        <h2 data-aos="fade-down" data-aos-duration="700" data-aos-anchor="#ee" id="eeContainer">
           Education and Experience
         </h2>
         {ee.slice().map((eeItem, index) => (
