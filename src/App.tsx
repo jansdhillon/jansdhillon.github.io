@@ -1,16 +1,10 @@
-import { useState, useRef, useEffect, useLayoutEffect } from "react";
+import { useState, useLayoutEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import autoAnimate from "@formkit/auto-animate";
 import "./App.css";
-import Sound, { ReactSoundProps } from "react-sound";
 import {
-  Button,
-  Stack,
   Container,
   Nav,
   Navbar,
-  NavDropdown,
-  Card,
 } from "react-bootstrap";
 import "animate.css/animate.min.css";
 import AOS from "aos";

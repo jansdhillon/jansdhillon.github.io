@@ -1,5 +1,5 @@
 import React, {useLayoutEffect} from 'react';
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import AOS from "aos";
 
 
@@ -57,7 +57,7 @@ const Box = styled.div`
 const StackX: React.FC<StackProps> = ({title, subtitle, description, period}) => {
     useLayoutEffect(() => {
         AOS.init({
-          duration: 500,
+          duration: 1000,
         });
       }, []);
 
