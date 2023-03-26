@@ -91,16 +91,16 @@ function App() {
 
   const ee = [
     {
-      title: "UBC Bachelor of Science",
-      subtitle: "Major: Computer Science",
-      period: "2018 - Present",
-      description: "I'm currently in my 4th year of my Computer Science degree at UBC Okanagan."
-    },
-    {
       title: "Student Support Analyst I",
       subtitle: "UBC IT",
       period: "2022 - Present",
-      description: "I'm currently working as a Student Support Analyst I at UBC IT. I'm responsible for providing technical support to students on the UBC Okanagan campus."
+      description: "I'm currently working as a Student Support Analyst I at UBC IT. I'm responsible for providing technical support to students on the UBC Okanagan campus. I've learned a lot about how users understand their computers and I've gained a lot of experience solving problems on the fly."
+    },
+    {
+      title: "UBC Bachelor of Science",
+      subtitle: "Major: Computer Science",
+      period: "2018 - Present",
+      description: "I'm currently in my 4th year of my Computer Science degree at UBC Okanagan. While I'm currently not in any classes (because I'm doing my co-op), I'm eager to eventually continue learning and complete my Caspstone degree project."
     },
   ];
 
@@ -203,6 +203,7 @@ function App() {
         <h2 data-aos="fade-down" data-aos-duration="700" data-aos-anchor="#ee" id="eeContainer">
           Education and Experience
         </h2>
+        <h5 className="center" data-aos="fade-right" data-aos-duration="1000" style={{marginBottom: "20px"}}>I'm currently looking for a summer internship!</h5>
         {ee.slice().map((eeItem, index) => (
           <StackX key={index} title={eeItem.title} subtitle={eeItem.subtitle} description={eeItem.description} period={eeItem.period}/>
         ))}
