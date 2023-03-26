@@ -10,6 +10,7 @@ import "animate.css/animate.min.css";
 import AOS from "aos";
 import React from "react";
 import Writer from "./Writer";
+// import github from "./assets/github.png";
 import github from "./assets/github.png";
 import linkedin from "./assets/linkedin.png";
 import python from "./assets/python.png";
@@ -172,7 +173,7 @@ function App() {
                 src={skill.icon}
                 style={{ width: "50px", paddingBottom: "10px" }}
                 data-aos="zoom-in"
-                data-aos-duration="1500"
+                data-aos-delay={`${index * 100}`}
               />
             </div>
           ))}
