@@ -1,18 +1,9 @@
 import { useState, useLayoutEffect } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import {
-  Container,
-  Nav,
-  Navbar,
-} from "react-bootstrap";
 import "animate.css/animate.min.css";
 import AOS from "aos";
 import React from "react";
 import Writer from "./Writer";
-// import github from "./assets/github.png";
-import github from "./assets/github.png";
-import linkedin from "./assets/linkedin.png";
 import python from "./assets/python.png";
 import java from "./assets/java.png";
 import javascript from "./assets/js.png";
@@ -24,6 +15,7 @@ import sql from "./assets/sql.png";
 import ProjectCard from "./ProjectCard";
 import StackX from "./StackX";
 import './input.css';
+import Navbar from "./Navbar";
 
 
 function App() {
@@ -32,6 +24,9 @@ function App() {
       duration: 200,
     });
   }, []);
+
+
+
 
   const skills = [
     {
@@ -114,8 +109,15 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar expand="lg" fixed="top">
-        <Container>
+      <Navbar brand={{
+        name: "Jan-Yaeger Dhillon",
+        href: "#intro",
+      }} links={[{name:"Skills", href:"#skills"}, 
+      {name:"Projects", href:"#projects-anchor"},
+      {name:"Education and Experience", href:"#eeContainer"},
+      ]}/>
+      {/* <Navbar expand="lg" fixed="top">
+        <div>
           <Navbar.Brand className="tab" href="#intro">
             Jan-Yaeger Dhillon
           </Navbar.Brand>
@@ -128,37 +130,18 @@ function App() {
               <Nav.Link className="tab" href="#projects-anchor">
                 Projects
               </Nav.Link>
-              <Nav.Link className="tab" href="#eeContainer">
+              <Nav.Link className="tab" href="#eeSection">
                 Education and Experience
               </Nav.Link>
             </Nav>
-          </Navbar.Collapse>
-          <span>
-            <a href="https://www.github.com/jansdhillon" target={"_blank"}>
-              <img
-                src={github}
-                className="icon"
-                alt="GitHub"
-                width="50"
-                height="50"
-              />
-            </a>
-            <a href="https://www.linkedin.com/in/jan-yaeger-dhillon-572674239/" target={"_blank"}>
-              <img
-                src={linkedin}
-                className="icon"
-                alt="LinkedIn"
-                width="50"
-                height="50"
-              />
-            </a>
-          </span>
-        </Container>
-      </Navbar>
+          </Navbar.Collapse> */}
+          
+        {/* </div>
+      </Navbar> */}
       <div id="intro" className="section">
         <Writer text="Hey, I'm Jan :)" />
       </div>
-      <Container id="skills" className="section">
+      <div id="skills" className="section">
         <h2
           data-aos="zoom-in"
           data-aos-duration="1000"
@@ -180,8 +163,8 @@ function App() {
             </div>
           ))}
         </div>
-      </Container>
-      <Container id="projects" className="section" data-aos="fade-down" style={{paddingTop: "500px"}}>
+      </div>
+      <div id="projects" className="section" data-aos="fade-down" style={{paddingTop: "500px"}}>
         <h2 id="projects-anchor">Projects</h2>
         <h5 className="center" data-aos="fade-right" data-aos-duration="1000">Find even more things I've done on my GitHub!</h5>
         <div className="projects-container" data-aos="flip-up">
@@ -200,8 +183,8 @@ function App() {
         <button className="see-more-button" onClick={handleShowMore}>
           {showMore ? "See Less" : "See More"}
         </button>
-      </Container>
-      <Container id="ee" className="section">
+      </div>
+      <div id="ee" className="section">
         <h2 data-aos="fade-down" data-aos-duration="700" data-aos-anchor="#ee" id="eeContainer">
           Education and Experience
         </h2>
@@ -211,7 +194,7 @@ function App() {
         {/* <button className="see-more-button" onClick={handleShowMore}>
           {showMore ? "See Less" : "See More"}
         </button> */}
-      </Container>
+      </div>
     </div>
   );
 }
