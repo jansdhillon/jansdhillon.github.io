@@ -23,6 +23,8 @@ import ts from "./assets/ts.png";
 import sql from "./assets/sql.png";
 import ProjectCard from "./ProjectCard";
 import StackX from "./StackX";
+import './input.css';
+
 
 function App() {
   useLayoutEffect(() => {
