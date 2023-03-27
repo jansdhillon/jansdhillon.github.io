@@ -49,7 +49,7 @@ const Box = styled.div`
   flex-direction: column;
   width: 500px;
   height: 300px;
-  background-color: #ffffff0f;;
+  background-color: #ffffff0f;
   margin-bottom: 8px;
   transition: all 0.3s ease;
 `;

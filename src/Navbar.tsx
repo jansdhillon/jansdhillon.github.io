@@ -1,12 +1,12 @@
 import React, {useState} from "react";
 import styled from "styled-components";
-import github from "./assets/github.png";
-import linkedin from "./assets/linkedin.png";
+
 
 
 type Link = {
     name: string;
     href: string;
+    src?: string;
 }
 
 
@@ -14,12 +14,6 @@ type NavbarProps = {
     links: Link[];
     brand: Link;
     icons: Link[];
-      
-    // icons: {
-    //     map(arg0: (icon: any, index: any) => JSX.Element): React.ReactNode;
-    //     src: string;
-    //     link: string;
-    // } | null;
 }
 
 const NavBarBody = styled.div`
@@ -64,7 +58,7 @@ const Link = styled.a`
 `;
 
 const Icon = styled.a`
-    align-
+    align-content: center;
 `;
 
 const IconImage = styled.img`
@@ -73,8 +67,6 @@ const IconImage = styled.img`
     padding: 10px;
 `;
     
-
-
 
 const Navbar: React.FC<NavbarProps> = ({brand, links, icons}) => {
 
@@ -86,33 +78,15 @@ const Navbar: React.FC<NavbarProps> = ({brand, links, icons}) => {
                     {link.name}
                 </Link>
             ))}
-            <span>
-                <>
-                {icons.map((icon, index) => {
-                    <Icon href={icon.href} target={"_blank"}>
-                        <IconImage
-                            src={icon.href}
-                            className="icon"
-                            alt={icon.name}
-                        />
+            <>
+            {icons.map((icon, index) => {
+                return (
+                    <Icon href={icon.href} target={"_blank"} key={index}>
+                        <IconImage src={icon.src} className="icon" alt={icon.name}/>
                     </Icon>
+                );
                 })}
-                </>
-            <Icon href="https://www.github.com/jansdhillon" target={"_blank"}>
-              <IconImage
-                src={github}
-                className="icon"
-                alt="GitHub"
-              />
-            </Icon>
-            <Icon href="https://www.linkedin.com/in/jan-yaeger-dhillon-572674239/" target={"_blank"}>
-              <IconImage
-                src={linkedin}
-                className="icon"
-                alt="LinkedIn"
-              />
-            </Icon>
-          </span>
+            </>
 
         </NavBarBody>
     );

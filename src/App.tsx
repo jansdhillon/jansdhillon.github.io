@@ -12,9 +12,10 @@ import html from "./assets/html.png";
 import css from "./assets/css.png";
 import ts from "./assets/ts.png";
 import sql from "./assets/sql.png";
+import github from "./assets/github.png";
+import linkedin from "./assets/linkedin.png";
 import ProjectCard from "./ProjectCard";
 import StackX from "./StackX";
-import './input.css';
 import Navbar from "./Navbar";
 
 
@@ -112,7 +113,7 @@ function App() {
       <Navbar links={[{name:"Skills", href:"#skills"}, 
       {name:"Projects", href:"#projects-anchor"},
       {name:"Education and Experience", href:"#eeContainer"}
-      ]} brand={{name:"Jan-Yaeger Dhillon", href:"#intro"}} icons={[{name: "GitHub", href:"https://github.com/jansdhillon"}, {name:"LinkedIn", href: "https://www.linkedin.com/in/jan-yaeger-dhillon-572674239/"}]}/>
+      ]} brand={{name:"Jan-Yaeger Dhillon", href:"#intro"}} icons={[{name: "GitHub", href:"https://github.com/jansdhillon", src:github}, {name:"LinkedIn", href: "https://www.linkedin.com/in/jan-yaeger-dhillon-572674239/", src: linkedin}]}/>
       <div id="intro" className="section">
         <Writer text="Hey, I'm Jan :)" />
       </div>
@@ -131,7 +132,7 @@ function App() {
               <img
                 key={index}
                 src={skill.icon}
-                style={{ width: "50px", paddingBottom: "10px" }}
+                style={{ width: "50px", marginBottom: "7px", alignContent: "center" }}
                 data-aos="zoom-in"
                 data-aos-delay={`${index * 100}`}
               />
@@ -160,15 +161,13 @@ function App() {
         </button>
       </div>
       <div id="ee" className="section">
-        <h2 data-aos="fade-down" data-aos-duration="700" data-aos-anchor="#ee" id="eeContainer">
+        <h2 data-aos="fade-down" data-aos-duration="700" data-aos-anchor="#ee" id="eeContainer" style={{paddingBottom: "5px"}}>
           Education and Experience
         </h2>
+        <h5 className="center" data-aos="fade-right" data-aos-duration="1000" style={{marginBottom: "20px"}}>I'm currently looking for a summer internship!</h5>
         {ee.slice().map((eeItem, index) => (
           <StackX key={index} title={eeItem.title} subtitle={eeItem.subtitle} description={eeItem.description} period={eeItem.period}/>
         ))}
-        {/* <button className="see-more-button" onClick={handleShowMore}>
-          {showMore ? "See Less" : "See More"}
-        </button> */}
       </div>
     </div>
   );

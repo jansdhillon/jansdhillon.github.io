@@ -45,6 +45,7 @@ a {
   font-size: 3rem;
   margin-bottom: 1rem;
   justify-content: center;
+  align-items: center;
 }
 
 .section p {
