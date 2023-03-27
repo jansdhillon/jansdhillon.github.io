@@ -109,35 +109,10 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar brand={{
-        name: "Jan-Yaeger Dhillon",
-        href: "#intro",
-      }} links={[{name:"Skills", href:"#skills"}, 
+      <Navbar links={[{name:"Skills", href:"#skills"}, 
       {name:"Projects", href:"#projects-anchor"},
-      {name:"Education and Experience", href:"#eeContainer"},
-      ]}/>
-      {/* <Navbar expand="lg" fixed="top">
-        <div>
-          <Navbar.Brand className="tab" href="#intro">
-            Jan-Yaeger Dhillon
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link className="tab" href="#skills">
-                Skills
-              </Nav.Link>
-              <Nav.Link className="tab" href="#projects-anchor">
-                Projects
-              </Nav.Link>
-              <Nav.Link className="tab" href="#eeSection">
-                Education and Experience
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse> */}
-          
-        {/* </div>
-      </Navbar> */}
+      {name:"Education and Experience", href:"#eeContainer"}
+      ]} brand={{name:"Jan-Yaeger Dhillon", href:"#intro"}} icons={[{name: "GitHub", href:"https://github.com/jansdhillon"}, {name:"LinkedIn", href: "https://www.linkedin.com/in/jan-yaeger-dhillon-572674239/"}]}/>
       <div id="intro" className="section">
         <Writer text="Hey, I'm Jan :)" />
       </div>

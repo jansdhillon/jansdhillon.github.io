@@ -4,15 +4,16 @@ import github from "./assets/github.png";
 import linkedin from "./assets/linkedin.png";
 
 
+type Link = {
+    name: string;
+    href: string;
+}
+
+
 type NavbarProps = {
-    brand: {
-        name: string;
-        href: string;
-    };
-    links : { 
-        name: string;
-        href: string;
-    }[];
+    links: Link[];
+    brand: Link;
+    icons: Link[];
       
     // icons: {
     //     map(arg0: (icon: any, index: any) => JSX.Element): React.ReactNode;
@@ -22,73 +23,60 @@ type NavbarProps = {
 }
 
 const NavBarBody = styled.div`
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
-    flex-wrap: nowrap;
-    background-image: linear-gradient(0deg, #2c92fe 0%, #66a2fc 50%);
-    width: 100%;
-    top: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(0deg, #2c92fe 0%, #66a2fc 50%);
     z-index: 100;
-    height: 7.5vh;
     `;
 
 const Brand = styled.a`
-
+    display: flex;
+    align-items: center;
+    content-align: center;
     font-weight: 500;
     font-size: 1.5rem;
     color: white;
-    margin-left: 10px;
     margin-right: 10px;
     text-decoration: none;
+    margin-bottom: 5px;
+
 `;
 
 const Link = styled.a`
-    margin: 0 10px;
+    display: flex;
+    margin: 0 1rem;
+    align-items: center;
+    content-align: center;
     font-weight: 300;
     font-size: 1.3rem;
     color: white;
     text-decoration: none;
-    a:hover, a:focus {
-      color: #b1d8fe;
-    };
+    &:hover {
+        color: #b1d8fe;
+      };
+    font-weight: 400;
 `;
 
 const Icon = styled.a`
-    maring-left: 10px;
+    align-
+`;
+
+const IconImage = styled.img`
+    width: 30px;
+    margin: 10px;
+    padding: 10px;
 `;
     
 
 
 
-const Navbar: React.FC<NavbarProps> = ({brand, links}) => {
-    const [acitve, setActive] = useState(false);
-    const [activeLink, setActiveLink] = useState(0);
-
-    const handleClick = (index: number) => {
-        setActiveLink(index);
-    }
-
-    // <div>
-    // <Navbar.Brand className="tab" href="#intro">
-    //   Jan-Yaeger Dhillon
-    // </Navbar.Brand>
-    // <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    // <Navbar.Collapse id="basic-navbar-nav">
-    //   <Nav className="me-auto">
-    //     <Nav.Link className="tab" href="#skills">
-    //       Skills
-    //     </Nav.Link>
-    //     <Nav.Link className="tab" href="#projects-anchor">
-    //       Projects
-    //     </Nav.Link>
-    //     <Nav.Link className="tab" href="#eeSection">
-    //       Education and Experience
-    //     </Nav.Link>
-    //   </Nav>
-    // </Navbar.Collapse> */}
+const Navbar: React.FC<NavbarProps> = ({brand, links, icons}) => {
 
     return (
         <NavBarBody>
@@ -99,22 +87,29 @@ const Navbar: React.FC<NavbarProps> = ({brand, links}) => {
                 </Link>
             ))}
             <span>
+                <>
+                {icons.map((icon, index) => {
+                    <Icon href={icon.href} target={"_blank"}>
+                        <IconImage
+                            src={icon.href}
+                            className="icon"
+                            alt={icon.name}
+                        />
+                    </Icon>
+                })}
+                </>
             <Icon href="https://www.github.com/jansdhillon" target={"_blank"}>
-              <img
+              <IconImage
                 src={github}
                 className="icon"
                 alt="GitHub"
-                width="50"
-                height="50"
               />
             </Icon>
             <Icon href="https://www.linkedin.com/in/jan-yaeger-dhillon-572674239/" target={"_blank"}>
-              <img
+              <IconImage
                 src={linkedin}
                 className="icon"
                 alt="LinkedIn"
-                width="50"
-                height="50"
               />
             </Icon>
           </span>
