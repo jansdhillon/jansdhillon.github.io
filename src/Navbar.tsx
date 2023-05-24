@@ -26,13 +26,12 @@ const NavBarBody = styled.div`
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(0deg, #2c92fe 0%, #66a2fc 50%);
-    z-index: 100;
+    z-index: 1;
     `;
 
 const Brand = styled.a`
     display: flex;
     align-items: center;
-    content-align: center;
     font-weight: 500;
     font-size: 1.5rem;
     color: white;
@@ -46,7 +45,6 @@ const Link = styled.a`
     display: flex;
     margin: 0 1rem;
     align-items: center;
-    content-align: center;
     font-weight: 300;
     font-size: 1.3rem;
     color: white;
