@@ -27,7 +27,7 @@ const DescriptionText = styled.div`
 align-items: center;
 text-align: center;
 font-size: 1.1rem;
-padding: 10px;
+padding-bottom: 10px;
 `;
 
 const PeriodText = styled.p`
@@ -50,8 +50,9 @@ const Box = styled.div`
   width: 500px;
   height: 300px;
   background-color: #ffffff0f;;
-  margin-bottom: 8px;
+  padding: 20px;
   transition: all 0.3s ease;
+  margin-bottom: 20px;
 `;
 
 const StackX: React.FC<StackProps> = ({title, subtitle, description, period}) => {

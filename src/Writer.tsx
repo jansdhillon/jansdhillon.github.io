@@ -1,6 +1,6 @@
 import Typewriter from "typewriter-effect";
 import React from 'react';
-import "/Users/imigh/Coding/Jan's Portfolio/jan-portfolio/src/Writer.css";
+import "./Writer.css";
 
 type IWriterProps = {
   text: string;

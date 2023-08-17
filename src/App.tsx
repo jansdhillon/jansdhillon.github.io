@@ -61,6 +61,12 @@ function App() {
 
   const projects = [
     {
+      title: "Salmon Arm Painting",
+      description: "A concept website made for a friend's business",
+      details: "This was a conceptual company site I made for a friend who was thinking of starting a painting business in the Okanagan. This was a really good learning experience for me as I got really valuable hands-on experience with Tailwind CSS, Next.js, and Express.js. ",
+      link: "https://github.com/jansdhillon/salmon-arm-painting",
+    },
+    {
       title: "NOVA Emotional Support ChatBot",
       description: "A chatbot designed in a group software engineering project.",
       details: "This was the class project for my Software Engineering class. My team and I used JAVA to create a chatbot that detected their emotions and acted as a sort of emotional support. We coded it mainly in JAVA, utilized several REST APIs and tested it with JUnit to achieve our goal. Looking back at this project now, I have honestly grown so much as a developer; however, it was a good starting point and gave me great hands-on experience developing software as a group and implementing software development life cycle processes. I've even considered going back and cleaning it up but in all honesty that would be kind of a waste considering non-AI chatbots are completely obsolete now. I mean, just take a look at my Dreamer project!",
@@ -89,20 +95,27 @@ function App() {
     
   ];
 
-  const ee = [
+  const exp = [
+    {
+      title: "Software Developer Co-Op",
+      subtitle: "Armilla Technology",
+      period: "May 2023 - Aug 2023",
+      description: "I'm currently working at Armilla Technology, a sports tech startup, as a Software Developer Co-op. This has been a great learning experience as I've gotten hands on experience with things like managing instances on AWS, web development, and mobile app development."
+    },
     {
       title: "Student Support Analyst I",
       subtitle: "UBC IT",
-      period: "2022 - Present",
-      description: "I'm currently working as a Student Support Analyst I at UBC IT. I'm responsible for providing technical support to students on the UBC Okanagan campus. I've learned a lot about how users understand their computers and I've gained a lot of experience solving problems on the fly."
-    },
-    {
-      title: "UBC Bachelor of Science",
-      subtitle: "Major: Computer Science",
-      period: "2018 - Present",
-      description: "I'm currently in my 4th year of my Computer Science degree at UBC Okanagan. While I'm currently not in any classes (because I'm doing my co-op), I'm eager to eventually continue learning and complete my Caspstone degree project."
+      period: "Aug 2022 - Apr 2023",
+      description: "I was the Student Support Analyst I at UBC IT. I was responsible for providing technical support to students on the UBC Okanagan campus. I learned a lot about how users understand their computers and I've gained a lot of experience solving problems on the fly. I even got the chance to contribute to the script and training of the Student Support Chatbot."
     },
   ];
+
+  const ed = [{
+    title: "UBC Bachelor of Science",
+    subtitle: "Major: Computer Science",
+    period: "Sept 2018 - Present",
+    description: "I'm going into my fifth and final year of my degree at UBC! After working for a year, it will be interesting to go back to school and see how my perspective has changed. I'm excited to learn more about AI and Machine Learning and I'm hoping to take some courses in that area. I'm also looking forward to taking some more advanced courses in Computer Science."
+  },]
 
   const [showMore, setShowMore] = useState(false);
 
@@ -126,8 +139,11 @@ function App() {
               <Nav.Link className="tab" href="#projects-anchor">
                 Projects
               </Nav.Link>
-              <Nav.Link className="tab" href="#eeContainer">
-                Education and Experience
+              <Nav.Link className="tab" href="#ed">
+                Education
+              </Nav.Link>
+              <Nav.Link className="tab" href="#exp">
+                Experience
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
@@ -199,18 +215,24 @@ function App() {
           {showMore ? "See Less" : "See More"}
         </button>
       </Container>
-      <Container id="ee" className="section">
-        <h2 data-aos="fade-down" data-aos-duration="700" data-aos-anchor="#ee" id="eeContainer">
-          Education and Experience
+      <Container id="exp" className="section">
+        <h2 data-aos="fade-down" data-aos-duration="700" data-aos-anchor="#exp" id="expContainer">
+          Work Experience
         </h2>
-        <h5 className="center" data-aos="fade-right" data-aos-duration="1000" style={{marginBottom: "20px"}}>I'm currently looking for a summer internship!</h5>
-        {ee.slice().map((eeItem, index) => (
-          <StackX key={index} title={eeItem.title} subtitle={eeItem.subtitle} description={eeItem.description} period={eeItem.period}/>
+        {exp.slice().map((expItem, index) => (
+          <StackX key={index} title={expItem.title} subtitle={expItem.subtitle} description={expItem.description} period={expItem.period}/>
         ))}
-        {/* <button className="see-more-button" onClick={handleShowMore}>
-          {showMore ? "See Less" : "See More"}
-        </button> */}
       </Container>
+      <Container id="ed" className="section">
+        <h2 data-aos="fade-down" data-aos-duration="700" data-aos-anchor="#ed" id="edContainer">
+          Education
+        </h2>
+        {ed.slice().map((edItem, index) => (
+          <StackX key={index} title={edItem.title} subtitle={edItem.subtitle} description={edItem.description} period={edItem.period}/>
+        ))}
+      </Container>
+      
+      
     </div>
   );
 }
