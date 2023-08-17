@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import "./ProjectCard.css";
-import github from "./assets/github.png";
+import githubImg from "./assets/github.png";
+import linkImg from "./assets/link.png";
 
 
 type ProjectCardProps = {
   title: string;
   description: string;
   details: string;
-  link: string;
+  github?: string;
+  link?: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, details, link }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, details, github, link }) => {
   const [expanded, setExpanded] = useState(false);
   const [showMore, setShowMore] = useState(false);
 
@@ -26,7 +28,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, details, 
       <p>{showMore?  "" : description}</p>
       {expanded && <p className="project-details">{details}</p>}
       <button onClick={handleClick}>{showMore? "Hide" : "Read more"}</button>
-      <a href={link} target={"_blank"}><img src={github} alt={title} style={{width: "30px", margin: "10px", paddingBottom: "5px"}}/></a>
+      {github? <a href={github} target={"_blank"}><img src={githubImg} alt={title} style={{width: "30px", margin: "10px", paddingBottom: "5px"}}/></a> : ""}
+      {link? <a href={link} target={"_blank"}><img src={linkImg} alt={title} style={{width: "30px", margin: "10px", paddingBottom: "5px"}}/></a> : ""}
     </div>
   );
 };
