@@ -81,6 +81,9 @@ module.exports = {
         'fadeOut': 'fadeOut 1s ease-out 100ms forwards',
         'spin-slow': 'spin 3s linear infinite',
       },
+      transitionDelay: {
+        '2500': '2500ms',
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],

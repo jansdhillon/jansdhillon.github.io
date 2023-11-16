@@ -48,7 +48,7 @@ const NavBar = () => {
   const scroll = useScroll();
 
   return (
-    <div className="sticky top-0 bg-gradient-to-b from-secondary to-background z-50 flex flex-column justify-between min-w-full">
+    <div className="sticky top-0 bg-gradient-to-b from-secondary to-background z-50 flex flex-column justify-between min-w-full opacity-0 animate-fadeIn delay-2500 transition-opacity">
       <div className="p-5">
         <NavigationMenu>
           <NavigationMenuList>
