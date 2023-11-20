@@ -9,7 +9,7 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   return (
     <>
-
+{/* 
     <motion.div
     initial={{ opacity: 0 }}
     animate={{ opacity: 1, transition: { duration: 1 } }}
@@ -20,9 +20,9 @@ export default function Layout({ children }: LayoutProps) {
       damping: 150,
     }}
     className="bg-background min-w-full font-inter"
-  >
+  > */}
         <main>{children}</main>
-    </motion.div>
+    {/* </motion.div> */}
     </>
   );
 }
