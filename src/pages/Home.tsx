@@ -1,83 +1,17 @@
-import Typewriter from "typewriter-effect";
-import Layout from "@/components/layout";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
-import { BellRing, Check } from "lucide-react";
-import { Button } from "@/components/ui/button";
-
-
-export default function Home() {
-
-  const notifications = [
-    {
-      title: "Your call has been confirmed.",
-      description: "1 hour ago",
-    },
-    {
-      title: "You have a new message!",
-      description: "1 hour ago",
-    },
-    {
-      title: "Your subscription is expiring soon!",
-      description: "2 hours ago",
-    },
-  ]
-
-
+const Home = () => {
   return (
-    <Layout>
-      <div className="grid grid-cols-2  ">
-        <div className=" grid grid-cols-1 grid-rows-2 ">
-          <div className="text-5xl items-end jusitfy-items-center w-full h-full">Hey, I'm Jan-Yaeger</div>
-          <div className="text-2xl break-words items-start">
-            I'm a student at UBC Okanagan who loves to code and learn new things
-          </div>  
-        </div>
-        <div className=" justify-center grid grid-rows-2 gap-0 card item-center">
-          <Card >
-            <CardHeader>
-              <CardTitle>Notifications</CardTitle>
-              <CardDescription>You have 3 unread messages.</CardDescription>
-            </CardHeader>
-            <CardContent className="grid gap-4">
-              <div className=" flex items-center space-x-4 rounded-md border p-4">
-                <BellRing />
-                <div className="flex-1 space-y-1">
-                  <p className="text-sm font-medium leading-none">
-                    Push Notifications
-                  </p>
-                  <p className="text-sm text-muted-foreground">
-                    Send notifications to device.
-                  </p>
-                </div>
-              </div>
-              <div>
-                {notifications.map((notification, index) => (
-                  <div
-                    key={index}
-                    className="mb-4 grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0"
-                  >
-                    <span className="flex h-2 w-2 translate-y-1 rounded-full bg-sky-500" />
-                    <div className="space-y-1">
-                      <p className="text-sm font-medium leading-none">
-                        {notification.title}
-                      </p>
-                      <p className="text-sm text-muted-foreground">
-                        {notification.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-            <CardFooter>
-              <Button className="w-full">
-                <Check className="mr-2 h-4 w-4" /> Mark all as read
-              </Button>
-            </CardFooter>
-          </Card>
-        </div>
+    <div className=" grid grid-cols-2 h-screen items-center  p-48 mx-auto">
+      <div className="grid grid-rows-3 h-full justify-self-end gap-10">
+        <div className="bg-red-200 w-64 h-full rounded-xl grid items-center justify-items-center">Jan-Yaeger Dhillon</div>
+        <div className="bg-blue-200 h-full w-64 rounded-xl grid items-center justify-items-center"> Education</div>
       </div>
-    </Layout>
+      <div className="grid grid-rows-3 h-full gap-10 justify-self-start">
+        <div className="bg-green-200 h-full w-64 rounded-xl grid items-center justify-items-center">Project</div>
+        <div className="bg-green-200 h-full w-64 rounded-xl grid items-center justify-items-center">Project</div>
+        <div className="bg-green-200 h-full w-64 rounded-xl  grid items-center justify-items-center">Project</div>
+      </div>
+    </div>
   );
-}
+};
+
+export default Home;
