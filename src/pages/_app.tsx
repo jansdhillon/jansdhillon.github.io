@@ -4,12 +4,10 @@ import type { AppProps } from "next/app";
 import type { ReactElement, ReactNode } from "react";
 import type { NextPage } from "next";
 import { useState, useEffect } from "react";
-import PageLoader from "next/dist/client/page-loader";
-import { Router } from "next/router";
-import LoadingPage from "@/components/LoadingPage";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Head from "next/head";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -30,35 +28,26 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
     const start = () => {
       setLoading(true);
-      AOS.refresh(); 
+      AOS.refresh();
     };
 
     const end = () => {
       setLoading(false);
-      AOS.refresh(); 
-    };
-
-    Router.events.on("routeChangeStart", start);
-    Router.events.on("routeChangeComplete", end);
-    Router.events.on("routeChangeError", end);
-
-    return () => {
-      Router.events.off("routeChangeStart", start);
-      Router.events.off("routeChangeComplete", end);
-      Router.events.off("routeChangeError", end);
+      AOS.refresh();
     };
   }, []);
 
   return getLayout(
     <ThemeProvider
-    attribute="class"
-    defaultTheme="system"
-    enableSystem
-    disableTransitionOnChange
-  >
-      {/* <NavBar /> */}
-     
-        {loading ? <LoadingPage /> : <Component {...pageProps} />}
+      attribute="class"
+      defaultTheme="light"
+      enableSystem
+      disableTransitionOnChange
+    >
+      <Head>
+        <meta name="viewport" content="viewport-fit=cover" />
+      </Head>
+      <Component {...pageProps} />
     </ThemeProvider>
   );
 }
