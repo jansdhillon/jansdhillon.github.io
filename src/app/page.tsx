@@ -48,8 +48,8 @@ const IndexPage: NextPage = () => {
             </CardDescription>
           </CardHeader>
           <CardContent className="text-lg">
-            I'm in my last year of my Computer Science degree at UBC Okanagan.
-            I've been having a great time learning and have had the opoortunity
+            I&apos;m in my last year of my Computer Science degree at UBC Okanagan.
+            I&apos;ve been having a great time learning and have had the opoortunity
             to be part of some cool projects.
           </CardContent>
         </Card>
@@ -86,8 +86,8 @@ const IndexPage: NextPage = () => {
             </CardDescription>
           </CardHeader>
           <CardContent className="text-lg">
-            I'm in my last year of my Computer Science degree at UBC Okanagan.
-            I've been having a great time learning and have had the opoortunity
+            I&apos;m in my last year of my Computer Science degree at UBC Okanagan.
+            I&apos;ve been having a great time learning and have had the opoortunity
             to be part of some cool projects.
           </CardContent>
         </Card>
@@ -98,8 +98,8 @@ const IndexPage: NextPage = () => {
             <CardDescription></CardDescription>
           </CardHeader>
           <CardContent className="text-lg ">
-            I'm in my last year of my Computer Science degree at UBC Okanagan.
-            I've been having a great time learning and have had the opoortunity
+            I&apos;m in my last year of my Computer Science degree at UBC Okanagan.
+            I&apos;ve been having a great time learning and have had the opoortunity
             to be part of some cool projects.
           </CardContent>
         </Card>
