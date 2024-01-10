@@ -53,7 +53,7 @@ const IndexPage: NextPage = () => {
           </CardHeader>
 
           <CardContent className=" text-xl font-regular">
-            Hey, I'm Jan! I'm an aspiring software engineer who enjoys building
+            Hey, I&apos;m Jan! I&apos;m an aspiring software engineer who enjoys building
             and learning new things.
           </CardContent>
         </Card>
