@@ -29,26 +29,29 @@ const IndexPage: NextPage = () => {
 
   return (
     <div className="container p-10 flex flex-col h-screen w-full">
-      <div className="text-4xl font-bold bg-gradient-to-r from-orange-300  to-indigo-500 inline-block text-transparent bg-clip-text animate-gradient bg-300% text-center leading-loose py-2">
-        <Writer text="Hey, I'm Jan!" />
-      </div>
-      <div className="flex flex-row justify-center w-full py-2 gap-3">
-        <a href="https://www.github.com/jansdhillon">
-          <div className="flex flex-row gap-2 place-items-center">
-            <RxGithubLogo className="h-5 w-5 font-semibold" />
-            <p>jansdhillon</p>
-          </div>
-        </a>
-        <a href="https://www.x.com/JanDhillon">
-          <div className="flex flex-row gap-2 place-items-center">
-            <FaXTwitter className="h-5 w-5 font-semibold" /> <p>jandhillon</p>
-          </div>
-        </a>
-        <a href="https://www.instagram.com/jandhillon">
-          <div className="flex flex-row gap-2 place-items-center">
-            <FaInstagram className="h-5 w-5 font-semibold" /> <p>jandhillon</p>
-          </div>
-        </a>
+      <div className="flex flex-col justify-center">
+        <div className="  text-5xl font-bold bg-gradient-to-r from-orange-300  to-indigo-500 inline-block text-transparent bg-clip-text animate-gradient bg-300% text-center leading-loose min-h-[100px]">
+          <Writer text="Hey, I'm Jan!" />
+        </div>
+        <div className="flex flex-row justify-center w-full gap-3">
+          <a href="https://www.github.com/jansdhillon">
+            <div className="flex flex-row gap-2 place-items-center">
+              <RxGithubLogo className="h-5 w-5 font-semibold" />
+              <p>jansdhillon</p>
+            </div>
+          </a>
+          <a href="https://www.x.com/JanDhillon">
+            <div className="flex flex-row gap-2 place-items-center">
+              <FaXTwitter className="h-5 w-5 font-semibold" /> <p>jandhillon</p>
+            </div>
+          </a>
+          <a href="https://www.instagram.com/jandhillon">
+            <div className="flex flex-row gap-2 place-items-center">
+              <FaInstagram className="h-5 w-5 font-semibold" />{" "}
+              <p>jandhillon</p>
+            </div>
+          </a>
+        </div>
       </div>
 
       <div className="text-center text-lg py-7">
@@ -62,7 +65,11 @@ const IndexPage: NextPage = () => {
           title={"Education"}
           description={"School and shit"}
           items={[
-            { header: "University of British Columbia", sub: "Computer Science (BSc)", icon: FaXTwitter },
+            {
+              header: "University of British Columbia",
+              sub: "Computer Science (BSc)",
+              icon: FaXTwitter,
+            },
             { header: "h", sub: "t", icon: FaXTwitter },
             { header: "h", sub: "t", icon: FaXTwitter },
           ]}
@@ -80,12 +87,15 @@ const IndexPage: NextPage = () => {
           title={"Projects"}
           description={"School and shit"}
           items={[
-            { header: "obscurus", sub: "A cloud based face-blurring service", icon: FaXTwitter },
+            {
+              header: "obscurus",
+              sub: "A cloud based face-blurring service",
+              icon: FaXTwitter,
+            },
             { header: "recycling", sub: "", icon: FaXTwitter },
             { header: "h", sub: "t", icon: FaXTwitter },
           ]}
         />
-        
       </div>
     </div>
   );
