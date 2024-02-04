@@ -58,22 +58,35 @@ const IndexPage: NextPage = () => {
         Welcome to my page! I&apos;m an aspiring software engineer who enjoys
         building and learning new things.
       </div>
-      <Separator className="mt-5" />
+      <Separator className="" />
 
-      <div className="flex flex-row  gap-2  items-center justify-center [&>div]:w-full h-full ">
-        <CustomCard
-          title={"Education"}
-          description={"School and shit"}
-          items={[
-            {
-              header: "University of British Columbia",
-              sub: "Computer Science (BSc)",
-              icon: FaXTwitter,
-            },
-            { header: "h", sub: "t", icon: FaXTwitter },
-            { header: "h", sub: "t", icon: FaXTwitter },
-          ]}
-        />
+      <div className="flex flex-col md:flex-row gap-2  items-center justify-center [&>div]:w-full h-full ">
+        <Card className="">
+          <CardHeader className="pb-3">
+            <CardTitle>Education</CardTitle>
+            <CardDescription>2024</CardDescription>
+          </CardHeader>
+          <CardContent className="grid gap-1 items-center">
+            {/* {items.map((item) => {
+              return (
+                <>
+                  <Separator />
+                  <div className="-mx-2 flex items-start space-x-4 rounded-md p-2 transition-all hover:bg-accent hover:text-accent-foreground">
+                    <item.icon />
+                    <div className="space-y-1">
+                      <p className="text-sm font-medium leading-none">
+                        {item.header}
+                      </p>
+                      <p className="text-sm text-muted-foreground">
+                        {item.sub}
+                      </p>
+                    </div>
+                  </div>
+                </>
+              );
+            })} */}
+          </CardContent>
+        </Card>
         <CustomCard
           title={"Experience"}
           description={"Teams I've been a part of!"}
@@ -97,6 +110,7 @@ const IndexPage: NextPage = () => {
           ]}
         />
       </div>
+      <Separator className="" />
     </div>
   );
 };
