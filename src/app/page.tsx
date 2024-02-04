@@ -1,68 +1,91 @@
 "use client";
 
 import type { NextPage } from "next";
-import Image from "next/image";
+
 import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Github } from "lucide-react";
+import { BellIcon, Github } from "lucide-react";
 import { RxGithubLogo } from "react-icons/rx";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import Writer from "./Writer";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import { DemoNotifications } from "./cards/components/notifications";
+import { DemoContainer } from "./cards/page";
+import { EyeNoneIcon, PersonIcon } from "@radix-ui/react-icons";
+import { CustomCard } from "@/components/custom-card";
 
 const IndexPage: NextPage = () => {
   const [selectedId, setSelectedId] = useState(null);
 
   return (
-    <div className="grid grid-cols-1 justify-items-center items-center h-screen">
-      <h1 className="text-5xl font-bold pt-10 px-10 text-center leading-loose">
+    <div className="container p-10 flex flex-col h-screen w-full">
+      <div className="text-4xl font-bold bg-gradient-to-r from-orange-300  to-indigo-500 inline-block text-transparent bg-clip-text animate-gradient bg-300% text-center leading-loose py-2">
+        <Writer text="Hey, I'm Jan!" />
+      </div>
+      <div className="flex flex-row justify-center w-full py-2 gap-3">
+        <a href="https://www.github.com/jansdhillon">
+          <div className="flex flex-row gap-2 place-items-center">
+            <RxGithubLogo className="h-5 w-5 font-semibold" />
+            <p>jansdhillon</p>
+          </div>
+        </a>
+        <a href="https://www.x.com/JanDhillon">
+          <div className="flex flex-row gap-2 place-items-center">
+            <FaXTwitter className="h-5 w-5 font-semibold" /> <p>jandhillon</p>
+          </div>
+        </a>
+        <a href="https://www.instagram.com/jandhillon">
+          <div className="flex flex-row gap-2 place-items-center">
+            <FaInstagram className="h-5 w-5 font-semibold" /> <p>jandhillon</p>
+          </div>
+        </a>
+      </div>
+
+      <div className="text-center text-lg py-7">
+        Welcome to my page! I&apos;m an aspiring software engineer who enjoys
+        building and learning new things.
+      </div>
+      <Separator className="mt-5" />
+
+      <div className="flex flex-row  gap-2  items-center justify-center [&>div]:w-full h-full ">
+        <CustomCard
+          title={"Education"}
+          description={"School and shit"}
+          items={[
+            { header: "University of British Columbia", sub: "Computer Science (BSc)", icon: FaXTwitter },
+            { header: "h", sub: "t", icon: FaXTwitter },
+            { header: "h", sub: "t", icon: FaXTwitter },
+          ]}
+        />
+        <CustomCard
+          title={"Experience"}
+          description={"Teams I've been a part of!"}
+          items={[
+            { header: "h", sub: "t", icon: FaXTwitter },
+            { header: "h", sub: "t", icon: FaXTwitter },
+            { header: "h", sub: "t", icon: FaXTwitter },
+          ]}
+        />
+        <CustomCard
+          title={"Projects"}
+          description={"School and shit"}
+          items={[
+            { header: "obscurus", sub: "A cloud based face-blurring service", icon: FaXTwitter },
+            { header: "recycling", sub: "", icon: FaXTwitter },
+            { header: "h", sub: "t", icon: FaXTwitter },
+          ]}
+        />
         
-        <Writer text="Hey, I'm Jan!"/>
-        </h1>
-      <div className="flex flex-col gap-2 p-10 md:flex-row">
-        <Card>
-          <CardHeader className="justify-items-center">
-            <CardTitle>Projects</CardTitle>
-            <CardDescription className=" font-semibold py-5">
-              Welcome to my portfolio!
-            </CardDescription>
-          </CardHeader>
-          <CardContent className=" font-regular">
-            Hey, I&apos;m Jan! I&apos;m an aspiring software engineer who enjoys
-            building and learning new things.
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader>
-            <CardTitle>Experience</CardTitle>
-            <CardDescription className=" font-semibold py-5">
-              Welcome to my portfolio!
-            </CardDescription>
-          </CardHeader>
-          <CardContent className=" font-regular">
-            Hey, I&apos;m Jan! I&apos;m an aspiring software engineer who enjoys
-            building and learning new things.
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader>
-            <CardTitle>Education</CardTitle>
-            <CardDescription className=" font-semibold py-5">
-              Welcome to my portfolio!
-            </CardDescription>
-          </CardHeader>
-          <CardContent className=" font-regular">
-            Hey, I&apos;m Jan! I&apos;m an aspiring software engineer who enjoys
-            building and learning new things.
-          </CardContent>
-        </Card>
       </div>
     </div>
   );
