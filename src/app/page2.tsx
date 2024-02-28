@@ -24,7 +24,7 @@ const IndexPage: NextPage = () => {
       <div className="grid grid-rows-3 gap-4 ">
         <Card className=" rounded-xl grid items-center  bg-card border-2  border-accent bg-opacity-30 drop-shadow-md">
           <CardHeader className="flex flex-col">
-            <CardTitle className="text-5xl font-bold bg-gradient-to-r from-orange-300  to-indigo-500 inline-block text-transparent bg-clip-text animate-gradient bg-300%">
+            <CardTitle className="text-5xl font-bold bg-gradient-to-r from-orange-300  to-indigo-500 inline-block text-transparent bg-clip-text animate-gradient bg-300% ring-2 ring-accent">
               Jan-Yaeger Dhillon
             </CardTitle>
             <CardDescription className="text-2xl font-semibold py-5">

@@ -57,6 +57,10 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        "fadeIn": {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
+        },
         "accordion-down": {
           from: { height: 0 },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -78,6 +82,8 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "gradient": 'animated-gradient 15s ease infinite alternate',
+        'fadeIn': 'fadeIn 1s ease-out forwards visible',
+        
       },
     },
   },
