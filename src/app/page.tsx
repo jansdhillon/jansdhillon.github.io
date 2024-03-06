@@ -123,7 +123,7 @@ const Education = () => {
           <CardContent>
             Graduating from UBC Okanagan this spring, my journey in computer
             science has been marked by academic excellence and a strong
-            commitment to learning. I've taken courses ranging from software
+            commitment to learning. I&aposve taken courses ranging from software
             engineering to artificial intelligence, equipping myself with a
             broad skill set.
           </CardContent>
@@ -139,7 +139,7 @@ const Education = () => {
           <CardContent>
             Graduating from UBC Okanagan this spring, my journey in computer
             science has been marked by academic excellence and a strong
-            commitment to learning. I've taken courses ranging from software
+            commitment to learning. I&aposve taken courses ranging from software
             engineering to artificial intelligence, equipping myself with a
             broad skill set.
           </CardContent>
@@ -168,7 +168,7 @@ const Experience = () => {
             <CardDescription>My Professional Journey</CardDescription>
           </CardHeader>
           <CardContent>
-            I've had the privilege of working with several teams, contributing
+            I&aposve had the privilege of working with several teams, contributing
             to a variety of projects that span from web development to mobile
             app creation. Highlights of my career include an internship at a
             leading tech company and a leadership role in a startup, where I led
@@ -190,7 +190,7 @@ const Experience = () => {
             <CardDescription>My Professional Journey</CardDescription>
           </CardHeader>
           <CardContent>
-            I've had the privilege of working with several teams, contributing
+            I&aposve had the privilege of working with several teams, contributing
             to a variety of projects that span from web development to mobile
             app creation. Highlights of my career include an internship at a
             leading tech company and a leadership role in a startup, where I led
@@ -207,7 +207,7 @@ const Experience = () => {
             <CardDescription>My Professional Journey</CardDescription>
           </CardHeader>
           <CardContent>
-            I've had the privilege of working with several teams, contributing
+            I&aposve had the privilege of working with several teams, contributing
             to a variety of projects that span from web development to mobile
             app creation. Highlights of my career include an internship at a
             leading tech company and a leadership role in a startup, where I led
@@ -235,7 +235,7 @@ const Page = () => {
   return (
     <div className="flex flex-col mx-auto container   h-[100dvh] md:p-10 p-10">
       <div className="mr-auto pl-5 justify-start text-4xl min-w-full font-bold  text-left min-h-[78px] leading-loose bg-gradient-to-r from-orange-300  to-indigo-500 text-transparent bg-clip-text animate-gradient bg-300%">
-        <Writer text="Hey, I'm Jan!" />
+        <Writer text="Hey, I&aposm Jan!" />
       </div>
       <Separator className="bg-accent " />
       <Socials />
