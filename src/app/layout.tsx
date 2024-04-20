@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${GeistSans.className} bg-background`}>{children}</body>
+      <body className={`${GeistSans.className} bg-background flex flex-col mx-auto container   h-[100dvh] md:p-10 p-10`}>{children}</body>
     </html>
   )
 }
