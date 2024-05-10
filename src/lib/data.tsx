@@ -36,7 +36,7 @@ export const projects: Project[] = [
       <>
         A serverless platform that uses AWS services, Next.js, and TailwindCSS
         to facilitate seamless face blurring and fully confidential video
-        sharing. My degree/Capstone project, it's still a work-in-progress, but
+        sharing. My degree/Capstone project, it&apos;s still a work-in-progress, but
         you can check our design submission{" "}
         <Link href="https://youtu.be/bWNTSBAlCgQ" className="text-blue-400">
           here!

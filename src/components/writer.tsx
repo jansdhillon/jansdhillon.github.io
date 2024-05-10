@@ -5,7 +5,7 @@ const Writer = ({ text }: { text: string }) => {
   return (
     <Typewriter
       onInit={(typewriter) => {
-        typewriter.typeString(text).pauseFor(1000).changeDelay(25).start();
+        typewriter.typeString(text).pauseFor(200).changeDelay(25).start();
       }}
     />
   );

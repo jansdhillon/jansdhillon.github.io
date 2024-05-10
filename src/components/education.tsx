@@ -20,7 +20,7 @@ export const Education: React.FC = () => {
           <p>
             I will be graduating from UBC Okanagan this spring with a Bachelor
             of Science degree, and a specialization in Computer Science. Looking
-            back on my academic career, I'm grateful to have met the people and
+            back on my academic career, I&apos;m grateful to have met the people and
             learned the things that I did.
           </p>
         </div>
