@@ -6,6 +6,7 @@ import { GeistMono } from "geist/font/mono";
 import { Header } from "@/components/header";
 import { Separator } from "@/components/ui/separator";
 import { Socials } from "@/components/socials";
+import { ThemeProvider } from "@/components/ui/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,11 +22,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={`${GeistSans.className} bg-background flex flex-col mx-auto container   h-[100dvh] md:p-10 p-10`}
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="dark"
+        disableTransitionOnChange
       >
-        {children}
-      </body>
+        <body
+          className={`${GeistSans.className} bg-background flex flex-col`}
+        >
+          {children}
+        </body>
+      </ThemeProvider>
     </html>
   );
 }

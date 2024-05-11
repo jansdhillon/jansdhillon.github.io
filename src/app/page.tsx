@@ -16,16 +16,22 @@ import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
 import { ArrowBigLeft, ArrowBigRight } from "lucide-react";
 import { Landing } from "@/components/landing";
+import Home from "@/components/home";
+import { Nav } from "@/components/nav";
 
 const Page = () => (
-  <div className="flex flex-col justify-center h-full">
-    <Header />
-    <Socials />
-    <Separator className="my-2 bg-accent mx-auto" />
-    <div className="flex flex-col  gap-4 justify-center items-center ">
-      <Landing />
-    </div>
-  </div>
+  // <div className="flex flex-col justify-center h-full">
+  //   <Header />
+  //   <Socials />
+  //   <Separator className="my-2 bg-accent mx-auto" />
+  //   <div className="flex flex-col  gap-4 justify-center items-center ">
+  //     <Landing />
+  //   </div>
+  // </div>
+  <>
+    <Nav />
+    <Home />
+  </>
 );
 
 export default Page;

@@ -13,9 +13,6 @@ export type Project  = {
 }
 
 export type SectionProps = {
-  title: string;
-  emoji: string;
-  description: string;
   children?: ReactNode;
 }
 
