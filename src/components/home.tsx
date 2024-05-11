@@ -27,7 +27,7 @@ export default function Home() {
                   Software Engineer
                 </h2>
                 <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                  I'm a passionate frontend developer with a focus on building
+                  I&apos;m a passionate frontend developer with a focus on building
                   beautiful and user-friendly web applications.
                 </p>
               </div>
@@ -63,7 +63,7 @@ export default function Home() {
                     My Recent Work
                   </h2>
                   <p className="mx-auto max-w-[700px] text-muted-foregorund md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed ">
-                    Check out some of the projects I've worked on recently.
+                    Check out some of the projects I&apos;ve worked on recently.
                   </p>
                 </div>
                 <div className="grid w-full max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -156,7 +156,7 @@ export default function Home() {
                     My Expertise
                   </h2>
                   <p className="mx-auto max-w-[700px]  md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                    Here are some of the technologies and tools I'm proficient
+                    Here are some of the technologies and tools I&apos;m proficient
                     with.
                   </p>
                 </div>
