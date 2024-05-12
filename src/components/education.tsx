@@ -1,30 +1,22 @@
-import {
-  CardDescription,
-} from "./ui/card";
 import { Separator } from "./ui/separator";
 
-export const Education: React.FC = () => {
+export const Education = () => {
   return (
     <>
       <div className="flex flex-row space-x-4 text-2xl font-bold">
         <div>🎓</div>
         <div>Education</div>
       </div>
-      <CardDescription>My academic Journey</CardDescription>
-      <Separator />
-      <div className="flex space-x-4">
-        <div className="space-y-4">
-          <div className="text-xl font-semibold">
-            Computer Science, UBC (BSc)
-          </div>
-          <p>
-            I will be graduating from UBC Okanagan this spring with a Bachelor
-            of Science degree, and a specialization in Computer Science. Looking
-            back on my academic career, I&apos;m grateful to have met the people and
-            learned the things that I did.
-          </p>
-        </div>
+      <div className="text-xl font-semibold">
+        Bachelor of Science, Computer Science
       </div>
+      <div>University of British Columbia, Kelowna - Sept 2020 - April 2024</div>
+      <div>CGPA: 87%</div>
+      <ul className="list-disc list-inside space-y-2">
+        <li>Key Courses: Software Engineering (97%), Human Computer Interaction (94%), Data Analysis (94%), Databases (90%), Directed Studies (95%), Capstone Software Engineering (100%)</li>
+        <li>Acknowledgements: Best project in Capstone project option, recognized by UBC CIC in collaboration with AWS</li>
+      </ul>
+      <Separator />
     </>
   );
 };
