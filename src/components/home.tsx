@@ -18,7 +18,12 @@ import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import Writer from "./writer";
 import { Header } from "./header";
 import { FaAws, FaJs, FaNodeJs, FaPython, FaReact } from "react-icons/fa";
-import { SiNextdotjs, SiPostgresql, SiTailwindcss, SiTypescript } from "react-icons/si";
+import {
+  SiNextdotjs,
+  SiPostgresql,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
 import { FigmaIcon, GitBranchIcon } from "lucide-react";
 import { Socials } from "./socials";
 import Image from "next/image";
@@ -54,10 +59,14 @@ export default function Home() {
           >
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
-                <div className="space-y-4">
-                  <div className="inline-block  rounded-lg bg-background px-3 py-1 text-sm">
-                    🚀 {"           "}Projects
-                  </div>
+                <div className="flex flex-col justify-center items-center space-y-4">
+                  <Badge
+                    variant="outline"
+                    className="flex gap-2 justify-center w-[1/4] bg-background  rounded-lg p-4 text-sm"
+                  >
+                    <div>🚀</div>
+                    <div>Projects</div>
+                  </Badge>
                   <div className="text-3xl font-bold tracking-tighter pb-3">
                     Things I&apos;ve made
                   </div>
@@ -143,17 +152,17 @@ export default function Home() {
           >
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
-                <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-accent px-3 py-1 text-sm ">
-                    Skills
+                <div className="flex flex-col justify-center items-center space-y-4">
+                  <Badge
+                    variant="outline"
+                    className="flex gap-2 justify-center w-[1/4] bg-accent  rounded-lg p-3 text-sm"
+                  >
+                    <div>🛠️</div>
+                    <div>Skills</div>
+                  </Badge>
+                  <div className="text-3xl font-bold tracking-tighter pb-4">
+                    Technologies I use
                   </div>
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                    My Expertise
-                  </h2>
-                  <p className="mx-auto max-w-[700px]  md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                    Here are some of the technologies and tools I&apos;m
-                    proficient with.
-                  </p>
                 </div>
                 <div className="grid w-full max-w-5xl grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
                   <div className="flex flex-col items-center gap-2">
@@ -196,14 +205,18 @@ export default function Home() {
         <div className="p-4">
           <section
             className="w-full py-12 md:py-24 lg:py-32 bg-neutral-100 dark:bg-neutral-900 rounded-lg"
-            id="projects"
+            id="experience"
           >
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
-                <div className="space-y-4">
-                  <div className="inline-block  rounded-lg bg-background px-3 py-1 text-sm">
-                    💼 {"           "}Experience
-                  </div>
+                <div className="flex flex-col justify-center items-center space-y-4">
+                  <Badge
+                    variant="outline"
+                    className="flex gap-2 justify-center w-[1/4]  rounded-lg bg-background p-4 text-sm"
+                  >
+                    <div>💼</div>
+                    <div>Experience</div>
+                  </Badge>
                   <div className="text-3xl font-bold tracking-tighter pb-3">
                     Teams I&apos;ve worked with
                   </div>
@@ -281,7 +294,7 @@ export default function Home() {
                           />{" "}
                           <CardTitle>Student Support Analyst I</CardTitle>
                         </div>
-                        <p className="text-sm pt-3">
+                        <div className="text-sm pt-3">
                           <ul className="list-disc list-inside space-y-2 text-left">
                             <li>
                               Resolved an increased number of incidents compared
@@ -301,7 +314,7 @@ export default function Home() {
                               Student Support on the Okanagan campus
                             </li>
                           </ul>
-                        </p>
+                        </div>
                       </div>
                       <div className="flex gap-2 justify-center w-full">
                         <Badge variant="secondary">React Native</Badge>
@@ -324,10 +337,14 @@ export default function Home() {
           >
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
-                <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-accent px-3 py-1 text-sm">
-                    Education
-                  </div>
+                <div className="flex flex-col justify-center items-center space-y-4">
+                  <Badge
+                    variant="outline"
+                    className="flex gap-2 justify-center w-[1/4] bg-accent  rounded-lg p-3 text-sm"
+                  >
+                    <div>🎓</div>
+                    <div>Education</div>
+                  </Badge>
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                     My Academic Journey
                   </h2>

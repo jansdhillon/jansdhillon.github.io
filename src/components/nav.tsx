@@ -20,6 +20,7 @@ import {
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Separator } from "./ui/separator";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 export const Nav = () => {
   const path = usePathname();
@@ -35,65 +36,58 @@ export const Nav = () => {
       <div className="flex items-center gap-3 justify-between w-full p-2">
         <div className="text-primary text-lg font-bold">Jan-Yaeger Dhillon</div>
 
-        <nav className="ml-auto flex  gap-4 justify-center items-center">
+        <nav className="flex  gap-4 justify-center items-center">
           <Sheet>
             <SheetTrigger asChild>
-              <button
-                onClick={handleClick}
-                className="flex flex-col justify-center items-center sm:visible md:invisible"
-              >
-                <span
-                  className={`bg-primary block transition-all duration-300 ease-out
-                    h-0.5 w-6 rounded-sm ${
-                      isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"
-                    }`}
-                ></span>
-                <span
-                  className={`bg-primary block transition-all duration-300 ease-out
-                    h-0.5 w-6 rounded-sm my-0.5 ${
-                      isOpen ? "opacity-0" : "opacity-100"
-                    }`}
-                ></span>
-                <span
-                  className={`bg-primary block transition-all duration-300 ease-out
-                    h-0.5 w-6 rounded-sm ${
-                      isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
-                    }`}
-                ></span>
-              </button>
+              <RxHamburgerMenu className="h-4 w-4 flex md:hidden" />
             </SheetTrigger>
             <SheetContent>
-            <div className="flex flex-col gap-3">
-            <Link
-              className={`text-sm font-medium hover:underline underline-offset-4`}
-              href="#"
-            >
-              <div>Projects</div>
-            </Link>
-            <Separator/>
-            <Link
-              className="text-sm font-medium hover:underline underline-offset-4"
-              href="#"
-            >
-              <div>Skills</div>
-            </Link>
-            <Separator/>
-            <Link
-              className="text-sm font-medium hover:underline underline-offset-4"
-              href="#"
-            >
-              <div >Experience</div>
-            </Link>
-          </div>
+              <div className="flex flex-col gap-3">
+                <Link
+                  className={`text-sm font-medium hover:underline underline-offset-4`}
+                  href="#projects"
+                >
+                  <SheetClose asChild>
+                    <div>Projects</div>
+                  </SheetClose>
+                </Link>
+                <Separator />
+                <Link
+                  className="text-sm font-medium hover:underline underline-offset-4"
+                  href="#skills"
+                >
+                  <SheetClose asChild>
+                    <div>Skills</div>
+                  </SheetClose>
+                </Link>
+                <Separator />
+                <Link
+                  className="text-sm font-medium hover:underline underline-offset-4"
+                  href="#experience"
+                >
+                  <SheetClose asChild>
+                    <div>Experience</div>
+                  </SheetClose>
+                </Link>
+                <Separator />
+                <Link
+                  className="text-sm font-medium hover:underline underline-offset-4"
+                  href="#education"
+                >
+                  <SheetClose asChild>
+                    <div>Education</div>
+                  </SheetClose>
+                </Link>
+              </div>
             </SheetContent>
           </Sheet>
 
-          <div className="flex gap-3">
+          <div className="gap-3 hidden md:flex">
             <Link
               className={`text-sm font-medium hover:underline underline-offset-4`}
               href="#"
             >
-              <div className="hidden md:flex">Projects</div>
+              <div className="">Projects</div>
             </Link>
             <Link
               className="text-sm font-medium hover:underline underline-offset-4"
