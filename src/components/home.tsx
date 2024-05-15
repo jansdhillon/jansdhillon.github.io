@@ -33,15 +33,15 @@ import { Skills } from "./skills";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-[100dvh] pt-10">
+    <div className="flex flex-col min-h-[100dvh] pt-24">
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
           <div className="container px-6">
-            <div className="flex flex-col items-center space-y-6 text-center">
+            <div className="flex flex-col items-center md:space-y-6 text-center">
               <div className="text-3xl md:text-5xl min-w-full font-bold  min-h-[100px] leading-loose bg-gradient-to-r from-indigo-600  to-orange-400 text-transparent bg-clip-text animate-gradient bg-300%">
                 <Writer text="Hey, I'm Jan!" />
               </div>
-              <h2 className="text-xl font-medium pb-8">
+              <h2 className="text-md md:text-xl font-medium md:pb-8 pb-5">
                 Full-Stack Software Engineer
               </h2>
               <Socials />
@@ -61,16 +61,14 @@ export default function Home() {
 
         {/*experience*/}
         <div className="p-4">
-          <section
-            className="w-full py-12 md:py-24 lg:py-32 rounded-lg"
-            id="experience"
-          >
+          <section className="w-full py-12 md:py-24 lg:py-32 " >
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="flex flex-col justify-center items-center space-y-4 w-full">
                   <Badge
                     variant="outline"
-                    className="flex gap-2 justify-center w-[1/4]  rounded-lg bg-background p-4 text-sm"
+                    className="flex gap-2 justify-center w-[1/4]  rounded-full bg-accent p-4 text-sm"
+                    id="experience"
                   >
                     <div>💼</div>
                     <div>Experience</div>
@@ -78,63 +76,91 @@ export default function Home() {
                   <div className="text-2xl font-medium tracking-tighter pb-3">
                     Teams I&apos;ve Worked With
                   </div>
-                  <Separator/>
+                  <Separator />
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full h-full ">
                   <Card className="p-3">
-                    <CardContent className="flex flex-col items-start justify-between gap-4">
+                    <CardContent className="flex flex-col items-start justify-between gap-4 h-full">
                       <div className="p-4 flex flex-col gap-3">
-                        <div className="text-lg font-bold flex w-full justify-center gap-3">
+                        <div className="text-lg font-bold flex w-full justify-center gap-3 items-center ">
                           {" "}
                           <Image
-                            src="/obscurus.svg"
-                            alt="obscurus"
-                            width={30}
-                            height={50}
+                            src="/cse.jpg"
+                            alt="CSE Logo"
+                            width={20}
+                            height={20}
                           />{" "}
-                          obscurus
+                          Software Engineer Intern
                         </div>
-                        <p className="text-sm pt-3 ">
-                          A a serverless web app powered by AWS that facilitates
-                          private online communication by allowing users to
-                          request and submit videos with face-blurring applied
-                        </p>
+                        <CardDescription>
+                          Communications Security Establishment (CSE)
+                        </CardDescription>
+                        {/* <CardDescription>
+                          January 2024 - April 2024
+                        </CardDescription> */}
+                        <div className="text-sm pt-3">
+                          <ul className="list-disc list-inside space-y-2 text-left">
+                            <li>
+                              Contributed to the enhancement and deployment of
+                              internal analytical software and documentation
+                            </li>
+                            <li>
+                              Employed a broad skillset and strong desire to
+                              learn, utilizing technologies such as Azure,
+                              Python, Linux, Kubernetes, and Helm
+                            </li>
+                            <li>
+                              Actively sought out and incorporated feedback from
+                              colleagues to foster personal and professional
+                              growth as a software engineer
+                            </li>
+                          </ul>
+                        </div>
                       </div>
-                      <div className="flex gap-2 justify-center w-full pb-4">
-                        <Badge variant="secondary">AWS</Badge>
-                        <Badge variant="secondary">TypeScript</Badge>
-                        <Badge variant="secondary">Next.js</Badge>
-                        <Badge variant="secondary">FastAPI</Badge>
+                      <div className="container flex flex-col md:flex-row w-[1/3] items-center gap-2 justify-center md:w-full">
+                        <Badge variant="secondary">Azure</Badge>
+                        <Badge variant="secondary">Python</Badge>
+                        <Badge variant="secondary">Kubernetes</Badge>
+                        <Badge variant="secondary">Docker</Badge>
                       </div>
                     </CardContent>
                   </Card>
                   <Card className="p-3">
-                    <CardContent className="flex flex-col items-start justify-between gap-4">
-                      <div className="p-4 flex flex-col gap-3">
-                        <div className="text-lg font-bold flex w-full justify-center gap-3 items-center">
+                    <CardContent className="flex flex-col items-start justify-between gap-4 h-full">
+                      <div className="p-4 flex flex-col gap-3 ">
+                        <div className="text-lg font-bold flex w-full justify-center gap-3 items-center  ">
                           {" "}
                           <Image
-                            src="/recycling.png"
-                            alt="UBC Recycling App"
-                            width={30}
-                            height={50}
-                            className="rounded-md"
+                            src="/at-yellow-cropped.svg"
+                            alt="Armilla Technology Logo"
+                            width={20}
+                            height={20}
                           />{" "}
-                          UBC Recycling
+                          Software Engineer Co-op
                         </div>
-                        <p className="text-sm pt-3">
-                          A cross-platform mobile app that uses a custom object
-                          detection machine learning model and geolocation to
-                          classify scanned items as recyclable, returnable,
-                          compostable, or trash, and then direct the user to
-                          where they can properly dispose of it.
-                        </p>
+                        <CardDescription className="h-full">Armilla Technology</CardDescription>
+                        <div className="text-sm pt-8">
+                          <ul className="list-disc list-inside space-y-2 text-left">
+                            <li>
+                              Maintained and implemented features on the company
+                              apps and sites
+                            </li>
+                            <li>
+                              Designed and implemented creative and effective
+                              changes to the UI/UX
+                            </li>
+                            <li>
+                              Contributed to increased sales and adoption of the
+                              product in an emerging market
+                            </li>
+                          </ul>
+                        </div>
                       </div>
-                      <div className="flex gap-2 justify-center w-full">
-                        <Badge variant="secondary">React Native</Badge>
-                        <Badge variant="secondary">Python</Badge>
-                        <Badge variant="secondary">Flask</Badge>
-                        <Badge variant="secondary">YOLO/Pytorch</Badge>
+                      <div className="container flex flex-col md:flex-row w-[1/3] items-center gap-2 justify-center md:w-full">
+                        <Badge variant="secondary">JavaScript</Badge>
+                        <Badge variant="secondary">.NET</Badge>
+                        <Badge variant="secondary">Kotlin</Badge>
+                        <Badge variant="secondary">HTML</Badge>
                       </div>
                     </CardContent>
                   </Card>
@@ -147,13 +173,13 @@ export default function Home() {
                           <Image
                             src="/ubc.svg"
                             alt="UBC Logo"
-                            width={30}
-                            height={50}
-                            className="rounded-md"
+                            width={20}
+                            height={20}
                           />{" "}
-                          <CardTitle>Student Support Analyst I</CardTitle>
+                          Student Support Analyst I
                         </div>
-                        <div className="text-sm pt-3">
+                        <CardDescription>UBC</CardDescription>
+                        <div className="text-sm pt-8">
                           <ul className="list-disc list-inside space-y-2 text-left">
                             <li>
                               Resolved an increased number of incidents compared
@@ -175,11 +201,11 @@ export default function Home() {
                           </ul>
                         </div>
                       </div>
-                      <div className="flex gap-2 justify-center w-full">
-                        <Badge variant="secondary">React Native</Badge>
-                        <Badge variant="secondary">Python</Badge>
-                        <Badge variant="secondary">Flask</Badge>
-                        <Badge variant="secondary">YOLO/Pytorch</Badge>
+                      <div className="container flex flex-col md:flex-row w-[1/3] items-center gap-2 justify-center md:w-full">
+                        <Badge variant="secondary">ServiceNow</Badge>
+                        <Badge variant="secondary">PowerPoint</Badge>
+                        <Badge variant="secondary">Word</Badge>
+                        <Badge variant="secondary">Excel</Badge>
                       </div>
                     </CardContent>
                   </Card>
@@ -192,16 +218,14 @@ export default function Home() {
         <Skills />
 
         <div className="p-4">
-          <section
-            className="w-full py-12 md:py-24 lg:py-32 rounded-lg"
-            id="education"
-          >
+          <section className="w-full py-12 md:py-24 lg:py-32 " >
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="flex flex-col justify-center items-center space-y-4 w-full">
                   <Badge
                     variant="outline"
-                    className="flex gap-2 justify-center w-[1/4]  rounded-lg p-3 text-sm"
+                    className="flex gap-2 justify-center w-[1/4] bg-accent  rounded-full p-3 text-sm"
+                    id="education"
                   >
                     <div>🎓</div>
                     <div>Education</div>
@@ -209,11 +233,10 @@ export default function Home() {
                   <div className="text-2xl font-medium tracking-tighter pb-4">
                     My Academic Journey
                   </div>
-                  <Separator/>
-                  <p className="mx-auto max-w-[700px]">
-                    Graduating with a Bachelor of Science in Computer Science
-                    from UBC, specializing in Software Engineering.
-                  </p>
+                  <Separator />
+                  <div className="mx-auto max-w-[700px] text-base">
+                        I graduated from UBC this spring and received my Bachelor of Science degree with a major in Computer Science.
+                  </div>
                 </div>
               </div>
             </div>

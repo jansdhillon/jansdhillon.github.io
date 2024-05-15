@@ -14,14 +14,15 @@ export const Projects = () => (
   <div className="p-4">
     <section
       className="w-full py-12 md:py-24 lg:py-32 rounded-lg"
-      id="projects"
+
     >
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="flex flex-col justify-center items-center space-y-4 w-full">
             <Badge
               variant="outline"
-              className="flex gap-2 justify-center w-[1/4] bg-card  rounded-lg p-4 text-sm"
+              className="flex gap-2 justify-center w-[1/4] bg-accent rounded-full p-4 text-sm"
+              id="projects"
             >
               <div>🚀</div>
               <div>Projects</div>
@@ -97,7 +98,7 @@ export const Projects = () => (
                   <Badge variant="secondary">Python</Badge>
                   <Badge variant="secondary">TypeScript</Badge>
                   <Badge variant="secondary">Flask</Badge>
-                  <Badge variant="secondary">YOLO/Pytorch</Badge>
+                  <Badge variant="secondary">YOLO/PyTorch</Badge>
                 </div>
               </CardContent>
               <CardFooter className="flex w-full justify-center">
