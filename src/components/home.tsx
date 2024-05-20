@@ -61,19 +61,19 @@ export default function Home() {
 
         {/*experience*/}
         <div className="p-4">
-          <section className="w-full py-12 md:py-24 lg:py-32 " >
+          <section className="w-full py-12 md:py-24 lg:py-32 ">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="flex flex-col justify-center items-center space-y-4 w-full">
                   <Badge
                     variant="outline"
-                    className="flex gap-2 justify-center w-[1/4]  rounded-full bg-accent p-4 text-sm"
+                    className="flex gap-2 justify-center w-[1/4]  rounded-full bg-accent p-4 text-xs md:text-sm"
                     id="experience"
                   >
                     <div>💼</div>
                     <div>Experience</div>
                   </Badge>
-                  <div className="text-2xl font-medium tracking-tighter pb-3">
+                  <div className="text-base md:text-2xl font-medium tracking-tighter pb-3">
                     Teams I&apos;ve Worked With
                   </div>
                   <Separator />
@@ -82,7 +82,7 @@ export default function Home() {
                   <Card className="p-3">
                     <CardContent className="flex flex-col items-start justify-between gap-4 h-full">
                       <div className="p-4 flex flex-col gap-3">
-                        <div className="text-lg font-bold flex w-full justify-center gap-3 items-center ">
+                        <div className="text-sm md:text-lg font-bold flex w-full justify-center gap-3 items-center ">
                           {" "}
                           <Image
                             src="/cse.jpg"
@@ -98,7 +98,7 @@ export default function Home() {
                         {/* <CardDescription>
                           January 2024 - April 2024
                         </CardDescription> */}
-                        <div className="text-sm pt-3">
+                        <div className="text-xs md:text-sm pt-3">
                           <ul className="list-disc list-inside space-y-2 text-left">
                             <li>
                               Contributed to the enhancement and deployment of
@@ -128,7 +128,7 @@ export default function Home() {
                   <Card className="p-3">
                     <CardContent className="flex flex-col items-start justify-between gap-4 h-full">
                       <div className="p-4 flex flex-col gap-3 ">
-                        <div className="text-lg font-bold flex w-full justify-center gap-3 items-center  ">
+                        <div className="text-sm md:text-lg font-bold flex w-full justify-center gap-3 items-center  ">
                           {" "}
                           <Image
                             src="/at-yellow-cropped.svg"
@@ -138,8 +138,10 @@ export default function Home() {
                           />{" "}
                           Software Engineer Co-op
                         </div>
-                        <CardDescription className="h-full">Armilla Technology</CardDescription>
-                        <div className="text-sm pt-8">
+                        <CardDescription className="h-full">
+                          Armilla Technology
+                        </CardDescription>
+                        <div className="text-xs md:text-sm pt-8">
                           <ul className="list-disc list-inside space-y-2 text-left">
                             <li>
                               Maintained and implemented features on the company
@@ -168,7 +170,7 @@ export default function Home() {
                   <Card className="p-3">
                     <CardContent className="flex flex-col items-start justify-between gap-4">
                       <div className="p-4 flex flex-col gap-3">
-                        <div className="text-lg font-bold flex w-full justify-center gap-3 items-center">
+                        <div className="text-sm md:text-lg font-bold flex w-full justify-center gap-3 items-center">
                           {" "}
                           <Image
                             src="/ubc.svg"
@@ -179,7 +181,7 @@ export default function Home() {
                           Student Support Analyst I
                         </div>
                         <CardDescription>UBC</CardDescription>
-                        <div className="text-sm pt-8">
+                        <div className="text-xs md:text-sm pt-8">
                           <ul className="list-disc list-inside space-y-2 text-left">
                             <li>
                               Resolved an increased number of incidents compared
@@ -218,24 +220,27 @@ export default function Home() {
         <Skills />
 
         <div className="p-4">
-          <section className="w-full py-12 md:py-24 lg:py-32 " >
+          <section className="w-full py-12 md:py-24 lg:py-32 ">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="flex flex-col justify-center items-center space-y-4 w-full">
                   <Badge
                     variant="outline"
-                    className="flex gap-2 justify-center w-[1/4] bg-accent  rounded-full p-3 text-sm"
+                    className="flex gap-2 justify-center w-[1/4] bg-accent  rounded-full p-3 text-xs md:text-sm"
                     id="education"
                   >
                     <div>🎓</div>
                     <div>Education</div>
                   </Badge>
-                  <div className="text-2xl font-medium tracking-tighter pb-4">
+                  <div className="text-base md:text-2xl font-medium tracking-tighter pb-4">
                     My Academic Journey
                   </div>
                   <Separator />
-                  <div className="mx-auto max-w-[700px] text-base">
-                        I graduated from UBC this spring and received my Bachelor of Science degree with a major in Computer Science.
+                  <div className="mx-auto max-w-[700px] text-sm md:text-base">
+                    I graduated from UBC this spring and received my Bachelor of
+                    Science degree with a major in Computer Science. I learned a
+                    lot through my academic career and I am excited to apply
+                    these skills to my career!
                   </div>
                 </div>
               </div>

@@ -21,9 +21,9 @@ export const Skills = () => {
                 id="skills"
               >
                 <div>🎨</div>
-                <div>Skills</div>
+                <div className="text-xs md:text-sm">Skills</div>
               </Badge>
-              <div className="text-2xl font-medium tracking-tighter pb-4">
+              <div className="text-base md:text-2xl font-medium tracking-tighter pb-4">
                 Technologies I Use
               </div>
               <Separator />
@@ -64,7 +64,7 @@ export const Skills = () => {
               </div>
             </div>
           </div>
-          <div className="flex pt-10 justify-center">
+          <div className="flex pt-10 justify-center text-xs md:text-base">
             ...and more! Plus I&apos;m always learning new things ✨
           </div>
         </div>

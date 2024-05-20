@@ -1,20 +1,4 @@
 import { ReactNode } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { RxGithubLogo } from 'react-icons/rx';
-import { FaCss3, FaJs, FaLinkedinIn, FaInstagram, FaTwitter } from 'react-icons/fa';
-
-export type Project  = {
-  title: string;
-  imgSrc: string;
-  imgAlt: string;
-  description: string;
-  content: ReactNode;
-}
-
-export type SectionProps = {
-  children?: ReactNode;
-}
 
 export type SocialLinkProps = {
   icon: ReactNode;

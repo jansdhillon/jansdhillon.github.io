@@ -34,7 +34,7 @@ export const Experience = ({}) => {
           </ul>
         </div>
       </div>
-      <div className="w-[1/3]">
+      <div className="w-[1/3] ">
         <div>
           <div className="flex flex-row w-full justify-between space-x-3 leading-loose">
             Armilla Technology
@@ -82,7 +82,7 @@ export const Experience = ({}) => {
              </Link>
           </div>
           <Separator />
-          <div>Student Support Analyst I</div>
+          <div className="text-xs md:text-lg">Student Support Analyst I</div>
           <div>August 2022 - April 2023</div>
         </div>
         <div>
