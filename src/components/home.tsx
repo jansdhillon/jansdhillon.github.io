@@ -1,37 +1,21 @@
-import Link from "next/link";
+"use client";
 import { Badge } from "@/components/ui/badge";
-import {
-  CardContent,
-  CardFooter,
-  Card,
-  CardHeader,
-  CardDescription,
-  CardTitle,
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { CardContent, Card, CardDescription } from "@/components/ui/card";
 import Writer from "./writer";
-import {
-  FaAws,
-  FaGithub,
-  FaJs,
-  FaNodeJs,
-  FaPython,
-  FaReact,
-} from "react-icons/fa";
-import {
-  SiNextdotjs,
-  SiPostgresql,
-  SiTailwindcss,
-  SiTypescript,
-} from "react-icons/si";
 import { Socials } from "./socials";
 import Image from "next/image";
 import { Separator } from "./ui/separator";
 import { Footer } from "./footer";
 import { Projects } from "./projects";
 import { Skills } from "./skills";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({ once: true });
+  });
   return (
     <div className="flex flex-col min-h-[100dvh] pt-24">
       <main className="flex-1">
@@ -79,7 +63,12 @@ export default function Home() {
                   <Separator />
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full h-full ">
-                  <Card className="p-3">
+                  <Card
+                    className="p-3"
+                    data-aos="flip-left"
+                    data-aos-delay="100"
+                    data-aos-duration="750"
+                  >
                     <CardContent className="flex flex-col items-start justify-between gap-4 h-full">
                       <div className="p-4 flex flex-col gap-3">
                         <div className="text-sm md:text-lg font-bold flex w-full justify-center gap-3 items-center ">
@@ -125,7 +114,12 @@ export default function Home() {
                       </div>
                     </CardContent>
                   </Card>
-                  <Card className="p-3">
+                  <Card
+                    className="p-3"
+                    data-aos="flip-left"
+                    data-aos-delay="200"
+                    data-aos-duration="750"
+                  >
                     <CardContent className="flex flex-col items-start justify-between gap-4 h-full">
                       <div className="p-4 flex flex-col gap-3 ">
                         <div className="text-sm md:text-lg font-bold flex w-full justify-center gap-3 items-center  ">
@@ -167,7 +161,12 @@ export default function Home() {
                     </CardContent>
                   </Card>
 
-                  <Card className="p-3">
+                  <Card
+                    className="p-3"
+                    data-aos="flip-left"
+                    data-aos-delay="300"
+                    data-aos-duration="750"
+                  >
                     <CardContent className="flex flex-col items-start justify-between gap-4">
                       <div className="p-4 flex flex-col gap-3">
                         <div className="text-sm md:text-lg font-bold flex w-full justify-center gap-3 items-center">
@@ -219,7 +218,12 @@ export default function Home() {
 
         <Skills />
 
-        <div className="p-4">
+        <div
+          className="p-4"
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-aos-duration="750"
+        >
           <section className="w-full py-12 md:py-24 lg:py-32 ">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center justify-center space-y-4 text-center">

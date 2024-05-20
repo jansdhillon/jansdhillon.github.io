@@ -8,10 +8,7 @@ import Link from "next/link";
 
 export const Projects = () => (
   <div className="p-4">
-    <section
-      className="w-full py-12 md:py-24 lg:py-32 rounded-lg"
-
-    >
+    <section className="w-full py-12 md:py-24 lg:py-32 rounded-lg">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="flex flex-col justify-center items-center space-y-4 w-full">
@@ -29,7 +26,7 @@ export const Projects = () => (
             <Separator />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-            <Card className="p-3">
+            <Card className="p-3" data-aos="flip-left" data-aos-delay="100">
               <CardContent className="flex flex-col items-start justify-between gap-4">
                 <div className="p-4 flex flex-col gap-3">
                   <div className="text-sm md:text-lg font-bold flex w-full justify-center gap-3">
@@ -62,12 +59,19 @@ export const Projects = () => (
                   <FaGithub size={20} />
                 </Link>
                 <Link href="https://youtu.be/4Sjj6J6F270">
-                  <Button variant={"default"} className="text-xs md:text-base">Demo</Button>
+                  <Button variant={"default"} className="text-xs md:text-base">
+                    Demo
+                  </Button>
                 </Link>
               </CardFooter>
             </Card>
 
-            <Card className="p-3">
+            <Card
+              className="p-3"
+              data-aos="flip-left"
+              data-aos-delay="200"
+              data-aos-duration="750"
+            >
               <CardContent className="flex flex-col items-start justify-between gap-4">
                 <div className="p-4 flex flex-col gap-3">
                   <div className="text-sm md:text-lg font-bold flex w-full justify-center gap-3 items-center">
@@ -90,7 +94,7 @@ export const Projects = () => (
                   </p>
                 </div>
                 <div className="container flex flex-col md:flex-row w-[1/3] items-center gap-2 justify-center md:w-full ">
-                  <Badge variant="secondary" >React Native</Badge>
+                  <Badge variant="secondary">React Native</Badge>
                   <Badge variant="secondary">Python</Badge>
                   <Badge variant="secondary">TypeScript</Badge>
                   <Badge variant="secondary">Flask</Badge>
@@ -102,7 +106,9 @@ export const Projects = () => (
                         <FaGithub size={20} />
                       </Link> */}
                 <Link href="https://www.youtube.com/watch?v=crK235Yaxlc">
-                  <Button variant={"default"} className="text-xs md:text-base">Demo</Button>
+                  <Button variant={"default"} className="text-xs md:text-base">
+                    Demo
+                  </Button>
                 </Link>
               </CardFooter>
             </Card>
