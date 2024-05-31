@@ -1,10 +1,16 @@
 import { FaGithub } from "react-icons/fa";
 import { Button } from "./ui/button";
-import { Card, CardContent, CardFooter } from "./ui/card";
+import { Card, CardContent, CardDescription, CardFooter } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Separator } from "./ui/separator";
 import Image from "next/image";
 import Link from "next/link";
+import {
+  LucideShieldHalf,
+  Shield,
+  ShieldCheck,
+  ShieldOffIcon,
+} from "lucide-react";
 
 export const Projects = () => (
   <div className="p-4">
@@ -23,10 +29,13 @@ export const Projects = () => (
             <div className="text-base md:text-2xl font-medium tracking-tighter pb-3">
               Projects I&apos;ve Contributed To
             </div>
-            <Separator />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-            <Card className="p-3" data-aos="flip-left" data-aos-delay="100">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+            <Card
+              className="p-3 ring-card "
+              data-aos="flip-left"
+              data-aos-delay="100"
+            >
               <CardContent className="flex flex-col items-start justify-between gap-4">
                 <div className="p-4 flex flex-col gap-3">
                   <div className="text-sm md:text-lg font-bold flex w-full justify-center gap-3">
@@ -39,13 +48,15 @@ export const Projects = () => (
                     />{" "}
                     obscurus
                   </div>
-                  <p className="text-xs md:text-sm pt-3 pb-5">
+                  <p className="text-xs md:text-sm pt-3 md:pb-10">
                     A open-source, serverless web app powered by AWS that
                     facilitates private online communication by allowing users
                     to request and submit videos with face-blurring applied
                   </p>
                 </div>
-                <div className="container flex flex-col md:flex-row w-[1/3] items-center gap-2 justify-center md:w-full">
+              </CardContent>
+              <CardFooter className="flex flex-col w-full justify-center gap-8">
+                <div className="space-x-1 md:space-x-4 space-y-4">
                   <Badge variant="secondary">AWS</Badge>
                   <Badge variant="secondary">TypeScript</Badge>
                   <Badge variant="secondary">Next.js</Badge>
@@ -53,16 +64,19 @@ export const Projects = () => (
                   <Badge variant="secondary">FastAPI</Badge>
                   <Badge variant="secondary">PostgreSQL</Badge>
                 </div>
-              </CardContent>
-              <CardFooter className="flex w-full justify-center gap-4">
-                <Link href="https://github.com/COSC-499-W2023/year-long-project-team-9/tree/master">
-                  <FaGithub size={20} />
-                </Link>
-                <Link href="https://youtu.be/4Sjj6J6F270">
-                  <Button variant={"default"} className="text-xs md:text-base">
-                    Demo
-                  </Button>
-                </Link>
+                <div className="flex gap-4 items-center">
+                  <Link href="https://github.com/COSC-499-W2023/year-long-project-team-9/tree/master">
+                    <FaGithub size={20} />
+                  </Link>
+                  <Link href="https://youtu.be/4Sjj6J6F270">
+                    <Button
+                      variant={"default"}
+                      className="text-xs md:text-base"
+                    >
+                      Demo
+                    </Button>
+                  </Link>
+                </div>
               </CardFooter>
             </Card>
 
@@ -85,31 +99,70 @@ export const Projects = () => (
                     />{" "}
                     UBC Recycling
                   </div>
-                  <p className="text-xs md:text-sm pt-3">
+                  <div className="text-xs md:text-sm pt-2 pb-1">
                     A cross-platform mobile app that uses a custom object
                     detection machine learning model and geolocation to classify
                     scanned items as recyclable, returnable, compostable, or
                     trash, and then direct the user to where they can properly
                     dispose of it.
-                  </p>
+                  </div>
                 </div>
-                <div className="container flex flex-col md:flex-row w-[1/3] items-center gap-2 justify-center md:w-full ">
+              </CardContent>
+              <CardFooter className="flex flex-col gap-8 w-full justify-center">
+                <div className="space-x-1 md:space-x-4 space-y-4">
                   <Badge variant="secondary">React Native</Badge>
                   <Badge variant="secondary">Python</Badge>
                   <Badge variant="secondary">TypeScript</Badge>
                   <Badge variant="secondary">Flask</Badge>
                   <Badge variant="secondary">YOLO/PyTorch</Badge>
                 </div>
-              </CardContent>
-              <CardFooter className="flex w-full justify-center">
-                {/* <Link href="https://github.com/COSC-499-W2023/year-long-project-team-9/tree/master">
-                        <FaGithub size={20} />
-                      </Link> */}
                 <Link href="https://www.youtube.com/watch?v=crK235Yaxlc">
                   <Button variant={"default"} className="text-xs md:text-base">
                     Demo
                   </Button>
                 </Link>
+              </CardFooter>
+            </Card>
+            <Card
+              className="p-3 ring-card "
+              data-aos="flip-left"
+              data-aos-delay="300"
+            >
+              <CardContent className="flex flex-col items-start justify-between gap-4">
+                <div className="p-4 flex flex-col gap-3">
+                  <div className="text-sm md:text-lg font-bold flex w-full justify-center gap-3 items-center">
+                    {" "}
+                    <ShieldCheck className="text-blue-500" />
+                    Defend Your Data
+                  </div>
+                  <div className="text-xs md:text-sm pt-3 md:pb-10 ">
+                    An open source web app that raises awareness about
+                    fundamental cybersecurity topics. Through various tips,
+                    interactive quizzes to test understanding, and links to
+                    additional resources, users can learn how to protect
+                    themselves in today&apos;s complex digital landscape.
+                  </div>
+                </div>
+              </CardContent>
+              <CardFooter className="flex flex-col w-full justify-center gap-8">
+                <div className="space-x-4 space-y-4">
+                  <Badge variant="secondary">Next.js</Badge>
+                  <Badge variant="secondary">React</Badge>
+                  <Badge variant="secondary">TailwindCSS</Badge>
+                </div>
+                <div className="flex gap-4 items-center">
+                  <Link href="https://github.com/jansdhillon/Defend-Your-Data">
+                    <FaGithub size={20} />
+                  </Link>
+                  <Link href="https://youtu.be/v8NQ6yFvvkY?si=Bb-xsWkDyu9KaP-i">
+                    <Button
+                      variant={"default"}
+                      className="text-xs md:text-base"
+                    >
+                      Demo
+                    </Button>
+                  </Link>
+                </div>
               </CardFooter>
             </Card>
           </div>

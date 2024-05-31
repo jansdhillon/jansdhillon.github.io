@@ -32,7 +32,6 @@ export const Skills = () => {
               <div className="text-base md:text-2xl font-medium tracking-tighter pb-4">
                 Technologies I Use
               </div>
-              <Separator />
             </div>
 
             <div className="grid w-full max-w-5xl grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">

@@ -74,16 +74,16 @@ export const Nav = () => {
                     <div>Skills</div>
                   </SheetClose>
                 </Link>
-                {/* <Separator /> */}
+                <Separator />
 
-                {/* <Link
+                <Link
                   className="text-sm font-medium hover:underline underline-offset-4"
                   href="#education"
                 >
                   <SheetClose asChild>
                     <div>Education</div>
                   </SheetClose>
-                </Link> */}
+                </Link>
               </div>
             </SheetContent>
           </Sheet>
@@ -100,6 +100,12 @@ export const Nav = () => {
               href="#experience"
             >
               <div className=" hidden md:flex">Experience</div>
+            </Link>
+            <Link
+              className="text-sm font-semibold hover:underline underline-offset-4"
+              href="#education"
+            >
+              <div className=" hidden md:flex">Education</div>
             </Link>
             <Link
               className="text-sm font-semibold hover:underline underline-offset-4"
