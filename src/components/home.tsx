@@ -24,10 +24,10 @@ export default function Home() {
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
           <div className="container px-6">
             <div className="flex flex-col items-center md:space-y-6 text-center">
-              <div className="pl-4 text-3xl md:text-5xl min-w-full font-bold  min-h-[100px] bg-gradient-to-r from-indigo-600  to-orange-400 text-transparent bg-clip-text animate-gradient bg-300%">
+              <div className="pl-3 text-3xl md:text-5xl min-w-full font-bold  min-h-[100px] bg-gradient-to-r from-indigo-600  to-orange-400 text-transparent bg-clip-text animate-gradient bg-300%">
                 <Writer text="Hey, I'm Jan!" />
               </div>
-              <h2 className="text-md md:text-xl font-medium pb-9">
+              <h2 className="text-md md:text-xl font-medium pb-11">
                 Full-Stack Software Engineer
               </h2>
               <Socials />
