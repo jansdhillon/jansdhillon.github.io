@@ -28,6 +28,7 @@ export default function RootLayout({
         >
           {children}
         </body>
+        <Analytics/>
       </ThemeProvider>
     </html>
   );
