@@ -2,35 +2,52 @@ import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { CardDescription } from "./ui/card";
+import { Separator } from "./ui/separator";
 
 export const Education = () => {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 " id="education">
-      <div className="container mx-auto px-7 md:px-4">
+      <div className="container mx-auto px-10 md:px-4">
         <div className="flex flex-col items-center  justify-center space-y-8 text-center">
           <div>
             <Badge
               variant="outline"
-              className="inline-flex items-center gap-2  bg-indigo-500 text-white rounded-full px-4 py-2 text-sm"
+              className="inline-flex items-center gap-2 border-0  bg-secondary dark:text-white rounded-full px-4 py-2 text-sm"
             >
               <div>🎓</div> <p>Education</p>
             </Badge>
           </div>
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tighter">
-            My Academic Journey
-          </h2>
+          <div className="">
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tighter">
+              My Academic Journey
+
+            </h2>
+
+
+          </div>
+          <Separator/>
           <div className="max-w-3xl">
-            <div className="flex items-start justify-center space-x-3 md:space-x-5 mb-6">
-              <Image src="/ubc.svg" alt="UBC" width={25} height={25} quality={100} />
-              <h3 className="text-lg md:text-xl font-medium">
+
+            <div className="flex items-center md:items-start justify-center space-x-3 md:space-x-5 mb-3">
+
+              <Image
+                src="/ubc.svg"
+                alt="UBC"
+                width={25}
+                height={25}
+                quality={100}
+              />
+              <h3 className="text-lg md:text-xl font-bold">
                 The University of British Columbia
               </h3>
             </div>
-            <div className="text-sm md:text-base space-y-2 mb-8">
-              <p className="text-muted-foreground">Sept 2020 - April 2024</p>
+            <div className=" md:text-base space-y-3 mb-8">
+              <p className="text-muted-foreground font-semibold text-sm">
+                September 2020 - April 2024
+              </p>
               <p>Bachelor of Science, Major in Computer Science</p>
               <p className="font-medium">
-                <span className=" font-bold">Cumulative GPA: </span>
+                <span className="">Cumulative GPA: </span>
                 87% (High Distinction, Dean&apos;s List 2023-2024)
               </p>
             </div>
@@ -50,8 +67,12 @@ export const Education = () => {
                   <li className="pl-1">Human Computer Interaction</li>
                   <li className="pl-1">Data Analysis</li>
                   <li className="pl-1">Databases</li>
-                  <li className="pl-1">Directed Studies in Software Development</li>
-                  <li className="pl-1">Capstone Software Engineering Degree Course</li>
+                  <li className="pl-1">
+                    Directed Studies in Software Development
+                  </li>
+                  <li className="pl-1">
+                    Capstone Software Engineering Degree Course
+                  </li>
                 </ul>
               </div>
               <div>

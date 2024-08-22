@@ -15,17 +15,15 @@ import {
 import { BiLogoTypescript } from "react-icons/bi";
 import { Badge } from "@/components/ui/badge";
 import { FaDocker, FaFlask } from "react-icons/fa6";
+import { Separator } from "./ui/separator";
 
 const SkillIcon = ({ Icon, name }: any) => (
-  <motion.div
-    className="flex flex-col items-center gap-2"
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5 }}
+  <div
+    className="flex flex-col items-center gap-3"
   >
-    <Icon className="h-12 w-12 text-primary" />
+    <Icon className="h-10 w-10 text-primary" />
     <span className="text-sm font-medium">{name}</span>
-  </motion.div>
+  </div>
 );
 
 export const Skills = () => {
@@ -51,7 +49,7 @@ export const Skills = () => {
           <div>
             <Badge
               variant="outline"
-              className="inline-flex items-center gap-2 bg-indigo-500 text-white rounded-full px-4 py-2 text-sm"
+              className="inline-flex items-center gap-2 bg-secondary dark:text-white rounded-full px-4 py-2 text-sm"
             >
               <div>🎨</div> <p>Skills</p>
             </Badge>
@@ -59,12 +57,13 @@ export const Skills = () => {
           <h2 className="text-2xl md:text-3xl font-bold tracking-tighter mb-8">
             Technologies I Use
           </h2>
+          <Separator/>
           <div className="grid w-full max-w-5xl grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-4">
             {skills.map((skill, index) => (
               <SkillIcon key={index} {...skill} />
             ))}
           </div>
-          <p className="text-sm md:text-base text-muted-foreground mt-8">
+          <p className="text-sm md:text-base font-medium text-muted-foreground mt-8">
             ...and more! Plus I&apos;m always learning new things ✨
           </p>
         </div>

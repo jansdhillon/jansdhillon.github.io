@@ -1,32 +1,27 @@
 import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import Link from "next/link";
 import { ShieldCheck } from "lucide-react";
-import {
-  ReactElement,
-  JSXElementConstructor,
-  ReactNode,
-  ReactPortal,
-  PromiseLikeOfReactNode,
-  Key,
-} from "react";
-
+import { Separator } from "./ui/separator";
 const ProjectCard = ({
   logo,
   title,
+  subtitle,
   description,
   technologies,
   githubLink,
   demoLink,
 }: any) => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5 }}
+  <div
   >
     <Card className="h-full flex flex-col">
       <CardContent className="flex-grow p-6">
@@ -45,32 +40,19 @@ const ProjectCard = ({
             )}
             <h3 className="text-lg font-bold">{title}</h3>
           </div>
-          <p className="text-sm text-muted-foreground text-center">
-            {description}
-          </p>
+          <CardDescription className=" text-sm text-muted-foreground text-center line-clamp-1 font-semibold">
+            {subtitle}
+          </CardDescription>
+          <p className="text-sm text-center">{description}</p>
         </div>
       </CardContent>
       <CardFooter className="flex flex-col items-center gap-6 p-6">
         <div className="flex flex-wrap justify-center gap-4">
-          {technologies.map(
-            (
-              tech:
-                | string
-                | number
-                | boolean
-                | ReactElement<any, string | JSXElementConstructor<any>>
-                | Iterable<ReactNode>
-                | ReactPortal
-                | PromiseLikeOfReactNode
-                | null
-                | undefined,
-              index: Key | null | undefined
-            ) => (
-              <Badge key={index} variant="secondary">
-                {tech}
-              </Badge>
-            )
-          )}
+          {technologies.map((tech: any, index: any) => (
+            <Badge key={index} variant="secondary">
+              {tech}
+            </Badge>
+          ))}
         </div>
         <div className="flex gap-4 items-center">
           {githubLink && (
@@ -88,7 +70,7 @@ const ProjectCard = ({
         </div>
       </CardFooter>
     </Card>
-  </motion.div>
+  </div>
 );
 
 export const Projects = () => {
@@ -96,8 +78,9 @@ export const Projects = () => {
     {
       logo: "/obscurus.svg",
       title: "obscurus",
+      subtitle: "Capstone Software Engineering Degree Project",
       description:
-        "A open-source, serverless web app powered by AWS that facilitates private online communication by allowing users to request and submit videos with face-blurring applied",
+        "A serverless web app powered by AWS that facilitates private online communication by allowing users to request and submit videos with face-blurring applied",
       technologies: [
         "AWS",
         "TypeScript",
@@ -114,6 +97,7 @@ export const Projects = () => {
     {
       logo: "/recycling.png",
       title: "UBC Recycling",
+      subtitle: "Directed Studies in Software Development",
       description:
         "A cross-platform app uses a custom object detection machine learning model and geolocation to classify scanned items as recyclable, returnable, compostable, or trash, and then direct the user to where they can properly dispose of it.",
       technologies: [
@@ -123,13 +107,14 @@ export const Projects = () => {
         "Flask",
         "YOLO",
         "Tailwind CSS",
-        "PyTorch"
+        "PyTorch",
       ],
       demoLink: "https://www.youtube.com/watch?v=crK235Yaxlc",
     },
     {
       logo: <ShieldCheck className="text-blue-500 w-8 h-8" />,
       title: "Defend Your Data",
+      subtitle: "Digital Citizenship Project",
       description:
         "An open-source web app that raises awareness about fundamental cybersecurity topics. Through various tips, interactive quizzes to test understanding, and links to additional resources, users can learn how to protect themselves in today's complex digital landscape.",
       technologies: ["Next.js", "React", "TailwindCSS", "TypeScript"],
@@ -145,7 +130,7 @@ export const Projects = () => {
           <div>
             <Badge
               variant="outline"
-              className="inline-flex items-center gap-3 bg-indigo-500 text-white rounded-full px-4 py-2 text-sm"
+              className="inline-flex items-center gap-3 border-0  bg-secondary dark:text-white rounded-full px-4 py-2 text-sm"
             >
               <div className="text-lg">🚀</div> <p>Projects</p>
             </Badge>
@@ -153,6 +138,7 @@ export const Projects = () => {
           <h2 className="text-2xl md:text-3xl font-bold tracking-tighter mb-8">
             Projects I&apos;ve Contributed To
           </h2>
+          <Separator/>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
             {projects.map((project, index) => (
               <ProjectCard key={index} {...project} />
