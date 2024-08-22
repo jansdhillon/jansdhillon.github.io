@@ -36,8 +36,8 @@ export const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { href: "#projects", label: "Projects" },
     { href: "#experience", label: "Experience" },
+    { href: "#projects", label: "Projects" },
     { href: "#education", label: "Education" },
     { href: "#skills", label: "Skills" },
   ];
