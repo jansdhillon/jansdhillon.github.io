@@ -5,28 +5,24 @@ import { CardDescription } from "./ui/card";
 
 export const Education = () => {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 ">
+    <section className="w-full py-12 md:py-24 lg:py-32 " id="education">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center justify-center space-y-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
+        <div className="flex flex-col items-center  justify-center space-y-8 text-center">
+          <div>
             <Badge
               variant="outline"
-              className="inline-flex items-center gap-2 bg-accent text-accent-foreground rounded-full px-4 py-2 text-sm"
+              className="inline-flex items-center gap-2  bg-indigo-500 text-white rounded-full px-4 py-2 text-sm"
             >
-              🎓 Education
+              <div>🎓</div> <p>Education</p>
             </Badge>
-          </motion.div>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tighter">
+          </div>
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tighter">
             My Academic Journey
           </h2>
           <div className="max-w-3xl">
             <div className="flex items-center justify-center space-x-5 mb-6">
-              <Image src="/ubc.svg" alt="UBC" width={35} height={35} />
-              <h3 className="text-xl md:text-2xl font-semibold">
+              <Image src="/ubc.svg" alt="UBC" width={30} height={30} />
+              <h3 className="text-lg md:text-xl font-semibold">
                 The University of British Columbia
               </h3>
             </div>

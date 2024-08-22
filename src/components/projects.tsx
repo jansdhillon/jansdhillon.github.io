@@ -1,167 +1,165 @@
+import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
-import { Button } from "./ui/button";
-import { Card, CardContent, CardDescription, CardFooter } from "./ui/card";
-import { Badge } from "./ui/badge";
-import { Separator } from "./ui/separator";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import Link from "next/link";
+import { ShieldCheck } from "lucide-react";
 import {
-  LucideShieldHalf,
-  Shield,
-  ShieldCheck,
-  ShieldOffIcon,
-} from "lucide-react";
+  ReactElement,
+  JSXElementConstructor,
+  ReactNode,
+  ReactPortal,
+  PromiseLikeOfReactNode,
+  Key,
+} from "react";
 
-export const Projects = () => (
-  <div className="p-4">
-    <section className="w-full py-12 md:py-24 lg:py-32 rounded-lg">
-      <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="flex flex-col justify-center items-center space-y-4 w-full">
+const ProjectCard = ({
+  logo,
+  title,
+  description,
+  technologies,
+  githubLink,
+  demoLink,
+}: any) => (
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+  >
+    <Card className="h-full flex flex-col">
+      <CardContent className="flex-grow p-6">
+        <div className="flex flex-col gap-6 ">
+          <div className="flex items-center justify-center space-x-3">
+            {typeof logo === "string" ? (
+              <Image
+                src={logo}
+                alt={title}
+                width={30}
+                height={30}
+                className="rounded-md"
+              />
+            ) : (
+              logo
+            )}
+            <h3 className="text-lg font-bold">{title}</h3>
+          </div>
+          <p className="text-sm text-muted-foreground text-center">
+            {description}
+          </p>
+        </div>
+      </CardContent>
+      <CardFooter className="flex flex-col items-center gap-6 p-6">
+        <div className="flex flex-wrap justify-center gap-4">
+          {technologies.map(
+            (
+              tech:
+                | string
+                | number
+                | boolean
+                | ReactElement<any, string | JSXElementConstructor<any>>
+                | Iterable<ReactNode>
+                | ReactPortal
+                | PromiseLikeOfReactNode
+                | null
+                | undefined,
+              index: Key | null | undefined
+            ) => (
+              <Badge key={index} variant="secondary">
+                {tech}
+              </Badge>
+            )
+          )}
+        </div>
+        <div className="flex gap-4 items-center">
+          {githubLink && (
+            <Link href={githubLink}>
+              <FaGithub size={20} />
+            </Link>
+          )}
+          {demoLink && (
+            <Link href={demoLink}>
+              <Button variant="default" size="sm">
+                Demo
+              </Button>
+            </Link>
+          )}
+        </div>
+      </CardFooter>
+    </Card>
+  </motion.div>
+);
+
+export const Projects = () => {
+  const projects = [
+    {
+      logo: "/obscurus.svg",
+      title: "obscurus",
+      description:
+        "A open-source, serverless web app powered by AWS that facilitates private online communication by allowing users to request and submit videos with face-blurring applied",
+      technologies: [
+        "AWS",
+        "TypeScript",
+        "Next.js",
+        "Python",
+        "OpenCV",
+        "Tailwind CSS",
+        "PostgreSQL",
+      ],
+      githubLink:
+        "https://github.com/COSC-499-W2023/year-long-project-team-9/tree/master",
+      demoLink: "https://youtu.be/4Sjj6J6F270",
+    },
+    {
+      logo: "/recycling.png",
+      title: "UBC Recycling",
+      description:
+        "A cross-platform app uses a custom object detection machine learning model and geolocation to classify scanned items as recyclable, returnable, compostable, or trash, and then direct the user to where they can properly dispose of it.",
+      technologies: [
+        "React Native",
+        "Python",
+        "TypeScript",
+        "Flask",
+        "YOLO",
+        "Tailwind CSS",
+        "PyTorch"
+      ],
+      demoLink: "https://www.youtube.com/watch?v=crK235Yaxlc",
+    },
+    {
+      logo: <ShieldCheck className="text-blue-500 w-8 h-8" />,
+      title: "Defend Your Data",
+      description:
+        "An open-source web app that raises awareness about fundamental cybersecurity topics. Through various tips, interactive quizzes to test understanding, and links to additional resources, users can learn how to protect themselves in today's complex digital landscape.",
+      technologies: ["Next.js", "React", "TailwindCSS", "TypeScript"],
+      githubLink: "https://github.com/jansdhillon/Defend-Your-Data",
+      demoLink: "https://youtu.be/v8NQ6yFvvkY?si=Bb-xsWkDyu9KaP-i",
+    },
+  ];
+
+  return (
+    <section className="w-full py-12 md:py-24 lg:py-32" id="projects">
+      <div className="container mx-auto px-10">
+        <div className="flex flex-col items-center justify-center space-y-8 text-center">
+          <div>
             <Badge
               variant="outline"
-              className="flex gap-2 justify-center w-[1/4] bg-accent rounded-full p-4 text-xs md:text-sm"
-              id="projects"
+              className="inline-flex items-center gap-3 bg-indigo-500 text-white rounded-full px-4 py-2 text-sm"
             >
-              <div>🚀</div>
-              <div>Projects</div>
+              <div className="text-lg">🚀</div> <p>Projects</p>
             </Badge>
-            <div className="text-base md:text-2xl font-medium tracking-tighter pb-3">
-              Projects I&apos;ve Contributed To
-            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-            <Card
-              className="p-3 ring-card "
-            >
-              <CardContent className="flex flex-col items-start justify-between gap-4">
-                <div className="p-4 flex flex-col gap-3">
-                  <div className="text-sm md:text-lg font-bold flex w-full justify-center gap-3">
-                    {" "}
-                    <Image
-                      src="/obscurus.svg"
-                      alt="obscurus"
-                      width={30}
-                      height={50}
-                    />{" "}
-                    obscurus
-                  </div>
-                  <p className="text-xs md:text-sm pt-3 md:pb-10">
-                    A open-source, serverless web app powered by AWS that
-                    facilitates private online communication by allowing users
-                    to request and submit videos with face-blurring applied
-                  </p>
-                </div>
-              </CardContent>
-              <CardFooter className="flex flex-col w-full justify-center gap-8">
-                <div className="space-x-1 md:space-x-4 space-y-4">
-                  <Badge variant="secondary">AWS</Badge>
-                  <Badge variant="secondary">TypeScript</Badge>
-                  <Badge variant="secondary">Next.js</Badge>
-                  <Badge variant="secondary">Python</Badge>
-                  <Badge variant="secondary">FastAPI</Badge>
-                  <Badge variant="secondary">PostgreSQL</Badge>
-                </div>
-                <div className="flex gap-4 items-center">
-                  <Link href="https://github.com/COSC-499-W2023/year-long-project-team-9/tree/master">
-                    <FaGithub size={20} />
-                  </Link>
-                  <Link href="https://youtu.be/4Sjj6J6F270">
-                    <Button
-                      variant={"default"}
-                      className="text-xs md:text-base"
-                    >
-                      Demo
-                    </Button>
-                  </Link>
-                </div>
-              </CardFooter>
-            </Card>
-
-            <Card
-              className="p-3"
-            >
-              <CardContent className="flex flex-col items-start justify-between gap-4">
-                <div className="p-4 flex flex-col gap-3">
-                  <div className="text-sm md:text-lg font-bold flex w-full justify-center gap-3 items-center">
-                    {" "}
-                    <Image
-                      src="/recycling.png"
-                      alt="UBC Recycling App"
-                      width={30}
-                      height={50}
-                      className="rounded-md"
-                    />{" "}
-                    UBC Recycling
-                  </div>
-                  <div className="text-xs md:text-sm pt-2 pb-1">
-                    Conducted machine learning research and developed a
-                    cross-platform mobile app. The app uses a custom object
-                    detection machine learning model and geolocation to classify
-                    scanned items as recyclable, returnable, compostable, or
-                    trash, and then direct the user to where they can properly
-                    dispose of it.
-                  </div>
-                </div>
-              </CardContent>
-              <CardFooter className="flex flex-col gap-8 w-full justify-center">
-                <div className="space-x-1 md:space-x-4 space-y-4">
-                  <Badge variant="secondary">React Native</Badge>
-                  <Badge variant="secondary">Python</Badge>
-                  <Badge variant="secondary">TypeScript</Badge>
-                  <Badge variant="secondary">Flask</Badge>
-                  <Badge variant="secondary">YOLO/PyTorch</Badge>
-                </div>
-                <Link href="https://www.youtube.com/watch?v=crK235Yaxlc">
-                  <Button variant={"default"} className="text-xs md:text-base">
-                    Demo
-                  </Button>
-                </Link>
-              </CardFooter>
-            </Card>
-            <Card
-              className="p-3 ring-card "
-            >
-              <CardContent className="flex flex-col items-start justify-between gap-4">
-                <div className="p-4 flex flex-col gap-3">
-                  <div className="text-sm md:text-lg font-bold flex w-full justify-center gap-3 items-center">
-                    {" "}
-                    <ShieldCheck className="text-blue-500" />
-                    Defend Your Data
-                  </div>
-                  <div className="text-xs md:text-sm pt-3 md:pb-10 ">
-                    An open source web app that raises awareness about
-                    fundamental cybersecurity topics. Through various tips,
-                    interactive quizzes to test understanding, and links to
-                    additional resources, users can learn how to protect
-                    themselves in today&apos;s complex digital landscape.
-                  </div>
-                </div>
-              </CardContent>
-              <CardFooter className="flex flex-col w-full justify-center gap-8">
-                <div className="space-x-4 space-y-4">
-                  <Badge variant="secondary">Next.js</Badge>
-                  <Badge variant="secondary">React</Badge>
-                  <Badge variant="secondary">TailwindCSS</Badge>
-                </div>
-                <div className="flex gap-4 items-center">
-                  <Link href="https://github.com/jansdhillon/Defend-Your-Data">
-                    <FaGithub size={20} />
-                  </Link>
-                  <Link href="https://youtu.be/v8NQ6yFvvkY?si=Bb-xsWkDyu9KaP-i">
-                    <Button
-                      variant={"default"}
-                      className="text-xs md:text-base"
-                    >
-                      Demo
-                    </Button>
-                  </Link>
-                </div>
-              </CardFooter>
-            </Card>
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tighter mb-8">
+            Projects I&apos;ve Contributed To
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+            {projects.map((project, index) => (
+              <ProjectCard key={index} {...project} />
+            ))}
           </div>
         </div>
       </div>
     </section>
-  </div>
-);
+  );
+};
