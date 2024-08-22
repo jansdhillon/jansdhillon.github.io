@@ -35,7 +35,7 @@ export const Education = () => {
               <p>Bachelor of Science, Major in Computer Science</p>
               <p className="font-medium">
                 <span className=" font-bold">Cumulative GPA: </span>
-                87% (High Distinction, Dean's List 2023-2024)
+                87% (High Distinction, Dean&apos;s List 2023-2024)
               </p>
             </div>
             <div className="text-sm md:text-base space-y-6 text-left">
