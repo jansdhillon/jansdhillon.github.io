@@ -18,7 +18,7 @@ export const Education = () => {
             </Badge>
           </div>
           <div className="">
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tighter">
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tighter text-primary">
               My Academic Journey
 
             </h2>
