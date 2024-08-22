@@ -1,94 +1,82 @@
-import { Badge } from "./ui/badge";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "./ui/card";
-import { Separator } from "./ui/separator";
+import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { CardDescription } from "./ui/card";
 
 export const Education = () => {
   return (
-    <div
-      className="p-4"
-      data-aos="fade-up"
-      data-aos-delay="100"
-      data-aos-duration="750"
-    >
-      <section className="w-full py-12 md:py-24 lg:py-32 ">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="flex flex-col justify-center items-center space-y-4 w-full ">
-              <Badge
-                variant="outline"
-                className="flex gap-2 justify-center w-[1/4] bg-accent  rounded-full p-3 text-xs md:text-sm"
-                id="education"
-              >
-                <div>🎓</div>
-                <div>Education</div>
-              </Badge>
-              <div className="text-base md:text-2xl font-medium tracking-tighter pb-4">
-                My Academic Journey
+    <section className="w-full py-12 md:py-24 lg:py-32 ">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col items-center justify-center space-y-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Badge
+              variant="outline"
+              className="inline-flex items-center gap-2 bg-accent text-accent-foreground rounded-full px-4 py-2 text-sm"
+            >
+              🎓 Education
+            </Badge>
+          </motion.div>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tighter">
+            My Academic Journey
+          </h2>
+          <div className="max-w-3xl">
+            <div className="flex items-center justify-center space-x-5 mb-6">
+              <Image src="/ubc.svg" alt="UBC" width={35} height={35} />
+              <h3 className="text-xl md:text-2xl font-semibold">
+                The University of British Columbia
+              </h3>
+            </div>
+            <div className="text-sm md:text-base space-y-2 mb-8">
+              <p className="text-muted-foreground">Sept 2020 - April 2024</p>
+              <p>Bachelor of Science, Major in Computer Science</p>
+              <p className="font-medium">
+                <span className=" font-bold">Cumulative GPA: </span>
+                87% (High Distinction, Dean's List 2023-2024)
+              </p>
+            </div>
+            <div className="text-sm md:text-base space-y-6 text-left">
+              <p>
+                I graduated from UBC with distinction this spring and received
+                my Bachelor of Science degree with a major in Computer Science.
+                I learned a lot through my studies and I am excited to apply
+                this foundation to my career!
+              </p>
+              <div>
+                <h4 className="font-bold text-lg mb-2">Key Courses:</h4>
+                <ul className="grid grid-cols-2 gap-2 list-disc list-inside ml-4">
+                  <li>Software Engineering</li>
+                  <li>Algorithm Analysis</li>
+                  <li>Data Structures</li>
+                  <li>Human Computer Interaction</li>
+                  <li>Data Analysis</li>
+                  <li>Databases</li>
+                  <li>Directed Studies in Software Development</li>
+                  <li>Capstone Software Engineering Degree Course</li>
+                </ul>
               </div>
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-stretch justify-center text-sm md:text-lg font-bold gap-4 pt-4 pb-1 md:pb-4">
-                    <Image src="/ubc.svg" alt="UBC" width={20} height={20} />{" "}
-                    <div>University of British Columbia</div>
-                  </CardTitle>
-                  <div className="text-xs md:text-sm space-y-4 ">
-                    <CardDescription>
-                      Bachelor of Science, Major in Computer Science
-                    </CardDescription>
-                    <CardDescription>Sept 2020 - April 2024</CardDescription>
-                    <CardDescription>
-                      <span className="font-bold">CGPA:</span> 87%
-                    </CardDescription>
-                  </div>
-                </CardHeader>
-
-                <CardContent className="mx-auto max-w-[800px] text-sm md:text-base pt-4 text-left space-y-4">
-                  <div>
-                    I graduated from UBC with distinction this spring and
-                    received my Bachelor of Science degree with a major in
-                    Computer Science. I learned a lot through my studies and I
-                    am excited to apply this foundation to my career!
-                  </div>
-                  <ul className=" space-y-4 text-left">
-                    <li>
-                      <p className="font-bold my-4">Key Courses:</p>
-                      <ul className="list-disc list-inside space-y-2 text-left ml-4">
-                        <li>Capstone Software Engineering Project (A+)</li>
-                        <li>Directed Studies (A+) </li>
-                        <li>Algorithm Analysis (A+) </li>
-                        <li>Intro to Databases (A+) </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <p className="font-bold my-4 ">Acknowledgements:</p>
-                      <ul className="list-disc list-inside space-y-2 text-left ml-4">
-                        <li>
-                          Graduated on the Dean&apos;s List, with distinction (average &gt; 85%), and with Co-op Designation
-                        </li>
-                        <li>
-                          Part of the team recognized as having the best project
-                          in our Capstone option (AWS)
-                        </li>
-                        <li>
-                          Recipient of the Southern Interior Development Trust
-                          scholarship
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
+              <div>
+                <h4 className="font-bold text-lg mb-2">Acknowledgements:</h4>
+                <ul className="space-y-2 list-disc list-inside ml-4">
+                  <li>
+                    Recognized by the UBC Cloud Innovation Centre, a
+                    collaboration between AWS and UBC, as having the best
+                    project in our hackathon-style Capstone Software Engineering
+                    degree course.
+                  </li>
+                  <li>
+                    Recipient of the Southern Interior Trust Development
+                    Scholarship and the Alexander Rutherford Scholarship.
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };

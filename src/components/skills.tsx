@@ -13,9 +13,6 @@ export const Skills = () => {
   return (
     <div
       className="p-4 "
-      data-aos="fade-up"
-      data-aos-delay="100"
-      data-aos-duration="750"
     >
       <section className="w-full py-12 md:py-24 lg:py-32 rounded-lg">
         <div className="container px-4 md:px-6">

@@ -15,9 +15,6 @@ import { Education } from "./education";
 import { Experience } from "./experience";
 
 export default function Home() {
-  useEffect(() => {
-    AOS.init({ once: true });
-  });
   return (
     <div className="flex flex-col min-h-[100dvh] pt-24">
       <main className="flex-1">

@@ -33,8 +33,6 @@ export const Projects = () => (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
             <Card
               className="p-3 ring-card "
-              data-aos="flip-left"
-              data-aos-delay="100"
             >
               <CardContent className="flex flex-col items-start justify-between gap-4">
                 <div className="p-4 flex flex-col gap-3">
@@ -82,9 +80,6 @@ export const Projects = () => (
 
             <Card
               className="p-3"
-              data-aos="flip-left"
-              data-aos-delay="200"
-              data-aos-duration="750"
             >
               <CardContent className="flex flex-col items-start justify-between gap-4">
                 <div className="p-4 flex flex-col gap-3">
@@ -100,7 +95,8 @@ export const Projects = () => (
                     UBC Recycling
                   </div>
                   <div className="text-xs md:text-sm pt-2 pb-1">
-                    A cross-platform mobile app that uses a custom object
+                    Conducted machine learning research and developed a
+                    cross-platform mobile app. The app uses a custom object
                     detection machine learning model and geolocation to classify
                     scanned items as recyclable, returnable, compostable, or
                     trash, and then direct the user to where they can properly
@@ -125,8 +121,6 @@ export const Projects = () => (
             </Card>
             <Card
               className="p-3 ring-card "
-              data-aos="flip-left"
-              data-aos-delay="300"
             >
               <CardContent className="flex flex-col items-start justify-between gap-4">
                 <div className="p-4 flex flex-col gap-3">

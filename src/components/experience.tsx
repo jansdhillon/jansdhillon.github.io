@@ -27,9 +27,6 @@ export const Experience = ({}) => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
               <Card
                 className="p-3"
-                data-aos="flip-left"
-                data-aos-delay="100"
-                data-aos-duration="750"
               >
                 <CardContent className="flex flex-col items-start justify-between gap-4 h-full">
                   <div className="p-4 flex flex-col gap-3">
@@ -41,10 +38,10 @@ export const Experience = ({}) => {
                         width={20}
                         height={20}
                       />{" "}
-                      Software Engineer Intern
+                      Software Engineer Co-op
                     </div>
                     <CardDescription>
-                      Communications Security Establishment (CSE)
+                    Communications Security Establishment (CSE), Government of Canada
                     </CardDescription>
                     {/* <CardDescription>
                           January 2024 - April 2024
@@ -52,18 +49,13 @@ export const Experience = ({}) => {
                     <div className="text-xs md:text-sm pt-3">
                       <ul className="list-disc list-inside space-y-2 text-left">
                         <li>
-                          Contributed to the enhancement and deployment of
-                          internal analytical software and documentation
+                        Developed a CI/CD pipeline for a microservice deployment onto Kubernetes, enhancing reliability and efficiency.
                         </li>
                         <li>
-                          Employed a broad skillset and strong desire to learn,
-                          utilizing technologies such as Azure, Python, Linux,
-                          Kubernetes, and Helm
+                        Enhanced internal analytical software using Azure, Python, Linux, and SQL, leading to improved intelligence analysis.
                         </li>
                         <li>
-                          Actively sought out and incorporated feedback from
-                          colleagues to foster personal and professional growth
-                          as a software engineer
+                        Engaged in continuous feedback loops to enhance team productivity and professional development.
                         </li>
                       </ul>
                     </div>
@@ -78,9 +70,6 @@ export const Experience = ({}) => {
               </Card>
               <Card
                 className="p-3"
-                data-aos="flip-left"
-                data-aos-delay="200"
-                data-aos-duration="750"
               >
                 <CardContent className="flex flex-col items-start justify-between gap-4 h-full">
                   <div className="p-4 flex flex-col gap-3 ">
@@ -100,16 +89,13 @@ export const Experience = ({}) => {
                     <div className="text-xs md:text-sm pt-8">
                       <ul className="list-disc list-inside space-y-2 text-left">
                         <li>
-                          Maintained and implemented features on the company
-                          apps and sites
+                        Contributed to the development of an innovative sports tech product, promoting accessibility in athletics.
                         </li>
                         <li>
-                          Designed and implemented creative and effective
-                          changes to the UI/UX
+                        •	Overhauled the command center web app with .NET, jQuery, and CSS, improving interactivity and accessibility.
                         </li>
                         <li>
-                          Contributed to increased sales and adoption of the
-                          product in an emerging market
+                        •	Improved Android app features with Kotlin and Java, resulting in an enriched experience for end users.
                         </li>
                       </ul>
                     </div>
@@ -119,16 +105,13 @@ export const Experience = ({}) => {
                     <Badge variant="secondary">JavaScript</Badge>
                     <Badge variant="secondary">.NET</Badge>
                     <Badge variant="secondary">Kotlin</Badge>
-                    <Badge variant="secondary">HTML</Badge>
+                    <Badge variant="secondary">CSS</Badge>
                   </div>
                 </CardContent>
               </Card>
 
               <Card
                 className="p-3"
-                data-aos="flip-left"
-                data-aos-delay="300"
-                data-aos-duration="750"
               >
                 <CardContent className="flex flex-col items-start justify-between gap-4">
                   <div className="p-4 flex flex-col gap-3">
@@ -142,24 +125,17 @@ export const Experience = ({}) => {
                       />{" "}
                       Student Support Analyst I
                     </div>
-                    <CardDescription>UBC</CardDescription>
+                    <CardDescription>The University of British Columbia</CardDescription>
                     <div className="text-xs md:text-sm pt-8">
                       <ul className="list-disc list-inside space-y-2 text-left">
                         <li>
-                          Resolved an increased number of incidents compared to
-                          the previous academic year
+                        Streamlined student support by creating clear, accessible documentation, greatly reducing troubleshooting time.
                         </li>
                         <li>
-                          Improved efficiency by creating effective
-                          documentation that is easy to understand and access
+                        Provided technical troubleshooting with a high satisfaction rate, resolving 70% more issues than the previous year.
                         </li>
                         <li>
-                          Provided comprehensive support for students
-                          experiencing various tech issues
-                        </li>
-                        <li>
-                          Collaborated with other teams at UBC to lead Student
-                          Support on the Okanagan campus
+                        Collaborated across teams to enhance on-campus support services, improving operational efficiency.
                         </li>
                       </ul>
                     </div>
