@@ -49,7 +49,7 @@ export const Skills = () => {
           <div>
             <Badge
               variant="outline"
-              className="inline-flex items-center gap-2 bg-secondary dark:text-white rounded-full px-4 py-2 text-sm"
+              className="inline-flex items-center gap-3 bg-secondary dark:text-white rounded-full px-4 py-2 text-sm"
             >
               <div>🎨</div> <p>Skills</p>
             </Badge>

@@ -12,7 +12,7 @@ export const Education = () => {
           <div>
             <Badge
               variant="outline"
-              className="inline-flex items-center gap-2 border-0  bg-secondary dark:text-white rounded-full px-4 py-2 text-sm"
+              className="inline-flex items-center gap-3 border-0  bg-secondary dark:text-white rounded-full px-4 py-2 text-sm "
             >
               <div>🎓</div> <p>Education</p>
             </Badge>
@@ -20,16 +20,11 @@ export const Education = () => {
           <div className="">
             <h2 className="text-2xl md:text-3xl font-bold tracking-tighter text-primary">
               My Academic Journey
-
             </h2>
-
-
           </div>
-          <Separator/>
+          <Separator />
           <div className="max-w-3xl">
-
             <div className="flex items-center md:items-start justify-center space-x-3 md:space-x-5 mb-3">
-
               <Image
                 src="/ubc.svg"
                 alt="UBC"

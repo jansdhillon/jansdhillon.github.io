@@ -8,7 +8,7 @@ export const JobStatusBadge: React.FC = () => {
       <Badge className="bg-accent px-4 py-2 rounded-full space-x-3 hover:bg-accent ">
         <div className="h-2 w-2  bg-green-400 rounded-full text-primary animate-pulse"></div>
 
-        <div className="text-foreground font-semibold">
+        <div className="text-foreground font-semibold text-sm">
           Ready to Join your Team
         </div>
       </Badge>

@@ -132,7 +132,7 @@ export const Projects = () => {
               variant="outline"
               className="inline-flex items-center gap-3 border-0  bg-secondary dark:text-white rounded-full px-4 py-2 text-sm"
             >
-              <div className="text-lg">🚀</div> <p>Projects</p>
+              <div className="">🚀</div> <p>Projects</p>
             </Badge>
           </div>
           <h2 className="text-2xl md:text-3xl font-bold tracking-tighter mb-8 text-primary">

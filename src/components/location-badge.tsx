@@ -20,7 +20,7 @@ export const LocationBadge: React.FC = () => {
         >
           <p className="h-4 w-4 text-primary ">📍</p>
         </motion.div>
-        <span className="text-foreground font-semibold">
+        <span className="text-foreground font-semibold text-sm">
           Calgary, Alberta, Canada
         </span>
       </Badge>
