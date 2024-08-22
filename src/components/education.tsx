@@ -20,9 +20,9 @@ export const Education = () => {
             My Academic Journey
           </h2>
           <div className="max-w-3xl">
-            <div className="flex items-center justify-center space-x-5 mb-6">
-              <Image src="/ubc.svg" alt="UBC" width={30} height={30} />
-              <h3 className="text-lg md:text-xl font-semibold">
+            <div className="flex items-start justify-center space-x-3 md:space-x-5 mb-6">
+              <Image src="/ubc.svg" alt="UBC" width={25} height={25} quality={100} />
+              <h3 className="text-lg md:text-xl font-medium">
                 The University of British Columbia
               </h3>
             </div>
@@ -43,27 +43,27 @@ export const Education = () => {
               </p>
               <div>
                 <h4 className="font-bold text-lg mb-2">Key Courses:</h4>
-                <ul className="grid grid-cols-2 gap-2 list-disc list-inside ml-4">
-                  <li>Software Engineering</li>
-                  <li>Algorithm Analysis</li>
-                  <li>Data Structures</li>
-                  <li>Human Computer Interaction</li>
-                  <li>Data Analysis</li>
-                  <li>Databases</li>
-                  <li>Directed Studies in Software Development</li>
-                  <li>Capstone Software Engineering Degree Course</li>
+                <ul className="grid grid-cols-2 gap-2 list-disc pl-5">
+                  <li className="pl-1">Software Engineering</li>
+                  <li className="pl-1">Algorithm Analysis</li>
+                  <li className="pl-1">Data Structures</li>
+                  <li className="pl-1">Human Computer Interaction</li>
+                  <li className="pl-1">Data Analysis</li>
+                  <li className="pl-1">Databases</li>
+                  <li className="pl-1">Directed Studies in Software Development</li>
+                  <li className="pl-1">Capstone Software Engineering Degree Course</li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-bold text-lg mb-2">Acknowledgements:</h4>
-                <ul className="space-y-2 list-disc list-inside ml-4">
-                  <li>
+                <ul className="space-y-2 list-disc pl-5">
+                  <li className="pl-1">
                     Recognized by the UBC Cloud Innovation Centre, a
                     collaboration between AWS and UBC, as having the best
                     project in our hackathon-style Capstone Software Engineering
                     degree course.
                   </li>
-                  <li>
+                  <li className="pl-1">
                     Recipient of the Southern Interior Trust Development
                     Scholarship and the Alexander Rutherford Scholarship.
                   </li>

@@ -25,7 +25,7 @@ export default function Home() {
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
           <div className="container px-6">
-            <div className="flex flex-col items-center space-y-6 text-center">
+            <div className="flex flex-col items-center space-y-6 md:space-y-8 text-center">
               <div className="min-w-full font-bold min-h-[100px] bg-gradient-to-r from-indigo-500 to-orange-400 tracking-tighter text-transparent bg-clip-text animate-gradient bg-300%">
                 <Writer text="Hey, I'm Jan!" className="text-4xl md:text-6xl tracking-tighter" />
               </div>

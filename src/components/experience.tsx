@@ -34,6 +34,7 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
               alt={`${company} Logo`}
               width={company === "The University of British Columbia" ? 20 : 25}
               height={company === "The University of British Columbia" ? 20 : 25}
+              quality={100}
             />
             <h3 className="text-lg font-bold">{title}</h3>
           </div>
