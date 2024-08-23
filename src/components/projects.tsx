@@ -47,7 +47,7 @@ const ProjectCard = ({
         </div>
       </CardContent>
       <CardFooter className="flex flex-col items-center gap-6 p-6">
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-2">
           {technologies.map((tech: any, index: any) => (
             <Badge key={index} variant="secondary">
               {tech}
