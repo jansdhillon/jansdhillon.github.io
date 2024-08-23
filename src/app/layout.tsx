@@ -24,7 +24,7 @@ export default function RootLayout({
         disableTransitionOnChange
       >
         <body
-          className={`${GeistSans.className} bg-gradient-to-b from-background to-secondary/20 flex flex-col`}
+          className={`${GeistSans.className} bg-gradient-to-br from-background to-accent/20  flex flex-col`}
         >
           {children}
         </body>

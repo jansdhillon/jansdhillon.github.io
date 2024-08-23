@@ -160,7 +160,7 @@ export const Experience: React.FC = () => {
               <div className=" ">💼</div> <p> Work Experience</p>
             </Badge>
           </div>
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tighter mb-8 text-primary">
+          <h2 className="text-2xl md:text-3xl font-semibold tracking-tighter mb-8 text-primary">
             Teams I&apos;ve Worked With
           </h2>
           <Separator/>

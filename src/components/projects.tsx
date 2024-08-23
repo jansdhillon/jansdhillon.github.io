@@ -135,7 +135,7 @@ export const Projects = () => {
               <div className="">🚀</div> <p>Projects</p>
             </Badge>
           </div>
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tighter mb-8 text-primary">
+          <h2 className="text-2xl md:text-3xl font-semibold tracking-tighter   mb-8 text-primary">
             Projects I&apos;ve Contributed To
           </h2>
           <Separator/>
