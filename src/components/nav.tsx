@@ -49,7 +49,7 @@ export const Nav = () => {
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
     >
-      <div className="container mx-auto px-5">
+      <div className="container mx-auto px-12">
         <div className="flex items-center justify-between py-5">
           <Link href="/" className="text-primary text-lg font-bold hover:text-indigo-400">
             Jan-Yaeger Dhillon

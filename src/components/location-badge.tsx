@@ -14,8 +14,6 @@ export const LocationBadge: React.FC = () => {
           }}
           transition={{
             duration: 1,
-            repeat: 2,
-            repeatType: "reverse",
           }}
         >
           <p className="h-4 w-4 text-primary ">📍</p>

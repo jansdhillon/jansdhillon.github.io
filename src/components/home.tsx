@@ -20,11 +20,11 @@ export default function Home() {
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 ">
           <div className="container px-6 ">
             <div className="flex flex-col items-center space-y-6 md:space-y-10 text-center">
-              <div className="min-w-full font-bold min-h-[60px] bg-gradient-to-l from-indigo-400 via-fuchsia-300 to-orange-400 tracking-tighter text-transparent bg-clip-text animate-gradient bg-300%">
+              <div className=" ">
 
                 <Writer
                   text="Hey, I'm Jan!"
-                  className="text-4xl md:text-6xl tracking-tighter"
+                  className="min-w-full font-bold min-h-[60px]  text-4xl md:text-6xl font-outline-1 bg-gradient-to-l from-indigo-400 via-fuchsia-300 to-orange-400  tracking-tighter text-transparent bg-clip-text animate-gradient bg-300%"
                 />
 
               </div>
