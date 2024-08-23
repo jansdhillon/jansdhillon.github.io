@@ -107,7 +107,7 @@ export const Experience: React.FC = () => {
       ],
     },
     {
-      logo: "/at-yellow-cropped.svg",
+      logo: "/at-yellow.png",
       title: "Software Engineer Co-op",
       company: "Armilla Technology",
       description: "May 2023 - September 2023",
@@ -128,7 +128,7 @@ export const Experience: React.FC = () => {
       ],
     },
     {
-      logo: "/ubc.svg",
+      logo: "/ubc.png",
       title: "Student Support Analyst I",
       company: "The University of British Columbia",
       description: "September 2022 - April 2023",
