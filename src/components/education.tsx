@@ -24,32 +24,28 @@ export const Education = () => {
           </div>
           <Separator />
           <div className="max-w-3xl">
-            <div className="flex items-start justify-center space-x-3 mb-3">
+            <div className="flex items-center md:items-start justify-center space-x-3 md:space-x-5 mb-3">
               <Image
                 src="/ubc.svg"
                 alt="UBC"
-                width={40}
-                height={40}
-                className="mt-1.5"
+                width={25}
+                height={25}
                 quality={100}
               />
-              <div>
-                <h3 className="text-lg md:text-xl font-bold">
-                  The University of British Columbia
-                </h3>
-                <div className=" md:text-base space-y-3 mb-8">
-                  <p className="text-muted-foreground font-semibold text-sm pt-3">
-                    September 2020 - April 2024
-                  </p>
-                  <p>Bachelor of Science, Major in Computer Science</p>
-                  <p className="font-medium">
-                    <span className="">Cumulative GPA: </span>
-                    87% (High Distinction, Dean&apos;s List 2023-2024)
-                  </p>
-                </div>
-              </div>
+              <h3 className="text-lg md:text-xl font-bold">
+                The University of British Columbia
+              </h3>
             </div>
-
+            <div className=" md:text-base space-y-3 mb-8">
+              <p className="text-muted-foreground font-semibold text-sm">
+                September 2020 - April 2024
+              </p>
+              <p>Bachelor of Science, Major in Computer Science</p>
+              <p className="font-medium">
+                <span className="">Cumulative GPA: </span>
+                87% (High Distinction, Dean&apos;s List 2023-2024)
+              </p>
+            </div>
             <div className="text-sm md:text-base space-y-6 text-left">
               <p>
                 I graduated from UBC with distinction this spring and received
