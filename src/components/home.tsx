@@ -12,6 +12,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { JobStatusBadge } from "./job-status-badge";
+import { Contact } from "./contact";
 
 export default function Home() {
   return (
@@ -32,12 +33,13 @@ export default function Home() {
                 Software Engineer
               </h2>
 
+
+              <Socials />
               <div className="flex gap-3 flex-col md:flex-row  items-center justify-center">
                 <LocationBadge />
 
                 <JobStatusBadge />
               </div>
-              <Socials />
             </div>
           </div>
         </section>
@@ -46,6 +48,7 @@ export default function Home() {
         <Projects />
         <Education />
         <Skills />
+        {/* <Contact/> */}
       </main>
       <Footer />
     </div>
