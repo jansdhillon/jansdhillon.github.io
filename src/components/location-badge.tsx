@@ -7,7 +7,7 @@ export const LocationBadge: React.FC = () => {
     <div
       className="inline-flex items-center "
     >
-      <Badge className="ring-1 ring-gray-900/5 bg-accent px-4 py-2 rounded-full space-x-2 hover:bg-accent ">
+      <Badge className="ring-1 ring-primary/20 bg-accent px-4 py-2 rounded-full space-x-2 hover:bg-accent ">
         <motion.div
           animate={{
             y: [0, -5, 0],

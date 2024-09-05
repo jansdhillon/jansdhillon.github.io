@@ -14,7 +14,7 @@ import {
 } from "react-icons/si";
 import { BiLogoTypescript } from "react-icons/bi";
 import { Badge } from "@/components/ui/badge";
-import { FaDocker, FaFlask } from "react-icons/fa6";
+import { FaDocker, FaFlask, FaJava } from "react-icons/fa6";
 import { Separator } from "./ui/separator";
 
 const SkillIcon = ({ Icon, name }: any) => (
@@ -37,7 +37,7 @@ export const Skills = () => {
     { Icon: FaPython, name: "Python" },
     { Icon: FaNodeJs, name: "Node.js" },
     { Icon: SiTailwindcss, name: "Tailwind CSS" },
-    { Icon: SiFlask, name: "Flask" },
+    { Icon: FaJava, name: "JAVA" },
     { Icon: SiLinux, name: "Linux" },
     { Icon: SiGit, name: "Git" },
   ];
@@ -49,7 +49,7 @@ export const Skills = () => {
           <div>
             <Badge
               variant="outline"
-              className="inline-flex items-center gap-3 bg-secondary dark:text-white rounded-full px-4 py-2 text-sm"
+              className="ring-1 ring-primary/20 inline-flex items-center gap-3 bg-indigo-950/50 dark:text-white rounded-full px-4 py-2 text-sm"
             >
               <div>🎨</div> <p>Skills</p>
             </Badge>
@@ -57,7 +57,6 @@ export const Skills = () => {
           <h2 className="text-2xl md:text-3xl font-semibold tracking-tighter mb-8 text-primary">
             Technologies I Use
           </h2>
-          <Separator/>
           <div className="grid w-full max-w-5xl grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-4">
             {skills.map((skill, index) => (
               <SkillIcon key={index} {...skill} />

@@ -1,19 +1,17 @@
+import { cn } from "@/lib/utils";
 import React, { ReactNode } from "react";
 
 const BgGlowContainer = ({
   children,
-  opacity = 0.1,
-  className,
+  className
 }: {
   children: ReactNode | ReactNode[];
-  opacity?: number;
   className?: string;
 }) => {
   return (
-    <div className="relative max-w-7xl mx-auto">
+    <div className="relative mx-auto p-4">
       <div
-        className={`absolute -inset-1 bg-gradient-to-r from-indigo-400 via-fuchsia-300 to-orange-400 rounded-lg blur`}
-        style={{ opacity }}
+        className={cn(`absolute -inset-1 bg-gradient-to-br from-indigo-500 to-orange-400 rounded-full  blur-lg  backdrop-blur-md opacity-5 `, className)}
       ></div>
       <div>{children}</div>
     </div>

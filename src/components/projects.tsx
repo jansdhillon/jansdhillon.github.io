@@ -23,7 +23,7 @@ const ProjectCard = ({
 }: any) => (
   <div
   >
-    <Card className="h-full flex flex-col">
+    <Card className="h-full flex flex-col border-0 bg-card/20">
       <CardContent className="flex-grow p-6">
         <div className="flex flex-col gap-6 ">
           <div className="flex items-center justify-center space-x-3">
@@ -40,9 +40,9 @@ const ProjectCard = ({
             )}
             <h3 className="text-lg font-bold">{title}</h3>
           </div>
-          <CardDescription className=" text-sm text-muted-foreground text-center line-clamp-1 font-semibold">
+          <div className=" text-sm text-center line-clamp-1 font-semibold">
             {subtitle}
-          </CardDescription>
+          </div>
           <p className="text-sm text-center">{description}</p>
         </div>
       </CardContent>
@@ -124,21 +124,20 @@ export const Projects = () => {
   ];
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32" id="projects">
+    <section className="w-full py-12 md:py-24 lg:py-32 " id="projects">
       <div className="container mx-auto px-10">
         <div className="flex flex-col items-center justify-center space-y-8 text-center">
           <div>
             <Badge
               variant="outline"
-              className="inline-flex items-center gap-3 border-0  bg-secondary dark:text-white rounded-full px-4 py-2 text-sm"
+              className="ring-1 bg-white text-black ring-primary/20 inline-flex items-center gap-3 border-0  font-semibold  rounded-full px-4 py-2 text-sm"
             >
               <div className="">🚀</div> <p>Projects</p>
             </Badge>
           </div>
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-tighter   mb-8 text-primary">
+          <h2 className="text-2xl md:text-3xl font-semibold tracking-tighter   mb-8 ">
             Projects I&apos;ve Contributed To
           </h2>
-          <Separator/>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
             {projects.map((project, index) => (
               <ProjectCard key={index} {...project} />

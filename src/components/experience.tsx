@@ -25,7 +25,7 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
 
   return (
     <div>
-      <Card className="h-full flex flex-col">
+      <Card className="h-full flex flex-col   rounded-md text-primary  bg-background/30 border-0  ">
         <CardContent className="flex-grow p-6">
           <div className="flex flex-col gap-6">
             <div
@@ -35,34 +35,36 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
                   : "space-x-3 md:space-x-5"
               }`}
             >
-              <Image
-                src={logo}
-                alt={`${companyLines[0]} Logo`}
-                width={
-                  companyLines[0] === "The University of British Columbia"
-                    ? 25
-                    : 30
-                }
-                height={
-                  companyLines[0] === "The University of British Columbia"
-                    ? 25
-                    : 30
-                }
-                quality={100}
-              />
-              <div className="text-lg font-bold text-center line-clamp-3">
-                {companyLines.map((line, index) => (
-                  <div key={index}>{line}</div>
-                ))}
+
+                <Image
+                  src={logo}
+                  alt={`${companyLines[0]} Logo`}
+                  width={
+                    companyLines[0] === "The University of British Columbia"
+                      ? 25
+                      : 30
+                  }
+                  height={
+                    companyLines[0] === "The University of British Columbia"
+                      ? 25
+                      : 30
+                  }
+                  quality={100}
+                />
+                <div className="text-lg font-bold text-center line-clamp-3">
+                  {companyLines.map((line, index) => (
+                    <div key={index}>{line}</div>
+                  ))}
+                </div>
               </div>
-            </div>
-            <div className="flex-col space-y-3 font-semibold text-muted-foreground text-center text-sm ">
-              <div>{title}</div>
-              <div>{description}</div>
-            </div>
-            <ul className="list-disc space-y-2 text-sm text-left pl-5">
+              <div className="flex-col space-y-3 font-semibold text-center text-sm ">
+                <div>{title}</div>
+                <div>{description}</div>
+              </div>
+
+            <ul className="list-disc space-y-2 text-sm text-left pl-5 font-medium ">
               {responsibilities.map((item, index) => (
-                <li key={index} className="pl-1 marker:text-primary">
+                <li key={index} className="pl-1">
                   <span className="inline-block align-top">{item}</span>
                 </li>
               ))}
@@ -72,7 +74,7 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
         <CardContent className="p-6 pt-0">
           <div className="flex flex-wrap justify-center gap-2">
             {skills.map((skill, index) => (
-              <Badge key={index} variant="secondary">
+              <Badge key={index} className="bg-white text-black">
                 {skill}
               </Badge>
             ))}
@@ -149,22 +151,25 @@ export const Experience: React.FC = () => {
   ];
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32" id="experience">
+    <section
+      className="w-full py-12 md:py-24 lg:py-32  "
+      id="experience"
+    >
       <div className="container mx-auto px-10">
         <div className="flex flex-col items-center justify-center space-y-8 text-center">
           <div>
             <Badge
-              variant="outline"
-              className="inline-flex items-center gap-3 border-0  bg-secondary  dark:text-white rounded-full px-4 py-2 text-sm"
+              variant={"secondary"}
+              className="inline-flex items-center gap-3  font-semibold  border-0 rounded-full px-4 py-2 text-sm bg-white text-black"
             >
               <div className=" ">💼</div> <p> Work Experience</p>
             </Badge>
           </div>
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-tighter mb-8 text-primary">
+          <h2 className="text-2xl md:text-3xl font-semibold tracking-tighter mb-8 ">
             Teams I&apos;ve Worked With
           </h2>
-          <Separator/>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 w-full">
             {experiences.map((exp, index) => (
               <ExperienceCard key={index} {...exp} />
             ))}

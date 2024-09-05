@@ -3,8 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { GeistSans } from "geist/font/sans";
 import { ThemeProvider } from "@/components/ui/theme-provider";
-import { Analytics } from "@vercel/analytics/react"
-
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Jan-Yaeger Dhillon",
@@ -18,18 +17,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <ThemeProvider
-        attribute="class"
-        defaultTheme="dark"
-        disableTransitionOnChange
+      <body
+        className={`${GeistSans.className} flex flex-col text-background  cool-bg animate-gradient `}
       >
-        <body
-          className={`${GeistSans.className} bg-gradient-to-br from-background to-accent/20  flex flex-col`}
-        >
-          {children}
-        </body>
-        <Analytics/>
-      </ThemeProvider>
+        {children}
+      </body>
+
+      <Analytics />
     </html>
   );
 }

@@ -5,12 +5,16 @@ const Writer = ({ text, className }: { text: string, className?: string }) => {
   return (
     <div className={className}>
       <Typewriter
-      options={{
-        cursorClassName: className + " opacity-0",
-        cursor: "",
-      }}
+      options={
+        {
+          cursor: "_",
+          delay: 50,
+
+
+        }
+      }
         onInit={(typewriter) => {
-          typewriter.typeString(text).pauseFor(100).changeDelay(100).start();
+          typewriter.typeString(text).changeDelay(100).start();
         }}
       />
     </div>
