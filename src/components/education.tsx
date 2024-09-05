@@ -22,7 +22,7 @@ export const Education = () => {
               My Academic Journey
             </h2>
           </div>
-
+          <Separator className="w-40 bg-primary" />
           <div className="max-w-3xl">
             <div className="flex items-center md:items-start justify-center space-x-3 md:space-x-5 mb-3">
               <Image

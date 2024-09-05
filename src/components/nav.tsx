@@ -42,17 +42,17 @@ export const Nav = () => {
   ];
 
   return (
-    <header
-      className="  fixed top-0 left-0 right-0 z-50  h-18 text-primary  backdrop-blur-md"
-      // initial={{ y: -100 }}
-      // animate={{ y: 0 }}
-      // transition={{ type: "spring", stiffness: 300, damping: 30 }}
+    <motion.header
+      className="  fixed top-0 left-0 right-0 z-50  h-18   backdrop-blur-md"
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ type: "spring", stiffness: 300, damping: 30 }}
     >
       <div className="container mx-auto px-12">
         <div className="flex items-center justify-between py-5">
           <Link
             href="/"
-            className="  text-lg font-black hover:text-orange-200 active:text-orange-200  ease-in transition-colors"
+            className="  text-lg font-black active:animate-gradient active:cool-bg active:bg-clip-text active:text-transparent ease-in-out transition-colors"
           >
             Jan-Yaeger Dhillon
           </Link>
@@ -91,6 +91,6 @@ export const Nav = () => {
           </div>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 };

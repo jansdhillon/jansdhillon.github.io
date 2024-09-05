@@ -9,7 +9,7 @@ export const Hero = () => {
         <div className=" w-full flex flex-col justify-center items-center space-y-6 md:space-y-8 text-center">
           {/* <BgGlowContainer className=" "> */}
             <Writer
-              className="font-black md:min-h-[80px]  text-4xl md:text-7xl  tracking-tighter  bg-clip-text "
+              className="font-black md:min-h-[80px]  text-4xl md:text-7xl  tracking-tighter text-gradient "
               text="Hey, I'm Jan!"
             />
             <h2 className="text-md md:text-2xl font-bold md:pb-2">Software Engineer</h2>

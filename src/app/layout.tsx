@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${GeistSans.className} flex flex-col text-background  cool-bg animate-gradient `}
+        className={`${GeistSans.className} flex flex-col dark bg-background text-primary font-medium`}
       >
         {children}
       </body>

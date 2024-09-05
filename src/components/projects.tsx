@@ -23,7 +23,7 @@ const ProjectCard = ({
 }: any) => (
   <div
   >
-    <Card className="h-full flex flex-col border-0 bg-card/20">
+    <Card className="h-full flex flex-col border-0 bg-card/20 cool-bg bg-300%">
       <CardContent className="flex-grow p-6">
         <div className="flex flex-col gap-6 ">
           <div className="flex items-center justify-center space-x-3">
@@ -124,7 +124,7 @@ export const Projects = () => {
   ];
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 " id="projects">
+    <section className="w-full py-12 md:py-24 lg:py-32 bg-background " id="projects">
       <div className="container mx-auto px-10">
         <div className="flex flex-col items-center justify-center space-y-8 text-center">
           <div>
