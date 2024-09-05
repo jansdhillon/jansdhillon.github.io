@@ -1,32 +1,28 @@
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { CardDescription } from "./ui/card";
+import { Card, CardDescription } from "./ui/card";
 import { Separator } from "./ui/separator";
 
 export const Education = () => {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 " id="education">
-      <div className="container mx-auto px-10">
-        <div className="flex flex-col items-center  justify-center space-y-8 text-center">
+      <div className="container mx-auto px-14">
+        <div className="flex flex-col items-center  justify-center space-y-12 text-center">
           <div>
-            <Badge
-              variant="outline"
-              className="inline-flex items-center gap-3 border-0  bg-secondary dark:text-white rounded-full px-4 py-2 text-sm "
-            >
+            <Badge className="space-x-2 " variant={"secondary"}>
               <div>🎓</div> <p>Education</p>
             </Badge>
           </div>
           <div className="">
-            <h2 className="text-2xl md:text-3xl font-semibold tracking-tighter  text-primary">
+            <h2 className="text-2xl md:text-3xl font-semibold  text-primary">
               My Academic Journey
             </h2>
           </div>
-          <Separator />
-          <div className="max-w-3xl">
+          <Card className="max-w-5xl p-10">
             <div className="flex items-center md:items-start justify-center space-x-3 md:space-x-5 mb-3">
               <Image
-                src="/ubc.svg"
+                src="/ubc.png"
                 alt="UBC"
                 width={25}
                 height={25}
@@ -41,7 +37,7 @@ export const Education = () => {
                 September 2020 - April 2024
               </p>
               <p>Bachelor of Science, Major in Computer Science</p>
-              <p className="font-medium">
+              <p >
                 <span className="">Cumulative GPA: </span>
                 87% (High Distinction, Dean&apos;s List 2023-2024)
               </p>
@@ -62,7 +58,7 @@ export const Education = () => {
                   <li className="pl-1">Human Computer Interaction</li>
                   <li className="pl-1">Data Analysis</li>
                   <li className="pl-1">Databases</li>
-                  <li className="pl-1">
+                  <li className="pl-1 pr-1">
                     Directed Studies in Software Development
                   </li>
                   <li className="pl-1">
@@ -86,7 +82,7 @@ export const Education = () => {
                 </ul>
               </div>
             </div>
-          </div>
+          </Card>
         </div>
       </div>
     </section>

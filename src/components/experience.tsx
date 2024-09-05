@@ -72,7 +72,7 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
         <CardContent className="p-6 pt-0">
           <div className="flex flex-wrap justify-center gap-2">
             {skills.map((skill, index) => (
-              <Badge key={index} variant="secondary">
+              <Badge key={index} variant={"secondary"} >
                 {skill}
               </Badge>
             ))}
@@ -91,9 +91,9 @@ export const Experience: React.FC = () => {
       company: "Communications Security Establishment",
       description: "January 2024 - April 2024",
       responsibilities: [
-        "Developed a CI/CD pipeline for a microservice deployment onto Kubernetes, enhancing reliability and efficiency.",
+        "Developed a CI/CD pipeline for a microservice deployment onto Kubernetes, promoting reliability and efficiency.",
         "Enhanced internal analytical software using Azure, Python, Linux, and SQL, leading to improved intelligence analysis.",
-        "Engaged in continuous feedback loops to enhance team productivity and professional development.",
+        "Engaged in continuous feedback loops to boost team productivity and professional development.",
       ],
       skills: [
         "Azure",
@@ -153,17 +153,13 @@ export const Experience: React.FC = () => {
       <div className="container mx-auto px-10">
         <div className="flex flex-col items-center justify-center space-y-8 text-center">
           <div>
-            <Badge
-              variant="outline"
-              className="inline-flex items-center gap-3 border-0  bg-secondary  dark:text-white rounded-full px-4 py-2 text-sm"
-            >
+          <Badge className="space-x-2" variant={"secondary"}>
               <div className=" ">💼</div> <p> Work Experience</p>
             </Badge>
           </div>
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-tighter mb-8 text-primary">
+          <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-primary">
             Teams I&apos;ve Worked With
           </h2>
-          <Separator/>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
             {experiences.map((exp, index) => (
               <ExperienceCard key={index} {...exp} />

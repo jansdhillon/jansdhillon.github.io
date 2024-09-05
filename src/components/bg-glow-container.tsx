@@ -12,7 +12,7 @@ const BgGlowContainer = ({
   return (
     <div className="relative max-w-7xl mx-auto">
       <div
-        className={`absolute -inset-1 bg-gradient-to-r from-indigo-400 via-fuchsia-300 to-orange-400 rounded-lg blur`}
+        className={`absolute -inset-1 bg-gradient-to-r from-indigo-400 via-fuchsia-300 to-orange-400 rounded-full blur-xl animate-gradient`}
         style={{ opacity }}
       ></div>
       <div>{children}</div>

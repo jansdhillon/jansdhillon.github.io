@@ -14,7 +14,7 @@ import {
 } from "react-icons/si";
 import { BiLogoTypescript } from "react-icons/bi";
 import { Badge } from "@/components/ui/badge";
-import { FaDocker, FaFlask } from "react-icons/fa6";
+import { FaDocker, FaFlask, FaJava } from "react-icons/fa6";
 import { Separator } from "./ui/separator";
 
 const SkillIcon = ({ Icon, name }: any) => (
@@ -37,7 +37,7 @@ export const Skills = () => {
     { Icon: FaPython, name: "Python" },
     { Icon: FaNodeJs, name: "Node.js" },
     { Icon: SiTailwindcss, name: "Tailwind CSS" },
-    { Icon: SiFlask, name: "Flask" },
+    { Icon: FaJava, name: "Java" },
     { Icon: SiLinux, name: "Linux" },
     { Icon: SiGit, name: "Git" },
   ];
@@ -45,19 +45,18 @@ export const Skills = () => {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 " id="skills">
       <div className="container mx-auto px-10">
-        <div className="flex flex-col items-center justify-center space-y-8 text-center">
+        <div className="flex flex-col items-center justify-center space-y-12 text-center">
           <div>
             <Badge
-              variant="outline"
-              className="inline-flex items-center gap-3 bg-secondary dark:text-white rounded-full px-4 py-2 text-sm"
+              variant="secondary"
+              className="space-x-2"
             >
               <div>🎨</div> <p>Skills</p>
             </Badge>
           </div>
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-tighter mb-8 text-primary">
+          <h2 className="text-2xl md:text-3xl font-semibold text-primary">
             Technologies I Use
           </h2>
-          <Separator/>
           <div className="grid w-full max-w-5xl grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-4">
             {skills.map((skill, index) => (
               <SkillIcon key={index} {...skill} />

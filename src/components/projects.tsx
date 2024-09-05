@@ -49,7 +49,7 @@ const ProjectCard = ({
       <CardFooter className="flex flex-col items-center gap-6 p-6">
         <div className="flex flex-wrap justify-center gap-2">
           {technologies.map((tech: any, index: any) => (
-            <Badge key={index} variant="secondary">
+            <Badge key={index} variant={"secondary"} >
               {tech}
             </Badge>
           ))}
@@ -62,7 +62,7 @@ const ProjectCard = ({
           )}
           {demoLink && (
             <Link href={demoLink}>
-              <Button variant="default" size="sm">
+              <Button size={"default"} className="font-semibold" >
                 Demo
               </Button>
             </Link>
@@ -129,16 +129,15 @@ export const Projects = () => {
         <div className="flex flex-col items-center justify-center space-y-8 text-center">
           <div>
             <Badge
-              variant="outline"
-              className="inline-flex items-center gap-3 border-0  bg-secondary dark:text-white rounded-full px-4 py-2 text-sm"
+            variant={"secondary"}
+              className="space-x-2 px-3 py-1"
             >
               <div className="">🚀</div> <p>Projects</p>
             </Badge>
           </div>
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-tighter   mb-8 text-primary">
+          <h2 className="text-2xl md:text-3xl font-semibold   mb-8 text-primary">
             Projects I&apos;ve Contributed To
           </h2>
-          <Separator/>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
             {projects.map((project, index) => (
               <ProjectCard key={index} {...project} />

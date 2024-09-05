@@ -8,9 +8,10 @@ const Writer = ({ text, className }: { text: string, className?: string }) => {
       options={{
         cursorClassName: className + " opacity-0",
         cursor: "",
+        delay: 75,
       }}
         onInit={(typewriter) => {
-          typewriter.typeString(text).pauseFor(100).changeDelay(100).start();
+          typewriter.typeString(text).start();
         }}
       />
     </div>

@@ -22,7 +22,7 @@ const NavLink = ({ href, children, onClick = () => {} }: any) => {
   return (
     <Link
       href={href}
-      className={`text-sm font-semibold hover:text-indigo-400  transition-colors ${
+      className={`text-sm font-semibold hover:text-primary  transition-colors ${
         isActive ? "text-primary" : "text-muted-foreground"
       }`}
       onClick={onClick}
@@ -40,19 +40,18 @@ export const Nav = () => {
     { href: "#projects", label: "Projects" },
     { href: "#education", label: "Education" },
     { href: "#skills", label: "Skills" },
-    {href: "#contact", label: "Contact" },
   ];
 
   return (
     <motion.header
-      className="bg-background/90 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 border-b "
+      className="bg-background/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 border-b "
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
     >
       <div className="container mx-auto px-12">
         <div className="flex items-center justify-between py-5">
-          <Link href="/" className="text-primary text-lg font-bold hover:text-indigo-400">
+          <Link href="/" className="text-primary text-lg font-bold hover:text-muted-foreground">
             Jan-Yaeger Dhillon
           </Link>
 
@@ -62,11 +61,9 @@ export const Nav = () => {
                 {item.label}
               </NavLink>
             ))}
-            <ThemeSwitcher />
           </nav>
 
           <div className="flex items-center md:hidden">
-            <ThemeSwitcher />
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" className="ml-2">
