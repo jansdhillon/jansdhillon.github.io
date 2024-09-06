@@ -32,7 +32,7 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
               className={`flex items-center justify-center ${
                 company == "Communications Security Establishment"
                   ? "space-x-3"
-                  : "space-x-3 md:space-x-5"
+                  : "space-x-5 md:space-x-5"
               }`}
             >
               <Image
@@ -50,7 +50,7 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
                 }
                 quality={100}
               />
-              <div className="text-lg font-bold text-center line-clamp-3">
+              <div className="text-md md:text-ld font-bold text-center line-clamp-3">
                 {companyLines.map((line, index) => (
                   <div key={index}>{line}</div>
                 ))}
@@ -157,7 +157,7 @@ export const Experience: React.FC = () => {
               <div className=" ">💼</div> <p> Work Experience</p>
             </Badge>
           </div>
-          <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-primary">
+          <h2 className="text-xl md:text-3xl font-semibold mb-8 text-primary">
             Teams I&apos;ve Worked With
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">

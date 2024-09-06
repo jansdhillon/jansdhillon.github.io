@@ -19,7 +19,7 @@ export const Education = () => {
               My Academic Journey
             </h2>
           </div>
-          <Card className="max-w-5xl p-10">
+          <Card className="max-w-3xl p-10">
             <div className="flex items-center md:items-start justify-center space-x-3 md:space-x-5 mb-3">
               <Image
                 src="/ubc.png"
@@ -58,7 +58,7 @@ export const Education = () => {
                   <li className="pl-1">Human Computer Interaction</li>
                   <li className="pl-1">Data Analysis</li>
                   <li className="pl-1">Databases</li>
-                  <li className="pl-1 pr-1">
+                  <li className="pl-1 pr-4">
                     Directed Studies in Software Development
                   </li>
                   <li className="pl-1">
