@@ -62,7 +62,7 @@ export const Skills = () => {
               <SkillIcon key={index} {...skill} />
             ))}
           </div>
-          <p className="text-sm md:text-base font-medium text-muted-foreground mt-8">
+          <p className="text-sm md:text-base text-muted-foreground mt-8">
             ...and more! Plus I&apos;m always learning new things ✨
           </p>
         </div>
