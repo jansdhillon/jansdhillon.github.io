@@ -37,7 +37,7 @@ export const Skills = () => {
     { Icon: FaPython, name: "Python" },
     { Icon: FaNodeJs, name: "Node.js" },
     { Icon: SiTailwindcss, name: "Tailwind CSS" },
-    { Icon: FaJava, name: "JAVA" },
+    { Icon: FaJava, name: "Java" },
     { Icon: SiLinux, name: "Linux" },
     { Icon: SiGit, name: "Git" },
   ];
@@ -45,16 +45,16 @@ export const Skills = () => {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 " id="skills">
       <div className="container mx-auto px-10">
-        <div className="flex flex-col items-center justify-center space-y-8 text-center">
+        <div className="flex flex-col items-center justify-center space-y-12 text-center">
           <div>
             <Badge
-              variant="outline"
-              className="ring-1 ring-primary/20 inline-flex items-center gap-3 bg-indigo-950/50 dark:text-white rounded-full px-4 py-2 text-sm"
+              variant="secondary"
+              className="space-x-2"
             >
               <div>🎨</div> <p>Skills</p>
             </Badge>
           </div>
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-tighter mb-8 text-primary">
+          <h2 className="text-2xl md:text-3xl font-semibold text-primary">
             Technologies I Use
           </h2>
           <div className="grid w-full max-w-5xl grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-4">

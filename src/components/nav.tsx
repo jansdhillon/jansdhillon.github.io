@@ -23,7 +23,9 @@ const NavLink = ({ href, children, onClick = () => {} }: any) => {
   return (
     <Link
       href={href}
-      className={`text-sm font-semibold   transition-colors `}
+      className={`text-sm font-semibold hover:text-primary  transition-colors ${
+        isActive ? "text-primary" : "text-muted-foreground"
+      }`}
       onClick={onClick}
     >
       {children}
@@ -43,17 +45,14 @@ export const Nav = () => {
 
   return (
     <motion.header
-      className="  fixed top-0 left-0 right-0 z-50  h-18   backdrop-blur-md"
+      className="bg-background/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 border-b "
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
     >
       <div className="container mx-auto px-12">
         <div className="flex items-center justify-between py-5">
-          <Link
-            href="/"
-            className="  text-lg font-black active:animate-gradient active:cool-bg active:bg-clip-text active:text-transparent ease-in-out transition-colors"
-          >
+          <Link href="/" className="text-primary text-lg font-bold hover:text-muted-foreground">
             Jan-Yaeger Dhillon
           </Link>
 

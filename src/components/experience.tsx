@@ -32,37 +32,35 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
               className={`flex items-center justify-center ${
                 company == "Communications Security Establishment"
                   ? "space-x-3"
-                  : "space-x-3 md:space-x-5"
+                  : "space-x-5 md:space-x-5"
               }`}
             >
-
-                <Image
-                  src={logo}
-                  alt={`${companyLines[0]} Logo`}
-                  width={
-                    companyLines[0] === "The University of British Columbia"
-                      ? 25
-                      : 30
-                  }
-                  height={
-                    companyLines[0] === "The University of British Columbia"
-                      ? 25
-                      : 30
-                  }
-                  quality={100}
-                />
-                <div className="text-lg font-bold text-center line-clamp-3">
-                  {companyLines.map((line, index) => (
-                    <div key={index}>{line}</div>
-                  ))}
-                </div>
+              <Image
+                src={logo}
+                alt={`${companyLines[0]} Logo`}
+                width={
+                  companyLines[0] === "The University of British Columbia"
+                    ? 25
+                    : 30
+                }
+                height={
+                  companyLines[0] === "The University of British Columbia"
+                    ? 25
+                    : 30
+                }
+                quality={100}
+              />
+              <div className="text-md md:text-ld font-bold text-center line-clamp-3">
+                {companyLines.map((line, index) => (
+                  <div key={index}>{line}</div>
+                ))}
               </div>
-              <div className="flex-col space-y-3 font-semibold text-center text-sm ">
-                <div>{title}</div>
-                <div>{description}</div>
-              </div>
-
-            <ul className="list-disc space-y-2 text-sm text-left pl-5 font-medium text-secondary">
+            </div>
+            <div className="flex-col space-y-3 font-semibold text-muted-foreground text-center text-sm ">
+              <div>{title}</div>
+              <div>{description}</div>
+            </div>
+            <ul className="list-disc space-y-2 text-sm text-left pl-5">
               {responsibilities.map((item, index) => (
                 <li key={index} className="pl-1">
                   <span className="inline-block align-top">{item}</span>
@@ -74,7 +72,7 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
         <CardContent className="p-6 pt-0">
           <div className="flex flex-wrap justify-center gap-2">
             {skills.map((skill, index) => (
-              <Badge key={index} className="bg-white text-black">
+              <Badge key={index} variant={"secondary"} >
                 {skill}
               </Badge>
             ))}
@@ -93,9 +91,9 @@ export const Experience: React.FC = () => {
       company: "Communications Security Establishment",
       description: "January 2024 - April 2024",
       responsibilities: [
-        "Developed a CI/CD pipeline for a microservice deployment onto Kubernetes, enhancing reliability and efficiency.",
+        "Developed a CI/CD pipeline for a microservice deployment onto Kubernetes, promoting reliability and efficiency.",
         "Enhanced internal analytical software using Azure, Python, Linux, and SQL, leading to improved intelligence analysis.",
-        "Engaged in continuous feedback loops to enhance team productivity and professional development.",
+        "Engaged in continuous feedback loops to boost team productivity and professional development.",
       ],
       skills: [
         "Azure",
@@ -158,18 +156,14 @@ export const Experience: React.FC = () => {
       <div className="container mx-auto px-10">
         <div className="flex flex-col items-center justify-center space-y-8 text-center">
           <div>
-            <Badge
-              variant={"default"}
-              className="inline-flex items-center gap-3  font-semibold  border-0 rounded-full px-4 py-2 text-sm "
-            >
+          <Badge className="space-x-2" variant={"secondary"}>
               <div className=" ">💼</div> <p> Work Experience</p>
             </Badge>
           </div>
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-tighter mb-8  ">
+          <h2 className="text-xl md:text-3xl font-semibold mb-8 text-primary">
             Teams I&apos;ve Worked With
           </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
             {experiences.map((exp, index) => (
               <ExperienceCard key={index} {...exp} />
             ))}
