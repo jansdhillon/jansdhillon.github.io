@@ -135,7 +135,7 @@ export const Projects = () => {
               <div className="">🚀</div> <p>Projects</p>
             </Badge>
           </div>
-          <h2 className="text-xl md:text-3xl font-semibold   mb-8 text-primary">
+          <h2 className="text-xl md:text-2xl font-semibold   mb-8 text-primary">
             Projects I&apos;ve Contributed To
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">

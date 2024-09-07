@@ -15,7 +15,7 @@ export const Education = () => {
             </Badge>
           </div>
           <div className="">
-            <h2 className="text-2xl md:text-3xl font-semibold  text-primary">
+            <h2 className="text-xl md:text-2xl font-semibold  text-primary">
               My Academic Journey
             </h2>
           </div>
@@ -42,7 +42,7 @@ export const Education = () => {
                 87% (High Distinction, Dean&apos;s List 2023-2024)
               </p>
             </div>
-            <div className="text-sm md:text-base space-y-6 text-left">
+            <div className="text-sm space-y-6 text-left">
               <p>
                 I graduated from UBC with distinction this spring and received
                 my Bachelor of Science degree with a major in Computer Science.

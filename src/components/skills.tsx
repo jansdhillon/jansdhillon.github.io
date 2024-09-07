@@ -54,7 +54,7 @@ export const Skills = () => {
               <div>🎨</div> <p>Skills</p>
             </Badge>
           </div>
-          <h2 className="text-2xl md:text-3xl font-semibold text-primary">
+          <h2 className="text-xl md:text-2xl font-semibold text-primary">
             Technologies I Use
           </h2>
           <div className="grid w-full max-w-5xl grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-4">
@@ -62,7 +62,7 @@ export const Skills = () => {
               <SkillIcon key={index} {...skill} />
             ))}
           </div>
-          <p className="text-sm md:text-base text-muted-foreground mt-8">
+          <p className="text-sm text-muted-foreground mt-8">
             ...and more! Plus I&apos;m always learning new things ✨
           </p>
         </div>
