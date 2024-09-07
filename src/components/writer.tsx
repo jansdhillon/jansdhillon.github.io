@@ -12,10 +12,11 @@ const Writer = ({ text, className }: { text: string, className?: string }) => {
           delay: 50,
 
 
+
         }
       }
         onInit={(typewriter) => {
-          typewriter.typeString(text).changeDelay(100).start();
+          typewriter.pauseFor(1000).typeString(text).start();
         }}
       />
     </div>

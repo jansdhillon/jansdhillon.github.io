@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { GeistSans } from "geist/font/sans";
 import { ThemeProvider } from "@/components/ui/theme-provider";
@@ -16,19 +15,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <ThemeProvider
-        attribute="class"
-        defaultTheme="dark"
-        disableTransitionOnChange
+    <html lang="en" className={GeistSans.className} suppressHydrationWarning>
+      <body
+        className={`${GeistSans.className} bg-gradient-to-br from-background to-accent/20  flex flex-col`}
       >
-        <body
-          className={`${GeistSans.className} bg-gradient-to-br from-background to-accent/20  flex flex-col`}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
         >
           {children}
-        </body>
-        <Analytics />
-      </ThemeProvider>
+        </ThemeProvider>
+      </body>
+      <Analytics />
     </html>
   );
 }

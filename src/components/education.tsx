@@ -11,7 +11,7 @@ export const Education = () => {
         <div className="flex flex-col items-center  justify-center space-y-12 text-center">
           <div>
             <Badge className="space-x-2 " variant={"secondary"}>
-              <div>🎓</div> <p>Education</p>
+              <div>📚</div> <p>Education</p>
             </Badge>
           </div>
           <div className="">
@@ -19,8 +19,8 @@ export const Education = () => {
               My Academic Journey
             </h2>
           </div>
-          <Card className="max-w-3xl p-10">
-            <div className="flex items-center md:items-start justify-center space-x-3 md:space-x-5 mb-3">
+          <Card className="max-w-3xl p-6">
+            <div className="flex items-center md:items-start justify-center space-x-5 mb-3">
               <Image
                 src="/ubc.png"
                 alt="UBC"
@@ -32,13 +32,13 @@ export const Education = () => {
                 The University of British Columbia
               </h3>
             </div>
-            <div className=" md:text-base space-y-3 mb-8">
-              <p className=" font-semibold text-sm">
+            <div className=" text-sm space-y-4 mb-8 ">
+              <p className=" font-semibold text-sm text-muted-foreground">
                 September 2020 - April 2024
               </p>
-              <p>Bachelor of Science, Major in Computer Science</p>
+              <p className="font-semibold">Bachelor of Science, Major in Computer Science</p>
               <p >
-                <span className="">Cumulative GPA: </span>
+                <span className="font-bold ">Cumulative GPA: </span>
                 87% (High Distinction, Dean&apos;s List 2023-2024)
               </p>
             </div>

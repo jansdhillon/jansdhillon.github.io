@@ -25,13 +25,13 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
 
   return (
     <div>
-      <Card className="h-full flex flex-col   rounded-xl  border-0  ">
+      <Card className="h-full flex flex-col ">
         <CardContent className="flex-grow p-6">
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-8">
             <div
               className={`flex items-center justify-center ${
                 company == "Communications Security Establishment"
-                  ? "space-x-3"
+                  ? "space-x-5 md:space-x-3"
                   : "space-x-5 md:space-x-5"
               }`}
             >
@@ -157,13 +157,13 @@ export const Experience: React.FC = () => {
         <div className="flex flex-col items-center justify-center space-y-8 text-center">
           <div>
           <Badge className="space-x-2" variant={"secondary"}>
-              <div className=" ">💼</div> <p> Work Experience</p>
+              <div className=" ">💰</div> <p> Work Experience</p>
             </Badge>
           </div>
           <h2 className="text-xl md:text-3xl font-semibold mb-8 text-primary">
             Teams I&apos;ve Worked With
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+          <div className="flex flex-col md:flex-row gap-6 w-full">
             {experiences.map((exp, index) => (
               <ExperienceCard key={index} {...exp} />
             ))}

@@ -23,10 +23,10 @@ const ProjectCard = ({
 }: any) => (
   <div
   >
-    <Card className="h-full flex flex-col border-0 bg-card/20 cool-bg bg-300%">
+    <Card className="h-full flex flex-col">
       <CardContent className="flex-grow p-6">
-        <div className="flex flex-col gap-6 ">
-          <div className="flex items-center justify-center space-x-3">
+        <div className="flex flex-col gap-8 ">
+          <div className="flex items-center justify-center space-x-3 ">
             {typeof logo === "string" ? (
               <Image
                 src={logo}
@@ -40,7 +40,7 @@ const ProjectCard = ({
             )}
             <h3 className="text-md md:text-lg font-bold">{title}</h3>
           </div>
-          <div className=" text-sm text-center line-clamp-1 font-semibold">
+          <div className=" text-sm text-center line-clamp-1 font-semibold text-muted-foreground">
             {subtitle}
           </div>
           <p className="text-sm text-center">{description}</p>
@@ -124,7 +124,7 @@ export const Projects = () => {
   ];
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-background " id="projects">
+    <section className="w-full py-12 md:py-24 lg:py-32" id="projects">
       <div className="container mx-auto px-10">
         <div className="flex flex-col items-center justify-center space-y-8 text-center">
           <div>
