@@ -70,10 +70,9 @@ module.exports = {
           to: { height: 0 },
         },
         "animated-gradient": {
-         '0%': { backgroundPosition: '0% 50%' },
+          '0%': { backgroundPosition: '0% 50%' },
           '50%': { backgroundPosition: '100% 50%' },
-          '100%': { backgroundPosition: '0% 50%'}
-
+          '100%': { backgroundPosition: '0% 50%' },
         },
       },
       backgroundSize: {
@@ -82,8 +81,9 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "gradient": ' animated-gradient 10s ease-in-out alternate infinite ',
-        'fadeIn': 'fadeIn 1s ease-out forwards visible ',
+        "gradient": 'animated-gradient 10s ease infinite alternate',
+        'fadeIn': 'fadeIn 1s ease-out forwards visible',
+
       },
     },
   },

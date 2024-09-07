@@ -17,13 +17,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={`${GeistSans.className} flex flex-col dark bg-background text-primary font-medium`}
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="dark"
+        disableTransitionOnChange
       >
-        {children}
-      </body>
-
-      <Analytics />
+        <body
+          className={`${GeistSans.className} bg-gradient-to-br from-background to-accent/20  flex flex-col`}
+        >
+          {children}
+        </body>
+        <Analytics />
+      </ThemeProvider>
     </html>
   );
 }

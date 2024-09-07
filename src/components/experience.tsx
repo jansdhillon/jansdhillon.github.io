@@ -25,7 +25,7 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
 
   return (
     <div>
-      <Card className="h-full flex flex-col   rounded-xl cool-bg bg-300%  border-0  ">
+      <Card className="h-full flex flex-col   rounded-xl  border-0  ">
         <CardContent className="flex-grow p-6">
           <div className="flex flex-col gap-6">
             <div
