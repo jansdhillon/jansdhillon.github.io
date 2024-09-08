@@ -38,7 +38,7 @@ const ProjectCard = ({
             ) : (
               logo
             )}
-            <h3 className="text-md md:text-xl font-bold">{title}</h3>
+            <h3 className="text-lg md:text-xl font-bold">{title}</h3>
           </div>
           <div className=" text-base text-center line-clamp-1 font-semibold text-muted-foreground">
             {subtitle}

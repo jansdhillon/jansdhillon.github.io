@@ -50,7 +50,7 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
                 }
                 quality={100}
               />
-              <div className="text-md md:text-ld font-bold text-center line-clamp-3">
+              <div className="text-lg md:text-xl font-bold text-center line-clamp-3">
                 {companyLines.map((line, index) => (
                   <div key={index}>{line}</div>
                 ))}
