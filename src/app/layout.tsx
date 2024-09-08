@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={GeistSans.className} suppressHydrationWarning>
       <body
-        className={`${GeistSans.className} bg-background flex flex-col`}
+        className={`${GeistSans.className} radiant-gradient  flex flex-col`}
       >
         <ThemeProvider
           attribute="class"

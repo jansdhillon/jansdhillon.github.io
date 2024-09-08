@@ -23,7 +23,7 @@ const ProjectCard = ({
 }: any) => (
   <div
   >
-    <Card className="h-full flex flex-col">
+    <Card className="h-full flex flex-col rounded-xl">
       <CardContent className="flex-grow p-6">
         <div className="flex flex-col gap-8 ">
           <div className="flex items-center justify-center space-x-3 ">
@@ -138,6 +138,7 @@ export const Projects = () => {
           <h2 className="text-xl md:text-2xl font-semibold   mb-8 text-primary">
             Projects I&apos;ve Contributed To
           </h2>
+          <Separator />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
             {projects.map((project, index) => (
               <ProjectCard key={index} {...project} />

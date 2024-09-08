@@ -25,7 +25,7 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
 
   return (
     <div>
-      <Card className="h-full flex flex-col ">
+      <Card className="h-full flex flex-col rounded-xl">
         <CardContent className="flex-grow p-6">
           <div className="flex flex-col gap-8">
             <div
@@ -163,6 +163,7 @@ export const Experience: React.FC = () => {
           <h2 className="text-xl md:text-2xl font-semibold mb-8 text-primary">
             Teams I&apos;ve Worked With
           </h2>
+          <Separator />
           <div className="flex flex-col md:flex-row gap-6 w-full">
             {experiences.map((exp, index) => (
               <ExperienceCard key={index} {...exp} />

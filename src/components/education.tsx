@@ -18,8 +18,10 @@ export const Education = () => {
             <h2 className="text-xl md:text-2xl font-semibold  text-primary">
               My Academic Journey
             </h2>
+
           </div>
-          <Card className="max-w-3xl p-8">
+          <Separator className="max-w-3xl"/>
+          <Card className="max-w-3xl p-8 rounded-xl">
             <div className="flex items-center md:items-start justify-center space-x-5 mb-3">
               <Image
                 src="/ubc.png"
