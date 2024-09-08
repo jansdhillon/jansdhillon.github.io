@@ -14,14 +14,15 @@ export const Education = () => {
               <div>📚</div> <p>Education</p>
             </Badge>
           </div>
+
           <div className="">
-            <h2 className="text-xl md:text-2xl font-semibold  text-primary">
+            <h2 className="text-2xl md:text-3xl font-semibold my-3  text-primary">
               My Academic Journey
             </h2>
 
           </div>
-          <Separator className="max-w-3xl"/>
-          <Card className="max-w-3xl p-8 rounded-xl">
+          <Separator />
+          <Card className="max-w-3xl p-8 rounded-xl space-y-5">
             <div className="flex items-center md:items-start justify-center space-x-5 mb-3">
               <Image
                 src="/ubc.png"
@@ -34,8 +35,9 @@ export const Education = () => {
                 The University of British Columbia
               </h3>
             </div>
-            <div className=" text-sm space-y-4 mb-8 ">
-              <p className=" font-semibold text-sm text-muted-foreground">
+
+            <div className="  text-base space-y-4 mb-8 ">
+              <p className=" font-semibold  text-muted-foreground">
                 September 2020 - April 2024
               </p>
               <p className="font-semibold">Bachelor of Science, Major in Computer Science</p>
@@ -44,7 +46,8 @@ export const Education = () => {
                 87% (High Distinction, Dean&apos;s List 2023-2024)
               </p>
             </div>
-            <div className="text-sm space-y-6 text-left">
+            <Separator />
+            <div className=" space-y-6 text-left">
               <p>
                 I graduated from UBC with distinction this spring and received
                 my Bachelor of Science degree with a major in Computer Science.
@@ -52,7 +55,7 @@ export const Education = () => {
                 this foundation to my career!
               </p>
               <div>
-                <h4 className="font-bold text-lg mb-2">Key Courses:</h4>
+                <h4 className="font-bold text-base mb-2">Key Courses:</h4>
                 <ul className="grid grid-cols-2 gap-2 list-disc pl-5">
                   <li className="pl-1">Software Engineering</li>
                   <li className="pl-1">Algorithm Analysis</li>
@@ -69,7 +72,7 @@ export const Education = () => {
                 </ul>
               </div>
               <div>
-                <h4 className="font-bold text-lg mb-2">Acknowledgements:</h4>
+                <h4 className="font-bold text-base mb-2">Acknowledgements:</h4>
                 <ul className="space-y-2 list-disc pl-5">
                   <li className="pl-1">
                     Recognized by the UBC Cloud Innovation Centre, a

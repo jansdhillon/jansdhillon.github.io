@@ -38,12 +38,12 @@ const ProjectCard = ({
             ) : (
               logo
             )}
-            <h3 className="text-md md:text-lg font-bold">{title}</h3>
+            <h3 className="text-md md:text-xl font-bold">{title}</h3>
           </div>
-          <div className=" text-sm text-center line-clamp-1 font-semibold text-muted-foreground">
+          <div className=" text-base text-center line-clamp-1 font-semibold text-muted-foreground">
             {subtitle}
           </div>
-          <p className="text-sm text-center">{description}</p>
+          <p className="text-base text-center">{description}</p>
         </div>
       </CardContent>
       <CardFooter className="flex flex-col items-center gap-6 p-6">
@@ -135,7 +135,8 @@ export const Projects = () => {
               <div className="">🚀</div> <p>Projects</p>
             </Badge>
           </div>
-          <h2 className="text-xl md:text-2xl font-semibold   mb-8 text-primary">
+
+          <h2 className="text-2xl md:text-3xl font-semibold   mb-8 text-primary">
             Projects I&apos;ve Contributed To
           </h2>
           <Separator />

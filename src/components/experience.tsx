@@ -27,11 +27,11 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
     <div>
       <Card className="h-full flex flex-col rounded-xl">
         <CardContent className="flex-grow p-6">
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-8 ">
             <div
               className={`flex items-center justify-center ${
                 company == "Communications Security Establishment"
-                  ? "space-x-5 md:space-x-3"
+                  ? "space-x-5 "
                   : "space-x-5 md:space-x-5"
               }`}
             >
@@ -56,10 +56,12 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
                 ))}
               </div>
             </div>
-            <div className="flex-col space-y-3 font-semibold text-muted-foreground text-center text-sm ">
+
+            <div className="flex-col space-y-3 font-semibold text-muted-foreground text-center text-sm">
               <div>{title}</div>
               <div>{description}</div>
             </div>
+
             <ul className="list-disc space-y-2 text-sm text-left pl-5">
               {responsibilities.map((item, index) => (
                 <li key={index} className="pl-1">
@@ -68,8 +70,10 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
               ))}
             </ul>
           </div>
+
         </CardContent>
-        <CardContent className="p-6 pt-0">
+
+        <CardContent className="p-6 ">
           <div className="flex flex-wrap justify-center gap-2">
             {skills.map((skill, index) => (
               <Badge key={index} variant={"secondary"} >
@@ -160,7 +164,7 @@ export const Experience: React.FC = () => {
               <div className=" ">💰</div> <p> Work Experience</p>
             </Badge>
           </div>
-          <h2 className="text-xl md:text-2xl font-semibold mb-8 text-primary">
+          <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-primary">
             Teams I&apos;ve Worked With
           </h2>
           <Separator />

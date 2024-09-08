@@ -54,7 +54,7 @@ export const Skills = () => {
               <div>🎨</div> <p>Skills</p>
             </Badge>
           </div>
-          <h2 className="text-xl md:text-2xl font-semibold text-primary">
+          <h2 className="text-2xl md:text-3xl font-semibold text-primary">
             Technologies I Use
           </h2>
           <Separator />
