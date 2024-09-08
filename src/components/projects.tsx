@@ -43,7 +43,7 @@ const ProjectCard = ({
           <div className=" text-base text-center line-clamp-1 font-semibold text-muted-foreground">
             {subtitle}
           </div>
-          <p className="text-base text-center">{description}</p>
+          <p className="text-base text-left">{description}</p>
         </div>
       </CardContent>
       <CardFooter className="flex flex-col items-center gap-6 p-6">
@@ -80,7 +80,7 @@ export const Projects = () => {
       title: "obscurus",
       subtitle: "Capstone Software Engineering Degree Project",
       description:
-        "A serverless web app powered by AWS that facilitates private online communication by allowing users to request and submit videos with face-blurring applied",
+        "A serverless, full-stack web app powered by AWS and infrastructure-as-code that facilitates private online communication by allowing users to request and submit videos with automatic face-blurring applied. Using a microservices architecture and cloud technologies, the app is highly performant and scalable.",
       technologies: [
         "AWS",
         "TypeScript",
@@ -99,7 +99,7 @@ export const Projects = () => {
       title: "UBC Recycling",
       subtitle: "Directed Studies in Software Development",
       description:
-        "A cross-platform app uses a custom object detection machine learning model and geolocation to classify scanned items as recyclable, returnable, compostable, or trash, and then direct the user to where they can properly dispose of it.",
+        "A cross-platform mobile app uses a custom object detection machine learning model and geolocation to classify scanned items as recyclable, returnable, compostable, or trash, and then direct the user to where they can properly dispose of it.",
       technologies: [
         "React Native",
         "Python",
@@ -117,7 +117,7 @@ export const Projects = () => {
       subtitle: "Digital Citizenship Project",
       description:
         "An open-source web app that raises awareness about fundamental cybersecurity topics. Through various tips, interactive quizzes to test understanding, and links to additional resources, users can learn how to protect themselves in today's complex digital landscape.",
-      technologies: ["Next.js", "React", "TailwindCSS", "TypeScript"],
+      technologies: ["Next.js", "React", "TailwindCSS", "TypeScript", "Powerpoint"],
       githubLink: "https://github.com/jansdhillon/Defend-Your-Data",
       demoLink: "https://youtu.be/v8NQ6yFvvkY?si=Bb-xsWkDyu9KaP-i",
     },
