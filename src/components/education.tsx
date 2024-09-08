@@ -21,7 +21,7 @@ export const Education = () => {
             </h2>
 
           </div>
-          <Separator />
+          <Separator className="max-w-3xl" />
           <Card className="max-w-3xl p-8 rounded-xl space-y-5">
             <div className="flex items-center md:items-start justify-center space-x-5 mb-3">
               <Image

@@ -57,7 +57,7 @@ export const Skills = () => {
           <h2 className="text-2xl md:text-3xl font-semibold text-primary">
             Technologies I Use
           </h2>
-          <Separator />
+          <Separator className="max-w-4xl" />
           <div className="grid w-full max-w-5xl grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-4">
             {skills.map((skill, index) => (
               <SkillIcon key={index} {...skill} />

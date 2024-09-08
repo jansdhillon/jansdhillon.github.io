@@ -62,7 +62,7 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
               <div>{description}</div>
             </div>
 
-            <ul className="list-disc space-y-2 text-sm text-left pl-5">
+            <ul className="list-disc space-y-2 text-base text-left pl-5">
               {responsibilities.map((item, index) => (
                 <li key={index} className="pl-1">
                   <span className="inline-block align-top">{item}</span>

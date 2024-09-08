@@ -38,8 +38,9 @@ export const Nav = () => {
 
   const navItems = [
     { href: "#experience", label: "Experience" },
-    { href: "#projects", label: "Projects" },
     { href: "#education", label: "Education" },
+    { href: "#projects", label: "Projects" },
+
     { href: "#skills", label: "Skills" },
   ];
 
