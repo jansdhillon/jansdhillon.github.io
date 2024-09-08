@@ -19,7 +19,7 @@ export const Hero = () => {
 
 
 
-            <div className="flex items-center ml-2 gap-3 lg:gap-3.5 px-7 md:px-5 py-6 md:py-10">
+            <div className="flex items-center ml-2 md:ml-4 gap-3 lg:gap-3.5 px-7 md:px-5 py-6 md:py-10">
               <div className=" text-green-500">&gt;</div>
               <Writer text="Hey, I'm Jan!" />
             </div>
