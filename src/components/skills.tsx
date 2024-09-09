@@ -14,15 +14,16 @@ import {
 } from "react-icons/si";
 import { BiLogoTypescript } from "react-icons/bi";
 import { Badge } from "@/components/ui/badge";
-import { FaDocker, FaFlask, FaJava } from "react-icons/fa6";
+import { FaDocker, FaFlask, FaJava, FaLinux } from "react-icons/fa6";
 import { Separator } from "./ui/separator";
+import { IconType } from "react-icons/lib";
 
-const SkillIcon = ({ Icon, name }: any) => (
+const SkillIcon = ({ Icon, name, invert }: {Icon : IconType, name: string, invert?: boolean }) => (
   <div
     className="flex flex-col items-center gap-3"
   >
-    <Icon className="h-10 w-10 text-primary" />
-    <span className="text-sm font-medium">{name}</span>
+    <Icon className={`h-10 w-10 ${invert ? "":"text-primary"}`} />
+    <span className="text-sm font-semibold">{name}</span>
   </div>
 );
 
@@ -38,7 +39,7 @@ export const Skills = () => {
     { Icon: FaNodeJs, name: "Node.js" },
     { Icon: SiTailwindcss, name: "Tailwind CSS" },
     { Icon: FaJava, name: "Java" },
-    { Icon: SiLinux, name: "Linux" },
+    { Icon: FaLinux, name: "Linux", invert:true },
     { Icon: SiGit, name: "Git" },
   ];
 
@@ -54,7 +55,7 @@ export const Skills = () => {
               <div>🎨</div> <p>Skills</p>
             </Badge>
           </div>
-          <h2 className="text-2xl md:text-3xl font-semibold text-primary">
+          <h2 className="text-2xl md:text-3xl font-bold text-primary leading-loose">
             Technologies I Use
           </h2>
           <Separator className="max-w-4xl" />

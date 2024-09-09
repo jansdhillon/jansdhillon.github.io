@@ -38,19 +38,11 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
               <Image
                 src={logo}
                 alt={`${companyLines[0]} Logo`}
-                width={
-                  companyLines[0] === "The University of British Columbia"
-                    ? 25
-                    : 30
-                }
-                height={
-                  companyLines[0] === "The University of British Columbia"
-                    ? 25
-                    : 30
-                }
+                width={30}
+                height={30}
                 quality={100}
               />
-              <div className="text-lg md:text-xl font-bold text-center line-clamp-3">
+              <div className="text-lg md:text-xl font-semibold text-center line-clamp-3">
                 {companyLines.map((line, index) => (
                   <div key={index}>{line}</div>
                 ))}
@@ -62,7 +54,7 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
               <div>{description}</div>
             </div>
 
-            <ul className="list-disc space-y-2 text-base text-left pl-5">
+            <ul className="list-disc space-y-2 text-base text-left pl-5 leading-loose">
               {responsibilities.map((item, index) => (
                 <li key={index} className="pl-1">
                   <span className="inline-block align-top">{item}</span>
@@ -70,13 +62,12 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
               ))}
             </ul>
           </div>
-
         </CardContent>
 
         <CardContent className="p-6 ">
           <div className="flex flex-wrap justify-center gap-2">
             {skills.map((skill, index) => (
-              <Badge key={index} variant={"secondary"} >
+              <Badge key={index} variant={"secondary"}>
                 {skill}
               </Badge>
             ))}
@@ -160,11 +151,11 @@ export const Experience: React.FC = () => {
       <div className="container mx-auto px-10">
         <div className="flex flex-col items-center justify-center space-y-8 text-center">
           <div>
-          <Badge className="space-x-2" variant={"secondary"}>
-              <div className=" ">💰</div> <p> Work Experience</p>
+            <Badge className="space-x-2" variant={"secondary"}>
+              <div className=" ">💰</div> <p> Experience</p>
             </Badge>
           </div>
-          <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-primary">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-primary tracking-wide">
             Teams I&apos;ve Worked With
           </h2>
           <Separator />

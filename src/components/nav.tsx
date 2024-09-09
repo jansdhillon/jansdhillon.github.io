@@ -23,7 +23,7 @@ const NavLink = ({ href, children, onClick = () => {} }: any) => {
   return (
     <Link
       href={href}
-      className={`text-sm font-medium hover:text-primary  transition-colors ${
+      className={`text-sm font-semibold hover:text-primary  transition-colors ${
         isActive ? "text-primary" : "text-muted-foreground"
       }`}
       onClick={onClick}
@@ -53,7 +53,7 @@ export const Nav = () => {
     >
       <div className="container mx-auto px-12">
         <div className="flex items-center justify-between py-5">
-          <Link href="/" className="text-primary text-lg font-bold hover:text-muted-foreground">
+          <Link href="/" className="text-primary text-lg font-bold tracking-wide hover:text-muted-foreground">
             Jan-Yaeger Dhillon
           </Link>
 

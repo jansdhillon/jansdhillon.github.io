@@ -38,12 +38,12 @@ const ProjectCard = ({
             ) : (
               logo
             )}
-            <h3 className="text-lg md:text-xl font-bold">{title}</h3>
+            <h3 className="text-lg md:text-xl font-semibold">{title}</h3>
           </div>
           <div className=" text-base text-center line-clamp-1 font-semibold text-muted-foreground">
             {subtitle}
           </div>
-          <p className="text-base text-left">{description}</p>
+          <p className="text-base text-left leading-loose">{description}</p>
         </div>
       </CardContent>
       <CardFooter className="flex flex-col items-center gap-6 p-6">
@@ -57,7 +57,7 @@ const ProjectCard = ({
         <div className="flex gap-4 items-center">
           {githubLink && (
             <Link href={githubLink}>
-              <FaGithub size={20} />
+              <FaGithub size={25} />
             </Link>
           )}
           {demoLink && (
@@ -136,7 +136,7 @@ export const Projects = () => {
             </Badge>
           </div>
 
-          <h2 className="text-2xl md:text-3xl font-semibold   mb-8 text-primary">
+          <h2 className="text-2xl md:text-3xl font-bold   mb-8 text-primary leading-loose">
             Projects I&apos;ve Contributed To
           </h2>
           <Separator />

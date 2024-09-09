@@ -16,22 +16,22 @@ export const Education = () => {
           </div>
 
           <div className="">
-            <h2 className="text-2xl md:text-3xl font-semibold my-3  text-primary">
+            <h2 className="text-2xl md:text-3xl font-bold my-3  text-primary tracking-wide">
               My Academic Journey
             </h2>
 
           </div>
           <Separator className="max-w-3xl" />
           <Card className="max-w-3xl p-8 rounded-xl space-y-5">
-            <div className="flex items-center md:items-start justify-center space-x-5 mb-3">
+            <div className="flex items-center md:items-start justify-center space-x-6 mb-3">
               <Image
                 src="/ubc.png"
                 alt="UBC"
-                width={25}
-                height={25}
+                width={30}
+                height={30}
                 quality={100}
               />
-              <h3 className="text-lg md:text-xl font-bold">
+              <h3 className="text-lg md:text-xl font-semibold">
                 The University of British Columbia
               </h3>
             </div>
@@ -42,12 +42,12 @@ export const Education = () => {
               </p>
               <p className="font-semibold">Bachelor of Science, Major in Computer Science</p>
               <p >
-                <span className="font-bold ">Cumulative GPA: </span>
+                <span className="font-semibold ">Cumulative GPA: </span>
                 87% (High Distinction, Dean&apos;s List 2023-2024)
               </p>
             </div>
-            <Separator />
-            <div className=" space-y-6 text-left">
+
+            <div className=" space-y-6 text-left pt-4 leading-loose">
               <p>
                 I graduated from UBC with distinction this spring and received
                 my Bachelor of Science degree with a major in Computer Science.
@@ -73,12 +73,12 @@ export const Education = () => {
               </div>
               <div>
                 <h4 className="font-bold text-base mb-2">Acknowledgements:</h4>
-                <ul className="space-y-2 list-disc pl-5">
+                <ul className="space-y-2 list-disc pl-5 leading-loose">
                   <li className="pl-1">
                     Recognized by the UBC Cloud Innovation Centre, a
                     collaboration between AWS and UBC, as having the best
                     project in our hackathon-style Capstone Software Engineering
-                    degree course.
+                    Degree Course.
                   </li>
                   <li className="pl-1">
                     Recipient of the Southern Interior Trust Development
