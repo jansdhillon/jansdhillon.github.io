@@ -10,7 +10,7 @@ const Writer = ({ text, className }: { text: string, className?: string }) => {
         {
           cursor: "_",
           delay: 50,
-          cursorClassName: "text-green-500 font-black  Typewriter__cursor",
+          cursorClassName: "text-secondary-foreground font-black  Typewriter__cursor",
 
 
 

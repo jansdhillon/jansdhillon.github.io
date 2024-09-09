@@ -19,8 +19,8 @@ export const Hero = () => {
 
 
 
-            <div className="flex items-center ml-2 md:ml-4 gap-3 lg:gap-3.5 px-7 md:px-5 py-6 md:py-12">
-              <div className=" text-green-500 font-black">&gt;</div>
+            <div className="flex items-center ml-2 md:ml-5 lg:ml-6 gap-3 lg:gap-3.5 px-7 md:px-3 py-6 md:py-12">
+              <div className=" text-secondary-foreground font-black">&gt;</div>
               <Writer text="Hey, I'm Jan!" />
             </div>
           </div>
