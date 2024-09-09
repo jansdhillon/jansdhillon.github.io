@@ -9,7 +9,7 @@ export const Hero = () => {
   return (
     <section className="w-full py-8 md:py-20 lg:py-24 xl:py-36 ">
       <div className="container mx-auto px-6 ">
-        <div className=" flex flex-col justify-center items-center space-y-6 md:space-y-8 text-center ">
+        <div className=" flex flex-col justify-center items-center space-y-6 md:space-y-10 text-center ">
           <div className=" bg-card rounded-xl  border-2  flex flex-col    font-mono md:min-h-[80px] w-[350px] md:w-[610px] text-3xl md:text-6xl tracking-tighter mb-1.5">
             <div className="p-4 rounded-t-lg rounded-b-none bg-secondary  flex gap-2.5 border-b ">
               <button>
@@ -33,7 +33,7 @@ export const Hero = () => {
           {/* <h2 className="text-lg md:text-2xl font-semibold   md:pb-2">
             Software Engineer
           </h2> */}
-          {/* <Separator className="max-w-[350px] md:max-w-[600px]" /> */}
+          <Separator className="max-w-[350px] md:max-w-3xl" />
           <Socials />
         </div>
       </div>
