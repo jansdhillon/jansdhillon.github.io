@@ -44,7 +44,7 @@ export const Nav = () => {
       // animate={{ y: 0 }}
       // transition={{ type: "spring", stiffness: 300, damping: 30 }}
     >
-      <div className=" mx-auto py-4 px-10 flex items-center justify-evenly space-x-3">
+      <div className=" mx-auto py-4  px-10 flex items-center justify-evenly space-x-3">
         <nav className="hidden w-full lg:flex items-center justify-between gap-4">
           <div className=" flex space-x-4  items-center">
             <Link
@@ -64,7 +64,7 @@ export const Nav = () => {
           </div>
         </nav>
 
-        <nav className="flex items-center  lg:hidden justify-between w-full">
+        <nav className="flex  items-center  lg:hidden justify-between w-full">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <Link
               href="/"
@@ -79,8 +79,8 @@ export const Nav = () => {
               </Button>
             </SheetTrigger>
             <SheetContent>
-              <div className="flex flex-col space-y-6 mt-8 ">
-                <div className="pl-4 space-y-4">
+              <div className="pl-4 flex flex-col space-y-4 mt-8 ">
+                <div className=" space-y-4">
                   {navItems.map((item, index) => (
                     <div key={index} className="space-y-4">
                       <NavLink
@@ -90,10 +90,11 @@ export const Nav = () => {
                         {item.label}
                       </NavLink>
 
-                      <Separator className="m-0 p-0" />
+                      {index !== navItems.length - 1 && <Separator className="m-0 p-0" />}
                     </div>
                   ))}
                 </div>
+                <Separator className="m-0 p-0" />
                 <Socials />
               </div>
             </SheetContent>
