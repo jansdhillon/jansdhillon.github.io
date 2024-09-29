@@ -15,8 +15,8 @@ export default function Home() {
     <div className="flex-1 flex-col min-h-[100dvh] pt-24 md:pt-5 ">
       <Hero />
       <Experience />
-      <Education />
       <Projects />
+      <Education />
 
       <Skills />
 

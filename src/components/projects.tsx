@@ -12,6 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ShieldCheck } from "lucide-react";
 import { Separator } from "./ui/separator";
+import { SiBookstack } from "react-icons/si";
 const ProjectCard = ({
   logo,
   title,
@@ -19,7 +20,8 @@ const ProjectCard = ({
   description,
   technologies,
   githubLink,
-  demoLink,
+  additionalLink,
+  additionalLinkText,
 }: any) => (
   <div
   >
@@ -60,10 +62,10 @@ const ProjectCard = ({
               <FaGithub size={25} />
             </Link>
           )}
-          {demoLink && (
-            <Link href={demoLink}>
+          {additionalLink && (
+            <Link href={additionalLink}>
               <Button size={"default"} className="font-semibold" >
-                Demo
+                {additionalLinkText || "Demo"}
               </Button>
             </Link>
           )}
@@ -76,9 +78,20 @@ const ProjectCard = ({
 export const Projects = () => {
   const projects = [
     {
+      logo: "/books.png",
+      title: "Kathrin's Books",
+      subtitle: "Online Bookstore",
+      description:
+        "A serverless, full-stack e-commerce site that allows users to browse and purchase a selection of rare and unique books curated by my mom, Kathrin. The app features a responsive design and a smooth, modern e-commerce flow. The project is powered by Next.js, Supabase, Stripe, and Google Cloud.",
+      technologies: ["Next.js", "PostgreSQL", "TailwindCSS", "TypeScript", "Google Cloud", "Stripe", "React", "Docker"],
+      githubLink: "https://github.com/jansdhillon/prairie-books",
+      additionalLink: "https://kathrinsbooks.com",
+      additionalLinkText: "Live Site"
+    },
+    {
       logo: "/obscurus.svg",
       title: "obscurus",
-      subtitle: "Capstone Software Engineering Degree Project",
+      subtitle: "Capstone Software Engineering Project",
       description:
         "A serverless, full-stack web app powered by AWS and infrastructure-as-code that facilitates private online communication by allowing users to request and submit videos with automatic face-blurring applied. Using a microservices architecture and cloud technologies, the app is highly performant and scalable.",
       technologies: [
@@ -89,15 +102,18 @@ export const Projects = () => {
         "OpenCV",
         "Tailwind CSS",
         "PostgreSQL",
+        "Docker",
+        "React",
       ],
       githubLink:
         "https://github.com/COSC-499-W2023/year-long-project-team-9/tree/master",
-      demoLink: "https://youtu.be/4Sjj6J6F270",
+      additionalLink: "https://youtu.be/4Sjj6J6F270",
+      additionalLinkText: "Presentation",
     },
     {
       logo: "/recycling.png",
       title: "UBC Recycling",
-      subtitle: "Directed Studies in Software Development",
+      subtitle: "Directed Studies Project",
       description:
         "A cross-platform mobile app uses a custom object detection machine learning model and geolocation to classify scanned items as recyclable, returnable, compostable, or trash, and then direct the user to where they can properly dispose of it.",
       technologies: [
@@ -109,7 +125,7 @@ export const Projects = () => {
         "Tailwind CSS",
         "PyTorch",
       ],
-      demoLink: "https://www.youtube.com/watch?v=crK235Yaxlc",
+      additionalLink: "https://www.youtube.com/watch?v=crK235Yaxlc",
     },
     {
       logo: <ShieldCheck className="text-blue-500 w-8 h-8" />,
@@ -119,8 +135,10 @@ export const Projects = () => {
         "An open-source web app that raises awareness about fundamental cybersecurity topics. Through various tips, interactive quizzes to test understanding, and links to additional resources, users can learn how to protect themselves in today's complex digital landscape.",
       technologies: ["Next.js", "React", "TailwindCSS", "TypeScript", "Powerpoint"],
       githubLink: "https://github.com/jansdhillon/Defend-Your-Data",
-      demoLink: "https://youtu.be/v8NQ6yFvvkY?si=Bb-xsWkDyu9KaP-i",
+      additionalLink: "https://youtu.be/v8NQ6yFvvkY?si=Bb-xsWkDyu9KaP-i",
+      additionalLinkText: "Presentation",
     },
+
   ];
 
   return (
