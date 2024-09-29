@@ -33,8 +33,8 @@ export const Education = () => {
           </h2>
         </div>
 
-        <div className="text-center text-muted-foreground font-semibold text-lg space-y-4 mb-8 leading-relaxed ">
-          <p className="line-clamp-1">
+        <div className="text-center text-muted-foreground font-medium md:font-semibold text-lg space-y-4 mb-8 leading-relaxed ">
+          <p className="line-clamp-2">
             Bachelor of Science, Major in Computer Science
           </p>
           <p>September 2020 - April 2024</p>

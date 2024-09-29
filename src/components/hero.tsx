@@ -31,7 +31,7 @@ const Terminal = () => {
 export const Hero = () => {
   return (
     <section className="w-full py-16">
-      <div className=" flex justify-center pl-5">
+      <div className=" flex justify-center md:pl-5">
         <Terminal />
       </div>
     </section>
