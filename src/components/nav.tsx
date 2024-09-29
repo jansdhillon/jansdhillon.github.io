@@ -44,7 +44,7 @@ export const Nav = () => {
       // animate={{ y: 0 }}
       // transition={{ type: "spring", stiffness: 300, damping: 30 }}
     >
-      <div className="container mx-auto py-4 sm:px-14 flex items-center justify-between space-x-3">
+      <div className=" mx-auto py-6 px-14 flex items-center justify-between space-x-3">
         <nav className="hidden w-full lg:flex lg:pl-16 items-center justify-between gap-4">
           <Link
             href="/"
