@@ -60,7 +60,7 @@ export const Education = () => {
               <li className="pl-1">Algorithm Analysis</li>
               <li className="pl-1">Data Structures</li>
               <li className="pl-1">Human Computer Interaction</li>
-              <li className="pl-1 pr-3">Data Analysis</li>
+              <li className="pl-1 pr-6">Data Analysis</li>
               <li className="pl-1">Databases</li>
               <li className="pl-1 pr-6">
                 Directed Studies in Software Development
