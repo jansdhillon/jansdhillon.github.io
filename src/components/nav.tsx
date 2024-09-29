@@ -1,20 +1,12 @@
-"use client";
-
+"use client";;
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import { Button } from "@/components/ui/button";
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Separator } from "@/components/ui/separator";
-import BgGlowContainer from "./bg-glow-container";
 import { Socials } from "./socials";
 
 const NavLink = ({ href, children, onClick = () => {} }: any) => {
@@ -52,7 +44,7 @@ export const Nav = () => {
       // animate={{ y: 0 }}
       // transition={{ type: "spring", stiffness: 300, damping: 30 }}
     >
-      <div className="container mx-auto py-4 px-16">
+      <div className="container mx-auto py-4 sm:px-14 flex items-center justify-between space-x-3">
         <nav className="hidden w-full lg:flex lg:pl-16 items-center justify-between gap-4">
           <Link
             href="/"
@@ -70,9 +62,10 @@ export const Nav = () => {
           <div>
             <Socials />
           </div>
+
         </nav>
 
-        <nav className="flex items-center lg:hidden justify-between">
+        <nav className="flex items-center lg:hidden justify-between w-full">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <Link
               href="/"
@@ -80,6 +73,7 @@ export const Nav = () => {
             >
               Jan-Yaeger Dhillon
             </Link>
+
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="ml-2">
                 <RxHamburgerMenu className="h-5 w-5" />
@@ -106,6 +100,7 @@ export const Nav = () => {
             </SheetContent>
           </Sheet>
         </nav>
+        <ThemeSwitcher />
       </div>
     </header>
   );
