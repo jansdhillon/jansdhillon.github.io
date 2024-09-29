@@ -155,7 +155,7 @@ export const Projects = () => {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32" id="projects">
       <div className="container mx-auto px-10">
-        <div className="flex flex-col items-center justify-center space-y-8 text-center">
+        <div className="flex flex-col items-center justify-center space-y-6 text-center">
           <div>
             <Badge variant={"secondary"} className="space-x-2 px-3 py-1">
               <div className="">🚀</div> <p>Projects</p>

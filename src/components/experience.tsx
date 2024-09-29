@@ -88,7 +88,7 @@ export const Experience: React.FC = () => {
       responsibilities: [
         "Developed a CI/CD pipeline for a microservice deployment onto Kubernetes, promoting reliability and efficiency.",
         "Enhanced internal analytical software using Azure, Python, Linux, and SQL, leading to improved intelligence analysis.",
-        "Engaged in continuous feedback loops to boost team productivity and professional development.",
+        "Engaged in continuous feedback loops to boost team productivity and facilitate professional development.",
       ],
       skills: [
         "Azure",
@@ -149,7 +149,7 @@ export const Experience: React.FC = () => {
       id="experience"
     >
       <div className="container mx-auto px-10">
-        <div className="flex flex-col items-center justify-center space-y-8 text-center">
+        <div className="flex flex-col items-center justify-center space-y-6 text-center">
           <div>
             <Badge className="space-x-2" variant={"secondary"}>
               <div className=" ">💰</div> <p> Experience</p>

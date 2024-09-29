@@ -46,7 +46,7 @@ export const Skills = () => {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 " id="skills">
       <div className="container mx-auto px-10">
-        <div className="flex flex-col items-center justify-center space-y-12 text-center">
+        <div className="flex flex-col items-center justify-center space-y-6 text-center">
           <div>
             <Badge
               variant="secondary"

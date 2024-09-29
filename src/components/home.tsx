@@ -12,7 +12,7 @@ import { Hero } from "./hero";
 
 export default function Home() {
   return (
-    <div className="flex-1 flex-col min-h-[100dvh] pt-24 md:pt-5 ">
+    <div className="flex-1 flex-col min-h-[100dvh] pt-24  ">
       <Hero />
       <Projects />
       <Experience />

@@ -30,8 +30,8 @@ const Terminal = () => {
 
 export const Hero = () => {
   return (
-    <section className="w-full py-8 md:py-36 ">
-      <div className=" flex justify-center lg:pl-10">
+    <section className="w-full py-16">
+      <div className=" flex justify-center pl-5">
         <Terminal />
       </div>
     </section>

@@ -1,4 +1,4 @@
-"use client";;
+"use client";
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -44,14 +44,17 @@ export const Nav = () => {
       // animate={{ y: 0 }}
       // transition={{ type: "spring", stiffness: 300, damping: 30 }}
     >
-      <div className=" mx-auto py-6 px-10 lg:px-6 flex items-center justify-evenly space-x-3">
-        <nav className="hidden w-full lg:flex lg:pl-12 items-center justify-between gap-4">
-          <Link
-            href="/"
-            className="text-primary text-lg font-bold tracking-wide hover:text-muted-foreground lg:pr-20"
-          >
-            Jan-Yaeger Dhillon
-          </Link>
+      <div className=" mx-auto py-4 px-10 flex items-center justify-evenly space-x-3">
+        <nav className="hidden w-full lg:flex items-center justify-between gap-4">
+          <div className=" flex space-x-4  items-center">
+            <Link
+              href="/"
+              className="text-primary text-lg font-bold tracking-wide hover:text-muted-foreground"
+            >
+              Jan-Yaeger Dhillon
+            </Link>
+            <Socials />
+          </div>
           <div className="hidden md:flex space-x-6 items-center ">
             {navItems.map((item) => (
               <NavLink key={item.href} href={item.href}>
@@ -59,10 +62,6 @@ export const Nav = () => {
               </NavLink>
             ))}
           </div>
-          <div>
-            <Socials />
-          </div>
-
         </nav>
 
         <nav className="flex items-center  lg:hidden justify-between w-full">
