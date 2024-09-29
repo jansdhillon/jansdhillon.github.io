@@ -44,15 +44,15 @@ export const Nav = () => {
       // animate={{ y: 0 }}
       // transition={{ type: "spring", stiffness: 300, damping: 30 }}
     >
-      <div className=" mx-auto py-6 px-4 sm:px-14 flex items-center justify-between space-x-3">
-        <nav className="hidden w-full lg:flex lg:pl-16 items-center justify-between gap-4">
+      <div className=" mx-auto py-6 px-10 lg:px-6 flex items-center justify-evenly space-x-3">
+        <nav className="hidden w-full lg:flex lg:pl-12 items-center justify-between gap-4">
           <Link
             href="/"
-            className="text-primary text-lg font-bold tracking-wide hover:text-muted-foreground"
+            className="text-primary text-lg font-bold tracking-wide hover:text-muted-foreground lg:pr-20"
           >
             Jan-Yaeger Dhillon
           </Link>
-          <div className="hidden md:flex space-x-6 items-center">
+          <div className="hidden md:flex space-x-6 items-center ">
             {navItems.map((item) => (
               <NavLink key={item.href} href={item.href}>
                 {item.label}
@@ -65,7 +65,7 @@ export const Nav = () => {
 
         </nav>
 
-        <nav className="flex items-center lg:hidden justify-between w-full">
+        <nav className="flex items-center  lg:hidden justify-between w-full">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <Link
               href="/"
