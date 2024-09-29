@@ -79,7 +79,7 @@ export const Projects = () => {
       title: "Kathrin's Books",
       subtitle: "Online Bookstore",
       description:
-        "A full-stack e-commerce site that allows users to browse and purchase a selection of rare and unique books curated by my mom, Kathrin. The app features a responsive design and a smooth, modern e-commerce flow. The project is powered by Next.js, Supabase, Stripe, and Google Cloud.",
+        "A cloud-based e-commerce site that allows users to browse and purchase a selection of rare and unique books curated by my mom, Kathrin. The app features a responsive, modern design and a smooth e-commerce flow. The project is powered by Next.js, Supabase, Stripe, and Google Cloud.",
       technologies: [
         "Next.js",
         "PostgreSQL",
