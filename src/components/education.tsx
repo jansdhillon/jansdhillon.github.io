@@ -31,15 +31,15 @@ export const Education = () => {
             </h3>
           </div>
 
-          <div className="text-center  text-base space-y-4 mb-8 ">
-            <p className=" font-semibold  text-muted-foreground">
+          <div className="text-center font-medium text-base space-y-4 mb-8 leading-relaxed ">
+            <p className=" text-muted-foreground">
               September 2020 - April 2024
             </p>
-            <p className="font-semibold line-clamp-2">
+            <p className="line-clamp-2">
               Bachelor of Science, Major in Computer Science
             </p>
             <p>
-              <span className="font-semibold ">Cumulative GPA: </span>
+              <span className="">Cumulative GPA: </span>
               87% (High Distinction, Dean&apos;s List 2023-2024)
             </p>
           </div>
@@ -51,14 +51,15 @@ export const Education = () => {
               learned a lot through my studies and I am excited to apply this
               foundation to my career!
             </p>
-            <div>
-              <h4 className="font-bold text-base mb-2">Key Courses:</h4>
+            <div className="space-y-4">
+              <h4 className=" font-medium text-base mb-2">Key Courses:</h4>
+              <Separator  />
               <ul className="grid grid-cols-2 gap-2 list-disc pl-5">
                 <li className="pl-1 pr-4">Software Engineering</li>
                 <li className="pl-1">Algorithm Analysis</li>
                 <li className="pl-1">Data Structures</li>
                 <li className="pl-1">Human Computer Interaction</li>
-                <li className="pl-1">Data Analysis</li>
+                <li className="pl-1 pr-3">Data Analysis</li>
                 <li className="pl-1">Databases</li>
                 <li className="pl-1 pr-6">
                   Directed Studies in Software Development
@@ -68,8 +69,10 @@ export const Education = () => {
                 </li>
               </ul>
             </div>
-            <div>
-              <h4 className="font-bold text-base mb-2">Acknowledgements:</h4>
+
+            <div  className="space-y-4">
+              <h4 className=" font-medium text-base mb-2">Acknowledgements:</h4>
+              <Separator  />
               <ul className="space-y-2 list-disc pl-5 leading-loose">
                 <li className="pl-1">
                   Recognized by the UBC Cloud Innovation Centre, a collaboration
@@ -77,8 +80,8 @@ export const Education = () => {
                   hackathon-style Capstone Software Engineering Degree Course.
                 </li>
                 <li className="pl-1">
-                  Recipient of the Southern Interior Trust Development
-                  Scholarship and the Alexander Rutherford Scholarship.
+                  Recipient of the Southern Interior Trust Development Scholarship
+                  and the Alexander Rutherford Scholarship.
                 </li>
               </ul>
             </div>

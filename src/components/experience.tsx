@@ -49,7 +49,7 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
               </div>
             </div>
 
-            <div className="flex-col space-y-3 font-semibold text-muted-foreground text-center text-base">
+            <div className="flex-col space-y-3 font-medium text-muted-foreground text-center text-base">
               <div>{title}</div>
               <div>{description}</div>
             </div>

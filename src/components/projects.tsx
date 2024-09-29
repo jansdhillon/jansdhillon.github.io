@@ -40,7 +40,7 @@ const ProjectCard = ({
           )}
           <h3 className="text-lg md:text-xl font-semibold">{title}</h3>
         </div>
-        <div className=" text-base text-center line-clamp-1 font-semibold text-muted-foreground">
+        <div className=" text-base text-center line-clamp-1 font-medium text-muted-foreground">
           {subtitle}
         </div>
         <p className="text-base text-left leading-loose">{description}</p>
