@@ -166,22 +166,9 @@ export const Projects = () => {
             Projects I&apos;ve Contributed To
           </h2>
           <Separator />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
             {projects.map((project, index) => (
-              <div
-                key={index}
-                className={
-                  index === 3 ? "lg:col-span-3 flex justify-center" : ""
-                }
-              >
-                <div
-                  className={
-                    index === 3 ? "lg:w-1/2" : "md:h-full"
-                  }
-                >
-                  <ProjectCard {...project} />
-                </div>
-              </div>
+              <ProjectCard {...project} />
             ))}
           </div>
         </div>
