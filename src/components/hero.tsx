@@ -7,7 +7,7 @@ import { Handjet } from "next/font/google";
 
 const Terminal = () => {
   return (
-    <div className=" bg-card rounded-xl  border-2  flex flex-col    font-mono md:min-h-[80px] w-[350px] md:w-[610px] text-3xl md:text-6xl tracking-tighter ">
+    <div className=" bg-card rounded-xl  border-2  flex flex-col    font-mono md:min-h-[80px] w-[330px] md:w-[610px] text-3xl md:text-6xl tracking-tighter ">
       <div className="p-4 rounded-t-lg rounded-b-none bg-secondary  flex gap-2.5 border-b ">
         <button>
           <Circle className="h-3 w-3 md:h-4 md:w-4 text-red-500 fill-red-500 cursor-not-allowed hover:fill-red-600 hover:text-red-600" />
@@ -20,7 +20,7 @@ const Terminal = () => {
         </button>
       </div>
 
-      <div className="flex items-center ml-2 md:ml-5 lg:ml-7 gap-3 lg:gap-3.5 px-7 md:px-3 py-8 md:py-16">
+      <div className="flex items-center ml-2 md:ml-5 lg:ml-7 gap-3 lg:gap-3.5 px-5 md:px-3 py-8 md:py-16">
         <div className=" text-secondary-foreground font-black">&gt;</div>
         <Writer text="Hey, I'm Jan!" />
       </div>
@@ -30,7 +30,7 @@ const Terminal = () => {
 
 export const Hero = () => {
   return (
-    <section className="w-full py-8 md:py-20 lg:py-24 xl:py-36 ">
+    <section className="w-full py-8 md:py-36 ">
       <div className=" flex justify-center lg:pl-10">
         <Terminal />
       </div>

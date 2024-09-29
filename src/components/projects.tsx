@@ -162,7 +162,7 @@ export const Projects = () => {
             </Badge>
           </div>
 
-          <h2 className="text-2xl md:text-3xl font-bold   mb-8 text-primary leading-loose">
+          <h2 className="text-xl md:text-3xl font-bold line-clamp-1   mb-8 text-primary leading-loose">
             Projects I&apos;ve Contributed To
           </h2>
           <Separator />

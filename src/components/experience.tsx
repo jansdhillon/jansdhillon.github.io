@@ -155,7 +155,7 @@ export const Experience: React.FC = () => {
               <div className=" ">💰</div> <p> Experience</p>
             </Badge>
           </div>
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-primary tracking-wide">
+          <h2 className="text-xl line-clamp-1 md:text-3xl font-bold mb-8 text-primary tracking-wide">
             Teams I&apos;ve Worked With
           </h2>
           <Separator />
