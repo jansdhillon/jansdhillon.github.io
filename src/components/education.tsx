@@ -7,7 +7,7 @@ import { Separator } from "./ui/separator";
 export const Education = () => {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 " id="education">
-      <div className="flex flex-col items-center  justify-center space-y-8 text-center">
+      <div className="flex flex-col items-center  justify-center space-y-8 text-center mx-auto px-10">
         <Badge className="space-x-2 " variant={"secondary"}>
           <div>📚</div> <p>Education</p>
         </Badge>
@@ -17,8 +17,8 @@ export const Education = () => {
         </h2>
 
         <Separator className="max-w-3xl" />
-        <div className="max-w-3xl p-8 rounded-xl ">
-          <div className="flex items-start justify-center space-x-6 mb-3">
+        <div className="max-w-3xl p-8 rounded-xl space-y-6">
+          <div className="flex items-center md:items-start justify-center space-x-6 mb-3">
             <Image
               src="/ubc.png"
               alt="UBC"
@@ -31,7 +31,7 @@ export const Education = () => {
             </h3>
           </div>
 
-          <div className="  text-base space-y-4 mb-8 ">
+          <div className="text-center  text-base space-y-4 mb-8 ">
             <p className=" font-semibold  text-muted-foreground">
               September 2020 - April 2024
             </p>
@@ -54,7 +54,7 @@ export const Education = () => {
             <div>
               <h4 className="font-bold text-base mb-2">Key Courses:</h4>
               <ul className="grid grid-cols-2 gap-2 list-disc pl-5">
-                <li className="pl-1">Software Engineering</li>
+                <li className="pl-1 pr-4">Software Engineering</li>
                 <li className="pl-1">Algorithm Analysis</li>
                 <li className="pl-1">Data Structures</li>
                 <li className="pl-1">Human Computer Interaction</li>
