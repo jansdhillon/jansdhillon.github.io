@@ -4,9 +4,9 @@ import { Button } from "./ui/button";
 
 export const SocialLink = ({ icon, username, link }: SocialLinkProps) => (
   <Button variant={"ghost"} className="hover:bg-accent">
-    <Link href={link} className="flex flex-row gap-4 place-items-center text-base font-semibold">
-      {icon}
-      <p>{username}</p>
+    <Link href={link} className="flex flex-row items-center gap-4 text-sm font-semibold">
+      <div >{icon}</div>
+      <div className="md:hidden">{username}</div>
     </Link>
   </Button>
 );

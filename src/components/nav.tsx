@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/sheet";
 import { Separator } from "@/components/ui/separator";
 import BgGlowContainer from "./bg-glow-container";
+import { Socials } from "./socials";
 
 const NavLink = ({ href, children, onClick = () => {} }: any) => {
   const pathname = usePathname();
@@ -41,7 +42,6 @@ export const Nav = () => {
     { href: "#experience", label: "Experience" },
     { href: "#education", label: "Education" },
 
-
     { href: "#skills", label: "Skills" },
   ];
 
@@ -52,45 +52,60 @@ export const Nav = () => {
       // animate={{ y: 0 }}
       // transition={{ type: "spring", stiffness: 300, damping: 30 }}
     >
-      <div className="container mx-auto px-12">
-        <div className="flex items-center justify-between py-5">
-          <Link href="/" className="text-primary text-lg font-bold tracking-wide hover:text-muted-foreground">
+      <div className="container mx-auto py-4 px-16">
+        <nav className="hidden w-full lg:flex lg:pl-16 items-center justify-between gap-4">
+          <Link
+            href="/"
+            className="text-primary text-lg font-bold tracking-wide hover:text-muted-foreground"
+          >
             Jan-Yaeger Dhillon
           </Link>
-
-          <nav className="hidden md:flex space-x-6 items-center ">
+          <div className="hidden md:flex space-x-6 items-center">
             {navItems.map((item) => (
               <NavLink key={item.href} href={item.href}>
                 {item.label}
               </NavLink>
             ))}
-          </nav>
+          </div>
+          <div>
+            <Socials />
+          </div>
+        </nav>
 
-          <div className="flex items-center md:hidden">
-            <Sheet open={isOpen} onOpenChange={setIsOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="ml-2">
-                  <RxHamburgerMenu className="h-5 w-5" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent>
-                <nav className="flex flex-col space-y-4 mt-8 ">
-                  {navItems.map((item) => (
-                    <div key={item.href}>
+        <nav className="flex items-center lg:hidden justify-between">
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <Link
+              href="/"
+              className="text-primary text-lg font-bold tracking-wide hover:text-muted-foreground"
+            >
+              Jan-Yaeger Dhillon
+            </Link>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" className="ml-2">
+                <RxHamburgerMenu className="h-5 w-5" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent>
+              <div className="flex flex-col space-y-6 mt-8 ">
+                <div className="pl-4 space-y-4">
+                  {navItems.map((item, index) => (
+                    <div key={index} className="space-y-4">
                       <NavLink
                         href={item.href}
                         onClick={() => setIsOpen(false)}
                       >
                         {item.label}
                       </NavLink>
-                      <Separator className="my-2" />
+
+                      <Separator className="m-0 p-0" />
                     </div>
                   ))}
-                </nav>
-              </SheetContent>
-            </Sheet>
-          </div>
-        </div>
+                </div>
+                <Socials />
+              </div>
+            </SheetContent>
+          </Sheet>
+        </nav>
       </div>
     </header>
   );
