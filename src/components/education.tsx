@@ -7,7 +7,7 @@ import { Separator } from "./ui/separator";
 export const Education = () => {
   return (
     <section
-      className="flex flex-col justify-center items-center gap-6 py-12 md:py-24 lg:py-32 "
+      className="flex flex-col justify-center items-center mx-10  gap-6 py-12 md:py-24 lg:py-32 "
       id="education"
     >
       <div >
@@ -15,7 +15,7 @@ export const Education = () => {
           <div>📚</div> <p>Education</p>
         </Badge>
       </div>
-      <div className="container max-w-6xl mx-auto  p-10 bg-card rounded-3xl border">
+      <div className="container md:w-2/3  mx-auto  p-10 bg-card rounded-3xl border">
         <div className="flex flex-col justify-center item-center gap-4">
           {/* <h2 className="text-xl line-clamp-1 md:text-3xl font-bold my-3  text-primary tracking-wide">
             My Academic Journey
@@ -39,10 +39,10 @@ export const Education = () => {
                 The University of British Columbia
               </h3>
             </div>
-            <p className="line-clamp-2">
+            <p className="line-clamp-2 text-muted-foreground font-medium">
               Bachelor of Science, Major in Computer Science
             </p>
-            <p>September 2020 - April 2024</p>
+            <p className="text-muted-foreground font-medium">September 2020 - April 2024</p>
           </div>
           <Separator />
           <div className=" space-y-6 text-left pt-4 leading-loose">

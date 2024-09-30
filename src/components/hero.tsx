@@ -7,7 +7,7 @@ import { Handjet } from "next/font/google";
 
 const Terminal = () => {
   return (
-    <div className=" bg-card rounded-xl  border-2  flex flex-col    font-mono md:min-h-[80px] w-[330px] md:w-[610px] text-3xl md:text-6xl tracking-tighter ">
+    <div className=" bg-card rounded-3xl  border-2  flex flex-col    font-mono md:min-h-[80px] w-[330px] md:w-[610px] text-3xl md:text-6xl tracking-tighter ">
       <div className="p-4 rounded-t-lg rounded-b-none bg-secondary  flex gap-2.5 border-b ">
         <button>
           <Circle className="h-3 w-3 md:h-4 md:w-4 text-red-500 fill-red-500 cursor-not-allowed hover:fill-red-600 hover:text-red-600" />

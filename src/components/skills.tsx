@@ -50,18 +50,17 @@ export const Skills = () => {
   ];
 
   return (
-    <section className="py-12 md:py-24 lg:py-32 gap-6" id="skills">
+    <section className="py-12 md:py-24 lg:py-32 " id="skills">
       <div className="container mx-auto px-10">
         <div className="flex   flex-col items-center justify-center gap-6">
           <Badge variant="secondary" className="space-x-2">
             <div>🎨</div> <p>Skills</p>
           </Badge>
-          <h2 className="text-xl line-clamp-1 md:text-3xl font-bold text-primary leading-loose">
+          <h2 className="text-xl line-clamp-1 md:text-3xl font-bold text-primary leading-loose mb-10">
             Technologies I Use
           </h2>
 
-          <Separator className="w-2/3" />
-          <div className="grid w-2/3  grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-4">
+          <div className="grid w-2/3  grid-cols-2 gap-12 sm:grid-cols-3 lg:grid-cols-4">
             {skills.map((skill, index) => (
               <SkillIcon key={index} {...skill} />
             ))}

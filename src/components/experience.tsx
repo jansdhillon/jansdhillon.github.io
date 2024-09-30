@@ -25,7 +25,7 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
 
   return (
     <div>
-      <Card className="h-full flex flex-col rounded-xl">
+      <Card className="h-full flex flex-col rounded-3xl">
         <CardContent className="flex-grow p-6">
           <div className="flex flex-col gap-8 ">
             <div
@@ -53,7 +53,7 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
               <div>{title}</div>
               <div>{description}</div>
             </div>
-
+            <Separator />
             <ul className="list-disc space-y-2 text-base text-left pl-5 leading-loose">
               {responsibilities.map((item, index) => (
                 <li key={index} className="pl-1">
@@ -152,7 +152,7 @@ export const Experience: React.FC = () => {
               <div className=" ">💰</div> <p> Experience</p>
             </Badge>
           </div>
-          <h2 className="text-xl line-clamp-1 md:text-3xl font-bold mb-8 text-primary tracking-wide">
+          <h2 className="text-xl line-clamp-1 md:text-3xl font-bold mb-10 text-primary tracking-wide">
             Teams I&apos;ve Worked With
           </h2>
 

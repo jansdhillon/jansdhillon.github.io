@@ -23,7 +23,7 @@ const ProjectCard = ({
   additionalLink,
   additionalLinkText,
 }: any) => (
-  <Card className="h-full flex flex-col rounded-xl">
+  <Card className="h-full flex flex-col rounded-3xl">
     <CardContent className="flex-grow p-6">
       <div className="flex flex-col gap-8 ">
         <div className="flex items-center justify-center space-x-3 ">
@@ -43,6 +43,7 @@ const ProjectCard = ({
         <div className=" text-base text-center line-clamp-1 font-medium text-muted-foreground">
           {subtitle}
         </div>
+        <Separator />
         <p className="text-base text-left leading-loose">{description}</p>
       </div>
     </CardContent>
