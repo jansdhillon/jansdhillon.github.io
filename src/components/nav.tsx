@@ -16,7 +16,7 @@ const NavLink = ({ href, children, onClick = () => {} }: any) => {
   return (
     <Link
       href={href}
-      className={`text-sm font-medium lg:font-semibold hover:text-primary  transition-colors ${
+      className={`text-sm font-medium lg:font-semibold hover:text-primary   transition-colors ${
         isActive ? "text-primary" : "text-muted-foreground"
       }`}
       onClick={onClick}
@@ -56,8 +56,8 @@ export const Nav = () => {
             <Socials />
           </div>
           <div className="hidden md:flex space-x-6 items-center ">
-            {navItems.map((item) => (
-              <NavLink key={item.href} href={item.href}>
+            {navItems.map((item, index) => (
+              <NavLink key={index} href={item.href}>
                 {item.label}
               </NavLink>
             ))}
@@ -79,24 +79,23 @@ export const Nav = () => {
               </Button>
             </SheetTrigger>
             <SheetContent>
-              <div className="pl-4 flex flex-col space-y-4 mt-8 ">
-                <div className=" space-y-4">
-                  {navItems.map((item, index) => (
-                    <div key={index} className="space-y-4">
-                      <NavLink
-                        href={item.href}
-                        onClick={() => setIsOpen(false)}
-                      >
-                        {item.label}
-                      </NavLink>
+              <div className="flex flex-col lg:flex-row text-left items-start lg:items-center font-sm lg:space-y-0">
+                {navItems.map((item, index) => (
+                  <div className="py-1 space-y-1 w-full" key={index}>
+                    <NavLink
+                      key={index}
+                      href={item.href}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.label}
+                    </NavLink>
 
-                      {index !== navItems.length - 1 && <Separator className="m-0 p-0" />}
-                    </div>
-                  ))}
-                </div>
-                <Separator className="m-0 p-0" />
-                <Socials />
+                    <Separator className="p-0 m-0 lg:hidden w-full" />
+                  </div>
+                ))}
               </div>
+
+              <Socials />
             </SheetContent>
           </Sheet>
         </nav>
