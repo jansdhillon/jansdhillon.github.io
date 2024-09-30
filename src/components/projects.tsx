@@ -155,7 +155,7 @@ export const Projects = () => {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32" id="projects">
       <div className="container mx-auto px-10">
-        <div className="flex flex-col items-center justify-center space-y-6 text-center">
+        <div className="flex flex-col items-center justify-center gap-6 text-center">
           <div>
             <Badge variant={"secondary"} className="space-x-2 px-3 py-1">
               <div className="">🚀</div> <p>Projects</p>
@@ -165,7 +165,6 @@ export const Projects = () => {
           <h2 className="text-xl md:text-3xl font-bold line-clamp-1   mb-8 text-primary leading-loose">
             Projects I&apos;ve Contributed To
           </h2>
-          <Separator />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
             {projects.map((project, index) => (
               <ProjectCard {...project} key={index} />

@@ -18,11 +18,17 @@ import { FaDocker, FaFlask, FaJava, FaLinux } from "react-icons/fa6";
 import { Separator } from "./ui/separator";
 import { IconType } from "react-icons/lib";
 
-const SkillIcon = ({ Icon, name, invert }: {Icon : IconType, name: string, invert?: boolean }) => (
-  <div
-    className="flex flex-col items-center gap-3"
-  >
-    <Icon className={`h-10 w-10 ${invert ? "":"text-primary"}`} />
+const SkillIcon = ({
+  Icon,
+  name,
+  invert,
+}: {
+  Icon: IconType;
+  name: string;
+  invert?: boolean;
+}) => (
+  <div className="flex flex-col items-center gap-3">
+    <Icon className={`h-10 w-10 ${invert ? "" : "text-primary"}`} />
     <span className="text-sm font-medium">{name}</span>
   </div>
 );
@@ -39,27 +45,23 @@ export const Skills = () => {
     { Icon: FaNodeJs, name: "Node.js" },
     { Icon: SiTailwindcss, name: "Tailwind CSS" },
     { Icon: FaJava, name: "Java" },
-    { Icon: FaLinux, name: "Linux", invert:true },
+    { Icon: FaLinux, name: "Linux", invert: true },
     { Icon: SiGit, name: "Git" },
   ];
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 " id="skills">
+    <section className="py-12 md:py-24 lg:py-32 gap-6" id="skills">
       <div className="container mx-auto px-10">
-        <div className="flex flex-col items-center justify-center space-y-6 text-center">
-          <div>
-            <Badge
-              variant="secondary"
-              className="space-x-2"
-            >
-              <div>🎨</div> <p>Skills</p>
-            </Badge>
-          </div>
+        <div className="flex   flex-col items-center justify-center gap-6">
+          <Badge variant="secondary" className="space-x-2">
+            <div>🎨</div> <p>Skills</p>
+          </Badge>
           <h2 className="text-xl line-clamp-1 md:text-3xl font-bold text-primary leading-loose">
             Technologies I Use
           </h2>
-          <Separator className="max-w-4xl" />
-          <div className="grid w-full max-w-5xl grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-4">
+
+          <Separator className="w-2/3" />
+          <div className="grid w-2/3  grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-4">
             {skills.map((skill, index) => (
               <SkillIcon key={index} {...skill} />
             ))}

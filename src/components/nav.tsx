@@ -39,7 +39,7 @@ export const Nav = () => {
 
   return (
     <header
-      className="bg-accent/30 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 border-b "
+      className="bg-card fixed top-0 left-0 right-0 z-50 border-b "
       // initial={{ y: -100 }}
       // animate={{ y: 0 }}
       // transition={{ type: "spring", stiffness: 300, damping: 30 }}
@@ -49,7 +49,7 @@ export const Nav = () => {
           <div className=" flex space-x-4  items-center">
             <Link
               href="/"
-              className="text-primary text-lg font-bold tracking-wide hover:text-muted-foreground"
+              className="text-primary text-lg font-bold tracking-tight hover:text-muted-foreground"
             >
               Jan-Yaeger Dhillon
             </Link>

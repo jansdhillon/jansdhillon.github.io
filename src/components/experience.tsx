@@ -144,12 +144,9 @@ export const Experience: React.FC = () => {
   ];
 
   return (
-    <section
-      className="w-full py-12 md:py-24 lg:py-32  text-primary  "
-      id="experience"
-    >
+    <section className="py-12 md:py-24 lg:py-32 " id="experience">
       <div className="container mx-auto px-10">
-        <div className="flex flex-col items-center justify-center space-y-6 text-center">
+        <div className="flex flex-col items-center justify-center gap-6 text-center">
           <div>
             <Badge className="space-x-2" variant={"secondary"}>
               <div className=" ">💰</div> <p> Experience</p>
@@ -158,8 +155,8 @@ export const Experience: React.FC = () => {
           <h2 className="text-xl line-clamp-1 md:text-3xl font-bold mb-8 text-primary tracking-wide">
             Teams I&apos;ve Worked With
           </h2>
-          <Separator />
-          <div className="flex flex-col md:flex-row gap-6 w-full">
+
+          <div className="flex flex-col lg:flex-row gap-6 w-full">
             {experiences.map((exp, index) => (
               <ExperienceCard key={index} {...exp} />
             ))}
