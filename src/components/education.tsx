@@ -10,7 +10,7 @@ export const Education = () => {
       className="flex flex-col justify-center items-center mx-10  gap-6 py-12 md:py-24 lg:py-32 "
       id="education"
     >
-      <div >
+      <div>
         <Badge className="space-x-2 " variant={"secondary"}>
           <div>📚</div> <p>Education</p>
         </Badge>
@@ -26,15 +26,14 @@ export const Education = () => {
                   </h2> */}
           <div className="flex flex-col items-center justify-center gap-4">
             <div className="flex items-start gap-4">
-              <div>
-                <Image
-                  src="/ubc.png"
-                  alt="UBC"
-                  width={30}
-                  height={30}
-                  quality={100}
-                />
-              </div>
+              <Image
+                src="/ubc.png"
+                alt="UBC"
+                width={30}
+                height={30}
+                quality={100}
+              />
+
               <h3 className="text-lg md:text-xl font-semibold text-center line-clamp-3">
                 The University of British Columbia
               </h3>
@@ -42,7 +41,9 @@ export const Education = () => {
             <p className="line-clamp-2 text-muted-foreground font-medium">
               Bachelor of Science, Major in Computer Science
             </p>
-            <p className="text-muted-foreground font-medium">September 2020 - April 2024</p>
+            <p className="text-muted-foreground font-medium">
+              September 2020 - April 2024
+            </p>
           </div>
           <Separator />
           <div className=" space-y-6 text-left pt-4 leading-loose">
