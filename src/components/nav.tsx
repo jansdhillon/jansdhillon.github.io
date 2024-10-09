@@ -16,7 +16,7 @@ const NavLink = ({ href, children, onClick = () => {} }: any) => {
   return (
     <Link
       href={href}
-      className={`text-sm font-medium lg:font-semibold hover:text-primary   transition-colors ${
+      className={`text-sm font-medium hover:text-primary   transition-colors ${
         isActive ? "text-primary" : "text-muted-foreground"
       }`}
       onClick={onClick}
@@ -49,7 +49,7 @@ export const Nav = () => {
           <div className=" flex space-x-4  items-center">
             <Link
               href="/"
-              className="text-primary text-lg font-bold tracking-tight hover:text-muted-foreground"
+              className="text-primary text-md font-black tracking-wider hover:text-muted-foreground"
             >
               Jan-Yaeger Dhillon
             </Link>
@@ -68,7 +68,7 @@ export const Nav = () => {
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <Link
               href="/"
-              className="text-primary text-md font-bold tracking-wide hover:text-muted-foreground"
+              className="text-primary text-md font-black tracking-wider hover:text-muted-foreground"
             >
               Jan-Yaeger Dhillon
             </Link>

@@ -10,22 +10,18 @@ export const Education = () => {
       className="flex flex-col justify-center items-center mx-10  gap-6 py-12 md:py-24 lg:py-32 "
       id="education"
     >
-      <div>
+       <div className="flex flex-col items-center justify-center gap-6 text-center">
         <Badge className="space-x-2 " variant={"secondary"}>
           <div>📚</div> <p>Education</p>
         </Badge>
+        <h2 className="text-xl line-clamp-1 md:text-3xl font-bold mb-10 text-primary tracking-wide">
+          My Academic Journey
+        </h2>
       </div>
-      <div className="container md:w-2/3  mx-auto  p-10 bg-card rounded-3xl border">
+      <Card className=" md:w-2/3  mx-auto  p-10 bg-card rounded-3xl  shadow-sm">
         <div className="flex flex-col justify-center item-center gap-4">
-          {/* <h2 className="text-xl line-clamp-1 md:text-3xl font-bold my-3  text-primary tracking-wide">
-            My Academic Journey
-                  </h2>
-                  <Separator  /> */}
-          {/* <h2 className="text-xl line-clamp-1 md:text-3xl font-bold mb-8 text-primary tracking-wide">
-            Education
-                  </h2> */}
           <div className="flex flex-col items-center justify-center gap-4">
-            <div className="flex items-start gap-4">
+            <div className="flex items-center md:items-start space-x-5">
               <Image
                 src="/ubc.png"
                 alt="UBC"
@@ -93,7 +89,7 @@ export const Education = () => {
             </div>
           </div>
         </div>
-      </div>
+      </Card>
     </section>
   );
 };
