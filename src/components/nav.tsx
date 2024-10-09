@@ -68,7 +68,7 @@ export const Nav = () => {
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <Link
               href="/"
-              className="text-primary text-md font-black tracking-wider hover:text-muted-foreground"
+              className="text-primary text-md font-black tracking-tighter hover:text-muted-foreground"
             >
               Jan-Yaeger Dhillon
             </Link>
