@@ -29,7 +29,6 @@ const SkillIcon = ({
 }) => (
   <div className="flex flex-col items-center gap-3">
     <Icon className={`h-10 w-10 ${invert ? "" : "text-primary"}`} />
-    <span className="text-sm font-medium">{name}</span>
   </div>
 );
 

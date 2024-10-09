@@ -44,7 +44,7 @@ export const Education = () => {
           <Separator />
           <div className=" space-y-6 text-left pt-4 leading-loose">
             <p>
-              I graduated from UBC with distinction this spring, earning my
+              I graduated from UBC with High Distinction this spring, earning my
               Bachelor of Science degree in Computer Science. Throughout my
               studies, I gained a solid foundation in software development,
               algorithms, and problem-solving, while also honing my skills
