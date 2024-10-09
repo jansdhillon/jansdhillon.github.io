@@ -34,19 +34,19 @@ const ThemeSwitcher = () => {
             <Sun
               key="light"
               size={ICON_SIZE}
-              className={"text-primary"}
+              className={"text-muted-foreground"}
             />
           ) : theme === "dark" ? (
             <Sun
               key="dark"
               size={ICON_SIZE}
-              className={"text-primary"}
+              className={"text-muted-foreground"}
             />
           ) : (
             <Sun
               key="system"
               size={ICON_SIZE}
-              className={"text-primary"}
+              className={"text-muted-foreground"}
             />
           )}
         </Button>

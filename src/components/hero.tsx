@@ -21,7 +21,7 @@ const Terminal = () => {
       </div>
 
       <div className="flex items-center ml-2 md:ml-5 lg:ml-7 gap-3 lg:gap-3.5 px-5 md:px-3 py-8 md:py-16">
-        <div className=" text-muted-foreground font-black">&gt;</div>
+        <div className=" text-secondary-foreground font-black">&gt;</div>
         <Writer text="Hey, I'm Jan!" />
       </div>
     </div>
