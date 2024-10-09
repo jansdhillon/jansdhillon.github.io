@@ -34,10 +34,10 @@ export const Education = () => {
                 The University of British Columbia
               </h3>
             </div>
-            <p className="line-clamp-2 text-muted-foreground font-medium">
+            <p className="line-clamp-2 text-muted-foreground font-medium text-center">
               Bachelor of Science, Major in Computer Science
             </p>
-            <p className="text-muted-foreground font-medium">
+            <p className="text-muted-foreground font-medium  text-center">
               September 2020 - April 2024
             </p>
           </div>
