@@ -5,6 +5,9 @@ import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import Link from "next/link";
 import { ShieldCheck } from "lucide-react";
+import kathrinBooksLogo from "../../public/kb.svg";
+
+
 const ProjectCard = ({
   logo,
   title,
@@ -15,7 +18,7 @@ const ProjectCard = ({
   additionalLink,
   additionalLinkText,
 }: any) => (
-  <Card className="h-full flex flex-col rounded-3xl shadow-sm">
+  <Card className="h-full flex flex-col rounded-2xl shadow-sm">
     <CardContent className="flex-grow p-6">
       <div className="flex flex-col space-y-6 ">
         <div className="flex items-center justify-center space-x-3 ">
@@ -30,16 +33,16 @@ const ProjectCard = ({
           ) : (
             logo
           )}
-          <h3 className="text-lg md:text-xl font-semibold">{title}</h3>
+          <h3 className="text-lg font-medium">{title}</h3>
         </div>
-        <div className=" text-base text-center line-clamp-1 font-medium text-muted-foreground">
+        <div className=" text-sm md:text-base  text-center line-clamp-1  font-medium text-muted-foreground">
           {subtitle}
         </div>
-        <p className="text-base text-left leading-loose">{description}</p>
+        <p className="text-sm md:text-base  text-left leading-loose">{description}</p>
       </div>
     </CardContent>
-    <CardFooter className="flex flex-col items-center gap-6 p-6">
-      <div className="flex flex-wrap justify-center gap-2 lg:max-w-[50%]">
+    <CardFooter className="flex flex-col items-center gap-6 px-6 pb-6">
+      <div className="flex flex-wrap justify-center gap-2 lg:max-w-[75%]">
         {technologies.map((tech: any, index: any) => (
           <Badge key={index} variant={"secondary"}>
             {tech}
@@ -54,7 +57,7 @@ const ProjectCard = ({
         )}
         {additionalLink && (
           <Link href={additionalLink}>
-            <Button size={"default"} className="font-semibold">
+            <Button size={"sm"}>
               {additionalLinkText || "Demo"}
             </Button>
           </Link>
@@ -71,9 +74,10 @@ export const Projects = () => {
       title: "Kathrin's Books",
       subtitle: "Online Bookstore",
       description:
-        "An online bookstore that allows users to browse and purchase a selection of rare and unique books curated by my mom, Kathrin. The app features a responsive, modern design and a smooth e-commerce flow. The project is powered by Next.js, Supabase, Stripe, and Google Cloud.",
+        "An online bookstore that allows users to browse and purchase a selection of rare and unique books curated by my mom, Kathrin. The app features a responsive, modern design and a smooth e-commerce flow. Kathrin's Books is powered by Next.js, Supabase, Stripe, Google Cloud Platform, and Google Analytics.",
       technologies: [
         "Next.js",
+        "Google Analytics",
         "PostgreSQL",
         "TailwindCSS",
         "TypeScript",
@@ -136,7 +140,8 @@ export const Projects = () => {
         "React",
         "TailwindCSS",
         "TypeScript",
-        "Powerpoint",
+        "PowerPoint",
+        "Photoshop"
       ],
       githubLink: "https://github.com/jansdhillon/Defend-Your-Data",
       additionalLink: "https://youtu.be/v8NQ6yFvvkY?si=Bb-xsWkDyu9KaP-i",

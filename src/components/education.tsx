@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Card, CardDescription } from "./ui/card";
 import { Separator } from "./ui/separator";
 import Link from "next/link";
+import ubcLogo from "../../public/ubc.png";
 
 export const Education = () => {
   return (
@@ -21,12 +22,12 @@ export const Education = () => {
           My Academic Journey
         </h2>
       </div>
-      <Card className=" md:w-2/3  mx-auto  p-10 bg-card rounded-3xl  shadow-sm">
+      <Card className=" md:w-2/3  mx-auto  p-10 bg-card rounded-2xl  shadow-sm">
         <div className="flex flex-col justify-center item-center gap-4">
           <div className="flex flex-col items-center justify-center space-y-6">
             <div className="flex items-center  space-x-5">
               <Image
-                src="/ubc.png"
+                src={ubcLogo}
                 alt="UBC"
                 width={30}
                 height={30}
@@ -34,17 +35,15 @@ export const Education = () => {
                 className="md:pt-1"
               />
 
-              <h3 className="text-lg md:text-xl font-semibold text-center line-clamp-3">
-                The University of British Columbia
+              <h3 className="text-base md:text-lg  font-medium text-center line-clamp-3">
+                The University of British Columbia (UBC)
               </h3>
             </div>
-            <div className="flex flex-col gap-4">
-              <p className="line-clamp-2 text-muted-foreground font-medium text-center">
+            <div className="flex flex-col gap-4 font-medium text-muted-foreground text-center">
+              <p className="line-clamp-2  ">
                 Bachelor of Science, Major in Computer Science
               </p>
-              <p className="text-muted-foreground font-medium  text-center">
-                September 2020 - April 2024
-              </p>
+              <p>September 2020 - April 2024</p>
             </div>
           </div>
           <div className=" space-y-6 text-left pt-4 leading-loose">
@@ -58,7 +57,9 @@ export const Education = () => {
               innovative solutions and tackling real-world challenges.
             </p>
             <div className="space-y-4">
-              <h4 className=" font-semibold text-base mb-2">Key Courses:</h4>
+              <h4 className=" font-medium text-sm md:text-base  mb-2">
+                Key Courses:
+              </h4>
               <Separator />
               <ul className="grid grid-cols-2 gap-2 list-disc pl-5 font-normal">
                 <li className="pl-1 pr-4">Software Engineering</li>
@@ -76,7 +77,9 @@ export const Education = () => {
               </ul>
             </div>
             <div className="space-y-4">
-              <h4 className=" font-semibold text-base mb-2">Acknowledgements:</h4>
+              <h4 className=" font-medium text-sm md:text-base  mb-2">
+                Acknowledgements:
+              </h4>
               <Separator />
               <ul className="space-y-2 list-disc pl-5 leading-loose font-normal">
                 <li className="pl-1">

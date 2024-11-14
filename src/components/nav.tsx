@@ -39,7 +39,7 @@ export const Nav = () => {
 
   return (
     <header
-      className="bg-card fixed top-0 left-0 right-0 z-50  "
+      className="bg-card fixed top-0 left-0 right-0 z-50 border-b  "
       // initial={{ y: -100 }}
       // animate={{ y: 0 }}
       // transition={{ type: "spring", stiffness: 300, damping: 30 }}

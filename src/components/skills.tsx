@@ -28,7 +28,7 @@ const SkillIcon = ({
   name: string;
   invert?: boolean;
 }) => (
-  <div className="flex flex-col items-center gap-3">
+  <div className="flex flex-col items-center gap-4">
     <Icon className={`h-10 w-10 ${invert ? "" : "text-primary"}`} />
     <span className="text-sm font-medium text-center">{name}</span>
   </div>
@@ -68,7 +68,7 @@ export const Skills = () => {
               <SkillIcon key={index} {...skill} />
             ))}
           </div>
-          <p className="text-base text-center text-muted-foreground mt-8">
+          <p className="text-sm md:text-base font-medium  text-center text-muted-foreground pt-8">
             ...and more! Plus I&apos;m always learning new things ✨
           </p>
         </div>

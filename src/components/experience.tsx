@@ -1,12 +1,14 @@
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription } from "@/components/ui/card";
-import { Separator } from "./ui/separator";
 import Link from "next/link";
+import ubcLogo from "../../public/ubc.png";
+import cseLogo from "../../public/cse.jpg";
+import atLogo from "../../public/at-yellow.png";
 
 interface ExperienceItem {
-  logo: string;
+  logo: string | StaticImageData;
   title: string;
   company: string;
   description: string;
@@ -26,12 +28,12 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
 
   return (
     <div>
-      <Card className="h-full flex flex-col rounded-3xl shadow-sm">
+      <Card className="h-full flex flex-col rounded-2xl shadow-sm">
         <CardContent className="flex-grow p-6">
           <div className="flex flex-col gap-8 ">
             <div
               className={`flex items-center justify-center ${
-                company == "Communications Security Establishment"
+                company == "Communications Security Establishment (CSE)"
                   ? "space-x-5 "
                   : "space-x-5 md:space-x-5"
               }`}
@@ -43,17 +45,17 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
                 height={30}
                 quality={100}
               />
-              <div className="text-lg md:text-xl font-semibold text-center line-clamp-3">
+              <div className="text-base md:text-lg font-medium text-center line-clamp-3">
                 {companyLines.map((line, index) => (
                   <div key={index}>{line}</div>
                 ))}
               </div>
             </div>
-            <div className="flex-col space-y-3 font-medium text-muted-foreground text-center text-base">
+            <div className="flex-col space-y-3 font-medium text-muted-foreground text-center text-sm md:text-base ">
               <div>{title}</div>
               <div>{description}</div>
             </div>
-            <ul className="list-disc space-y-2 text-base text-left pl-5 leading-loose">
+            <ul className="list-disc space-y-2 text-sm md:text-base text-left pl-5 leading-loose">
               {responsibilities.map((item, index) => (
                 <li key={index} className="pl-1">
                   <span className="inline-block align-top">{item}</span>
@@ -79,9 +81,9 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
 export const Experience: React.FC = () => {
   const experiences: ExperienceItem[] = [
     {
-      logo: "/cse.jpg",
+      logo: cseLogo,
       title: "Software Engineer Co-op",
-      company: "Communications Security Establishment",
+      company: "Communications Security Establishment (CSE)",
       description: "January 2024 - April 2024",
       responsibilities: [
         "Developed a CI/CD pipeline for a microservice deployment onto Kubernetes, promoting reliability and efficiency.",
@@ -100,7 +102,7 @@ export const Experience: React.FC = () => {
       ],
     },
     {
-      logo: "/at-yellow.png",
+      logo: atLogo,
       title: "Software Engineer Co-op",
       company: "Armilla Technology",
       description: "May 2023 - September 2023",
@@ -121,9 +123,9 @@ export const Experience: React.FC = () => {
       ],
     },
     {
-      logo: "/ubc.png",
+      logo: ubcLogo,
       title: "Student Support Analyst I",
-      company: "The University of British Columbia",
+      company: "The University of British Columbia (UBC)",
       description: "September 2022 - April 2023",
       responsibilities: [
         "Streamlined student support by creating clear, accessible documentation, greatly reducing troubleshooting time.",
