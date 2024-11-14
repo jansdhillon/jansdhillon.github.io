@@ -1,18 +1,10 @@
-import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-} from "@/components/ui/card";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import Link from "next/link";
 import { ShieldCheck } from "lucide-react";
-import { Separator } from "./ui/separator";
-import { SiBookstack } from "react-icons/si";
 const ProjectCard = ({
   logo,
   title,
@@ -25,7 +17,7 @@ const ProjectCard = ({
 }: any) => (
   <Card className="h-full flex flex-col rounded-3xl shadow-sm">
     <CardContent className="flex-grow p-6">
-      <div className="flex flex-col gap-8 ">
+      <div className="flex flex-col space-y-6 ">
         <div className="flex items-center justify-center space-x-3 ">
           {typeof logo === "string" ? (
             <Image
@@ -43,12 +35,11 @@ const ProjectCard = ({
         <div className=" text-base text-center line-clamp-1 font-medium text-muted-foreground">
           {subtitle}
         </div>
-        <Separator />
         <p className="text-base text-left leading-loose">{description}</p>
       </div>
     </CardContent>
     <CardFooter className="flex flex-col items-center gap-6 p-6">
-      <div className="flex flex-wrap justify-center gap-2">
+      <div className="flex flex-wrap justify-center gap-2 lg:max-w-[50%]">
         {technologies.map((tech: any, index: any) => (
           <Badge key={index} variant={"secondary"}>
             {tech}
@@ -76,11 +67,11 @@ const ProjectCard = ({
 export const Projects = () => {
   const projects = [
     {
-      logo: "/books.png",
+      logo: "/kb.svg",
       title: "Kathrin's Books",
       subtitle: "Online Bookstore",
       description:
-        "A cloud-based e-commerce site that allows users to browse and purchase a selection of rare and unique books curated by my mom, Kathrin. The app features a responsive, modern design and a smooth e-commerce flow. The project is powered by Next.js, Supabase, Stripe, and Google Cloud.",
+        "An online bookstore that allows users to browse and purchase a selection of rare and unique books curated by my mom, Kathrin. The app features a responsive, modern design and a smooth e-commerce flow. The project is powered by Next.js, Supabase, Stripe, and Google Cloud.",
       technologies: [
         "Next.js",
         "PostgreSQL",
@@ -155,15 +146,15 @@ export const Projects = () => {
 
   return (
     <section className="w-full py-12 md:py-24 lg:py-32" id="projects">
-      <div className="container mx-auto px-10">
-        <div className="flex flex-col items-center justify-center gap-6 text-center">
-          <div>
+      <div className="container mx-auto px-10 max-w-7xl">
+        <div className="flex flex-col items-center justify-center gap-4 text-center space-y-6">
+          <Link href="#projects">
             <Badge variant={"secondary"} className="space-x-2 px-3 py-1">
               <div className="">🚀</div> <p>Projects</p>
             </Badge>
-          </div>
+          </Link>
 
-          <h2 className="text-xl md:text-3xl font-bold line-clamp-1   mb-8 text-primary leading-loose">
+          <h2 className="text-xl md:text-2xl font-semibold line-clamp-1 text-primary leading-loose">
             Projects I&apos;ve Contributed To
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">

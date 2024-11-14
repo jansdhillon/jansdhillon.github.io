@@ -3,45 +3,50 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Card, CardDescription } from "./ui/card";
 import { Separator } from "./ui/separator";
+import Link from "next/link";
 
 export const Education = () => {
   return (
     <section
-      className="flex flex-col justify-center items-center mx-10  gap-6 py-12 md:py-24 lg:py-32 "
+      className="flex flex-col justify-center items-center mx-10  gap-6 py-12 md:py-24 lg:py-32 space-y-6"
       id="education"
     >
-       <div className="flex flex-col items-center justify-center gap-6 text-center">
-        <Badge className="space-x-2 " variant={"secondary"}>
-          <div>📚</div> <p>Education</p>
-        </Badge>
-        <h2 className="text-xl line-clamp-1 md:text-3xl font-bold mb-10 text-primary tracking-wide">
+      <div className="flex flex-col items-center justify-center gap-6 text-center">
+        <Link href="#education">
+          <Badge className="space-x-2 " variant={"secondary"}>
+            <div>📚</div> <p>Education</p>
+          </Badge>
+        </Link>
+        <h2 className="text-xl line-clamp-1 md:text-2xl font-semibold text-primary tracking-wide">
           My Academic Journey
         </h2>
       </div>
       <Card className=" md:w-2/3  mx-auto  p-10 bg-card rounded-3xl  shadow-sm">
         <div className="flex flex-col justify-center item-center gap-4">
-          <div className="flex flex-col items-center justify-center gap-4">
-            <div className="flex items-center md:items-start space-x-5">
+          <div className="flex flex-col items-center justify-center space-y-6">
+            <div className="flex items-center  space-x-5">
               <Image
                 src="/ubc.png"
                 alt="UBC"
                 width={30}
                 height={30}
                 quality={100}
+                className="md:pt-1"
               />
 
               <h3 className="text-lg md:text-xl font-semibold text-center line-clamp-3">
                 The University of British Columbia
               </h3>
             </div>
-            <p className="line-clamp-2 text-muted-foreground font-medium text-center">
-              Bachelor of Science, Major in Computer Science
-            </p>
-            <p className="text-muted-foreground font-medium  text-center">
-              September 2020 - April 2024
-            </p>
+            <div className="flex flex-col gap-4">
+              <p className="line-clamp-2 text-muted-foreground font-medium text-center">
+                Bachelor of Science, Major in Computer Science
+              </p>
+              <p className="text-muted-foreground font-medium  text-center">
+                September 2020 - April 2024
+              </p>
+            </div>
           </div>
-          <Separator />
           <div className=" space-y-6 text-left pt-4 leading-loose">
             <p>
               I graduated from UBC with High Distinction this spring, earning my
@@ -53,7 +58,8 @@ export const Education = () => {
               innovative solutions and tackling real-world challenges.
             </p>
             <div className="space-y-4">
-              <h4 className=" font-medium text-base mb-2">Key Courses:</h4>
+              <h4 className=" font-semibold text-base mb-2">Key Courses:</h4>
+              <Separator />
               <ul className="grid grid-cols-2 gap-2 list-disc pl-5 font-normal">
                 <li className="pl-1 pr-4">Software Engineering</li>
                 <li className="pl-1">Algorithm Analysis</li>
@@ -70,7 +76,8 @@ export const Education = () => {
               </ul>
             </div>
             <div className="space-y-4">
-              <h4 className=" font-medium text-base mb-2">Acknowledgements:</h4>
+              <h4 className=" font-semibold text-base mb-2">Acknowledgements:</h4>
+              <Separator />
               <ul className="space-y-2 list-disc pl-5 leading-loose font-normal">
                 <li className="pl-1">
                   Recognized by the UBC Cloud Innovation Centre, a collaboration

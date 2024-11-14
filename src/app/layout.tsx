@@ -3,6 +3,8 @@ import "./globals.css";
 import { GeistSans } from "geist/font/sans";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { Analytics } from "@vercel/analytics/react";
+import { Footer } from "@/components/footer";
+import { Nav } from "@/components/nav";
 
 export const metadata: Metadata = {
   title: "Jan-Yaeger Dhillon",
@@ -23,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={GeistSans.className} suppressHydrationWarning>
       <body
-        className={`${GeistSans.className} radiant-gradient  flex flex-col`}
+        className={`${GeistSans.className} bg-background text-base flex flex-col`}
       >
         <ThemeProvider
           attribute="class"
@@ -31,7 +33,13 @@ export default function RootLayout({
           disableTransitionOnChange
           enableSystem
         >
-          {children}
+          <div className="flex flex-col min-h-[100dvh]">
+            <Nav />
+            <main className="w-full flex flex-1 flex-col justify-start mt-20 pb-10">
+              {children}
+            </main>
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
       <Analytics />

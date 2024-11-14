@@ -17,6 +17,7 @@ import { Badge } from "@/components/ui/badge";
 import { FaDocker, FaFlask, FaJava, FaLinux } from "react-icons/fa6";
 import { Separator } from "./ui/separator";
 import { IconType } from "react-icons/lib";
+import Link from "next/link";
 
 const SkillIcon = ({
   Icon,
@@ -52,11 +53,13 @@ export const Skills = () => {
   return (
     <section className="py-12 md:py-24 lg:py-32 " id="skills">
       <div className="container mx-auto px-10">
-        <div className="flex   flex-col items-center justify-center gap-6">
-          <Badge variant="secondary" className="space-x-2">
-            <div>🎨</div> <p>Skills</p>
-          </Badge>
-          <h2 className="text-xl line-clamp-1 md:text-3xl font-bold text-primary leading-loose mb-10">
+        <div className="flex   flex-col items-center justify-center gap-4 space-y-6">
+          <Link href="#skills">
+            <Badge variant="secondary" className="space-x-2">
+              <div>🎨</div> <p>Skills</p>
+            </Badge>
+          </Link>
+          <h2 className="text-xl line-clamp-1 md:text-2xl font-semibold text-primary leading-loose">
             Technologies I Use
           </h2>
 

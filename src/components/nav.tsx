@@ -39,7 +39,7 @@ export const Nav = () => {
 
   return (
     <header
-      className="bg-card fixed top-0 left-0 right-0 z-50 border-b "
+      className="bg-card fixed top-0 left-0 right-0 z-50  "
       // initial={{ y: -100 }}
       // animate={{ y: 0 }}
       // transition={{ type: "spring", stiffness: 300, damping: 30 }}
@@ -49,7 +49,7 @@ export const Nav = () => {
           <div className=" flex space-x-4  items-center">
             <Link
               href="/"
-              className="text-primary text-md font-black tracking-wider hover:text-muted-foreground"
+              className="text-primary text-md font-semibold tracking-wider hover:text-muted-foreground"
             >
               Jan-Yaeger Dhillon
             </Link>
@@ -68,34 +68,33 @@ export const Nav = () => {
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <Link
               href="/"
-              className="text-primary text-md font-black tracking-tighter hover:text-muted-foreground"
+              className="text-primary text-md font-semibold tracking-wider hover:text-muted-foreground"
             >
               Jan-Yaeger Dhillon
             </Link>
 
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="ml-2 text-muted-foreground">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="ml-2 text-muted-foreground"
+              >
                 <RxHamburgerMenu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
             <SheetContent>
-              <div className="flex flex-col lg:flex-row text-left items-start lg:items-center font-sm lg:space-y-0">
-                {navItems.map((item, index) => (
-                  <div className="py-1 space-y-1 w-full" key={index}>
-                    <NavLink
-                      key={index}
-                      href={item.href}
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {item.label}
-                    </NavLink>
-
-                    <Separator className="p-0 m-0 lg:hidden w-full" />
-                  </div>
-                ))}
+              <div className="flex flex-col space-y-6">
+                <div className="flex flex-col lg:flex-row text-left items-start lg:items-center font-sm lg:space-y-0 space-y-6 w-full">
+                  {navItems.map((item, index) => (
+                    <div className="py-1 w-full" key={index}>
+                      <NavLink href={item.href} onClick={() => setIsOpen(false)}>
+                        {item.label}
+                      </NavLink>
+                    </div>
+                  ))}
+                </div>
+                <Socials />
               </div>
-
-              <Socials />
             </SheetContent>
           </Sheet>
         </nav>

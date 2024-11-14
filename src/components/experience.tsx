@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription } from "@/components/ui/card";
 import { Separator } from "./ui/separator";
+import Link from "next/link";
 
 interface ExperienceItem {
   logo: string;
@@ -48,12 +49,10 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
                 ))}
               </div>
             </div>
-
             <div className="flex-col space-y-3 font-medium text-muted-foreground text-center text-base">
               <div>{title}</div>
               <div>{description}</div>
             </div>
-            <Separator />
             <ul className="list-disc space-y-2 text-base text-left pl-5 leading-loose">
               {responsibilities.map((item, index) => (
                 <li key={index} className="pl-1">
@@ -63,7 +62,6 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
             </ul>
           </div>
         </CardContent>
-
         <CardContent className="p-6 ">
           <div className="flex flex-wrap justify-center gap-2">
             {skills.map((skill, index) => (
@@ -145,14 +143,14 @@ export const Experience: React.FC = () => {
 
   return (
     <section className="py-12 md:py-24 lg:py-32 " id="experience">
-      <div className="container mx-auto px-10">
-        <div className="flex flex-col items-center justify-center gap-6 text-center">
-          <div>
+      <div className="container mx-auto px-10 max-w-7xl">
+        <div className="flex flex-col items-center justify-center gap-4 text-center space-y-6">
+          <Link href={"#experience"}>
             <Badge className="space-x-2" variant={"secondary"}>
               <div className=" ">💰</div> <p> Experience</p>
             </Badge>
-          </div>
-          <h2 className="text-xl line-clamp-1 md:text-3xl font-bold mb-10 text-primary tracking-wide">
+          </Link>
+          <h2 className="text-xl line-clamp-1 md:text-2xl font-semibold text-primary tracking-wide">
             Teams I&apos;ve Worked With
           </h2>
 
