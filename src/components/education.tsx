@@ -9,10 +9,10 @@ import ubcLogo from "../../public/ubc.png";
 export const Education = () => {
   return (
     <section
-      className="flex flex-col justify-center items-center mx-10  gap-6 py-12 md:py-24 lg:py-32 space-y-6"
+      className="flex flex-col justify-center items-center mx-10  gap-4 py-12 md:py-24 lg:py-32 space-y-6"
       id="education"
     >
-      <div className="flex flex-col items-center justify-center gap-6 text-center">
+      <div className="flex flex-col items-center justify-center gap-7 text-center">
         <Link href="#education">
           <Badge className="space-x-2 " variant={"secondary"}>
             <div>📚</div> <p>Education</p>
