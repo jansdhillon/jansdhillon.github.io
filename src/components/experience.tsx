@@ -29,22 +29,17 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
   return (
     <div>
       <Card className="h-full flex flex-col rounded-2xl shadow-sm">
-        <CardContent className="flex-grow p-6">
+        <CardContent className="flex-grow pt-6 px-6">
           <div className="flex flex-col gap-8 ">
-            <div
-              className={`flex items-center justify-center ${
-                company == "Communications Security Establishment (CSE)"
-                  ? "space-x-5 "
-                  : "space-x-5 md:space-x-5"
-              }`}
-            >
-              <Image
-                src={logo}
-                alt={`${companyLines[0]} Logo`}
-                width={30}
-                height={30}
-                quality={100}
-              />
+            <div className={`flex items-center justify-center space-x-5`}>
+              <div className="relative h-[30px] w-[30px]">
+                <Image
+                  fill
+                  src={logo}
+                  alt={`${companyLines[0]} Logo`}
+                  className="object-contain"
+                />
+              </div>
               <div className="text-base md:text-lg font-medium text-center line-clamp-3">
                 {companyLines.map((line, index) => (
                   <div key={index}>{line}</div>
@@ -64,7 +59,7 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
             </ul>
           </div>
         </CardContent>
-        <CardContent className="p-6 ">
+        <CardContent className="px-6 pb-6">
           <div className="flex flex-wrap justify-center gap-2">
             {skills.map((skill, index) => (
               <Badge key={index} variant={"secondary"}>

@@ -19,7 +19,7 @@ const ProjectCard = ({
   additionalLinkText,
 }: any) => (
   <Card className="h-full flex flex-col rounded-2xl shadow-sm">
-    <CardContent className="flex-grow p-6">
+    <CardContent className="flex-grow pt-6 px-6">
       <div className="flex flex-col space-y-6 ">
         <div className="flex items-center justify-center space-x-3 ">
           {typeof logo === "string" ? (
