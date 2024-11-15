@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import Link from "next/link";
 import { ShieldCheck } from "lucide-react";
-import kathrinBooksLogo from "../../public/kb.svg";
+import kathrinBooksLogo from "../../public/kb2.svg";
 
 
 const ProjectCard = ({
@@ -70,7 +70,7 @@ const ProjectCard = ({
 export const Projects = () => {
   const projects = [
     {
-      logo: "/kb.svg",
+      logo: "/kb2.svg",
       title: "Kathrin's Books",
       subtitle: "Online Bookstore",
       description:
