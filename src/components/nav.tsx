@@ -49,7 +49,7 @@ export const Nav = () => {
           <div className=" flex space-x-4  items-center">
             <Link
               href="/"
-              className="text-primary text-md font-semibold tracking-wider hover:text-muted-foreground"
+              className="text-primary text-lg font-semibold tracking-wider hover:text-muted-foreground"
             >
               Jan-Yaeger Dhillon
             </Link>
@@ -68,7 +68,7 @@ export const Nav = () => {
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <Link
               href="/"
-              className="text-primary text-md font-semibold tracking-wider hover:text-muted-foreground"
+              className="text-primary text-base font-semibold tracking-wider hover:text-muted-foreground"
             >
               Jan-Yaeger Dhillon
             </Link>
